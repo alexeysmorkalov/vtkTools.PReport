@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/preport.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Cross-tab report</title>
+<!-- InstanceEndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable --> 
+<link href="PReport.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table cellspacing=0 cellpadding=0 bgcolor="#FBEAEA" align="center" width=100%>
+  <tr>
+    <td align="left"> &nbsp;<i>PReport</i><br>
+        &nbsp;<b><script language=Javascript>document.write(document.title);</script><br>
+      <br>
+    </b></td>
+  </tr>
+</table>
+<!-- <h3 align=center><img src=logo-gridreport.gif><br>Grid Report description</h3> -->
+
+
+<!-- InstanceBeginEditable name="EditRegion1" -->
+<table width="100%" border="0">
+  <tr> 
+    <td>
+	<h5>Directory: <font color="#0000FF">PReport\DEMO\DEMOS\05_SimpleCrossTab</font></h5>
+	<p>This report is intended for printing table with variable number of columns. During report building, all off-bounds columns will be printed on new page (like in MS Excel). </p>
+	<p>The Cross-tab report consists of two bands: TprHDetailBand (horizontal detail band) and TprVDetailBand (vertical detail band). Object, which derives contents of the table, should lay on intersection of these two bands. The value is showed in this object may be calculated on the base of key fields in datasets linked with horizontal and vertical bands. The example of data scheme for a Cross-tab report:</p>
+	<ul>
+	<li>The horizontal dataset HorDataset (to which a TprHDetailBand is linked) has a key field CDY.</li>
+	<li>The vertical dataset VertDataset (to which TprVDetailBand is linked) has a key field CDX.</li>
+	<li>The third Dataset which is contained fields CDX, CDY, S; where S, for example, the sum for a combination of fields CDX and CDY.</li>
+	</ul>
+	<p>Do the following for create a simple Cross-Tab report:</p>
+	<ul>
+	<li>Create the new project</li>
+	<li>Put the TTable component on the form and rename it to HorDataset, DatabaseName = "a path to the table1.dbf file", TableName = table1.dbf. This dataset forms rows of table.</li>
+	<li>Put the TTable component on the form and rename it to VertDataset, DatabaseName = "a path to the table2.dbf file", TableName = table2.dbf. This dataset forms columns of table.</li>
+	<li>Put the TprReport component on the form and open the report designer. Add the report title, put the TprMemoObj object with text "Simple CrossTab demo", for example.</li>
+	<li>Add Detail band (horizontal detail band), set dataset property to HorDataset and check CheckBox "Use vertical bands".</li>
+	<li>Add Vertical Detail band, set dataset property to VertDataset and check CheckBox "Use horizontal bands". Attention! If you click on the intersection of vertical and horizontal bands, the properties window of horizontal band will be shown, you must click within the vertical band area to select it.</li>
+	<li>Add Detail header band (horizontal title of detail band), call a properties of it and on page "Data" in a field "Detail band" indicate prHDetailBand1, and then check "Use vertical bands".</li>
+	<li>Add Vertical detail header band (vertical title of datas), call a properties of it and on page "Data" in a field "Detail band" indicate prVDetailBand1, and then check "Use horizontal bands".</li>
+	<li>Put object TprMemoObj with text [VertDataset. Name] on intersection of Detail header and Vertical detail bands, it forms the horizontal title of CrossTab table, in object indicate.</li>
+	<li>Put object TprMemoObj with text [HorDataset. Name] on intersection of Detail and Vertical detail header bands, it the forms the vertical title of CrossTab table.</li>
+	<li>Put object TprMemoObj on intersection of Detail and Vertical detail bands, it forms a contents of CrossTab table, write within object text: 
+<blockquote>HorDataset: [HorDataset. LineNo ()]<br>
+VertDataset: [VertDataset. LineNo ()]</blockquote>
+</li>
+	</ul>
+	<p>The creation of Cross-tab report for TprTxReport happens absolute similarly, except that instead of TprMemoObj is necessary to use TprTxMemoObj. In example "05_SimpleCrossTab" both variants are showed, for TprReport (Windows report) and for TprTxReport (text report).</p>
+	<br>
+	</td>
+  </tr>
+</table>
+<!-- InstanceEndEditable -->
+<hr width="100%" size="1">
+<br>&nbsp;&nbsp; &copy; 1999-2004 vtkTools Company. All rights reserved.<br><br><br>
+</body>
+<!-- InstanceEnd --></html>

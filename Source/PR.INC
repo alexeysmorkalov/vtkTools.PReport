@@ -1,0 +1,52 @@
+{$IFDEF VER170}
+  {$DEFINE PR_D9}
+  {$DEFINE PR_D6_D7}
+  {$DEFINE PR_D5_D6_D7}
+  {$DEFINE PR_D5_D6_D7_D9}
+{$ELSE}
+  {$IFDEF VER150}
+    {$DEFINE PR_D7}
+    {$DEFINE PR_D6_D7}
+    {$DEFINE PR_D5_D6_D7}
+  {$ELSE}
+    {$IFDEF VER140}
+      {$DEFINE PR_D6}
+      {$DEFINE PR_D6_D7}
+      {$DEFINE PR_D5_D6_D7}
+      {$IFDEF BCB}
+        {$DEFINE PR_CB}
+        {$DEFINE PR_CB6}
+        {$DEFINE PR_D6_D7}
+      {$ENDIF}
+    {$ELSE}
+      {$IFDEF VER130}
+        {$DEFINE PR_D5}
+        {$DEFINE PR_D5_D6_D7}
+        {$IFDEF BCB}
+          {$DEFINE PR_CB}
+          {$DEFINE PR_CB5}
+        {$ENDIF}
+      {$ELSE}
+        {$IFDEF VER120}
+          {$DEFINE PR_D4}
+        {$ENDIF}
+      {$ENDIF}
+    {$ENDIF}
+  {$ENDIF}
+{$ENDIF}
+
+{$IFDEF PR_D7}
+  {$WARN UNSAFE_TYPE OFF}
+  {$WARN UNSAFE_CAST OFF}
+  {$WARN UNSAFE_CODE OFF}
+{$ENDIF}
+
+{$IFDEF PR_D9}
+  {$WARN UNSAFE_TYPE OFF}
+  {$WARN UNSAFE_CAST OFF}
+  {$WARN UNSAFE_CODE OFF}
+{$ENDIF}
+
+//{$DEFINE PR_DEBUG}
+//{$DEFINE PRINT_RTF_AS_METAFILE}
+//{$DEFINE PR_OLD_ALIGN_MODE}

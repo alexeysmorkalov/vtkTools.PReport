@@ -1,0 +1,130 @@
+
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="Introduction">
+<PARAM name="Local" value="preport_Introduction.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="Installation">
+<PARAM name="Local" value="preport_Installation.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="Principle of work">
+<PARAM name="Local" value="preport_Principle_of_work.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="Report designer">
+<PARAM name="Local" value="preport_Report_designer.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="Algorithm of the report generating">
+<PARAM name="Local" value="preport_Algorithm_of_the_report_generating.htm">
+</OBJECT>
+
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="Built-in parser">
+</OBJECT>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="Functions of PReport parser">
+<PARAM name="Local" value="preport_Functions_of_PReport_parser.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="Functions of classes">
+<PARAM name="Local" value="preport_Functions_of_classes.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="Properties of classes">
+<PARAM name="Local" value="preport_Properties_of_classes.htm">
+</OBJECT>
+</UL>
+
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="Aggregate variables">
+<PARAM name="Local" value="preport_Aggregate_values.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="Groups">
+<PARAM name="Local" value="preport_Groups.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="Objects views">
+<PARAM name="Local" value="preport_Objects_views.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="The 'UserData' in the PReport">
+<PARAM name="Local" value="preport_The_UserData_in_the_PReport.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="Links between objects (dynamic change size / position of objects)">
+<PARAM name="Local" value="preport_Links_between_objects.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="Cross-tab reports">
+<PARAM name="Local" value="preport_Cross-tab_reports.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="Formatting of expressions">
+<PARAM name="Local" value="preport_Formatting_of_expressions.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="Tracking user actions in the preview window">
+<PARAM name="Local" value="preport_Tracking_user_actions_in_the_preview_window.htm">
+</OBJECT>
+
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="Text reports">
+<PARAM name="Local" value="preport_txro_intro.htm">
+</OBJECT>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="Recode tables">
+<PARAM name="Local" value="preport_txro_recodetable.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="ESC models">
+<PARAM name="Local" value="preport_txro_escmodel.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="TxRO.ini file">
+<PARAM name="Local" value="preport_txro_txro.htm">
+</OBJECT>
+</UL>
+
+
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="Examples">
+</OBJECT>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="Simple report">
+<PARAM name="Local" value="preport_e_simple_report.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="Multicolumn report">
+<PARAM name="Local" value="preport_e_Multicolumn_report.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="Using of groups">
+<PARAM name="Local" value="preport_e_Using_of_groups.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="Aggregated variables">
+<PARAM name="Local" value="preport_e_Aggregated_variables.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="Cross-tab report">
+<PARAM name="Local" value="preport_e_Cross-tab_report.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="Aggregated values in the Cross-tab reports">
+<PARAM name="Local" value="preport_e_Aggregated_values_in_the_Cross-tab_reports.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="Dynamic changing of the objects sizes">
+<PARAM name="Local" value="preport_e_Dynamic_changing_of_the_objects_sizes.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<PARAM name="Name" value="Using 'user data' in the report">
+<PARAM name="Local" value="preport_e_Example_of_using_user_data_in_the_report.htm">
+</OBJECT>
+</UL>

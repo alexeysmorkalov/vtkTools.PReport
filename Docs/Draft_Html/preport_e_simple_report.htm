@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/preport.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Simple report</title>
+<!-- InstanceEndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable --> 
+<link href="PReport.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table cellspacing=0 cellpadding=0 bgcolor="#FBEAEA" align="center" width=100%>
+  <tr>
+    <td align="left"> &nbsp;<i>PReport</i><br>
+        &nbsp;<b><script language=Javascript>document.write(document.title);</script><br>
+      <br>
+    </b></td>
+  </tr>
+</table>
+<!-- <h3 align=center><img src=logo-gridreport.gif><br>Grid Report description</h3> -->
+
+
+<!-- InstanceBeginEditable name="EditRegion1" -->
+<table width="100%" border="0">
+  <tr> 
+    <td> <h5>Directory: <font color="#0000FF">PReport\DEMO\Demos\01_SimpleDemo</font></h5>
+	<p>In this example you will known how to create a simple report. This report prints all records from the CUSTOMERS table from the DBDEMOS alias. Report contains the report title (TprHTitleBand) and the detail (TprHDetailBand).</p>
+	  <ul>
+        <li>Create new Delphi project. Put TTable component on the form, set it 
+          properties to: DatabaseName = DBDEMOS, TableName = CUSTOMER.DB, then 
+          put TprReport component. Double-clicks on the icon of TprReport component 
+          to edit the report template.</li>
+        <li>Add the report title band - click on a <img src="Images/bInsertBand.GIF"> 
+          button and select "Report title" from appear menu. </li>
+        <li>Put into the created band TprMemoObj object, click on a <img src="Images/bObjMemo.GIF"> button for this. Double-clicks on the memo object and in the appeared window on the page "Text" enter the report title, for example "List of customers". The object has all borders by default, it can be changed on page "Borders".</li>
+		<li>Add detail band (click on <img src="Images/bInsertBand.GIF"> button and select "Detail").</li>
+		<li>Open the properties window for the added detail band (double-clicks on detail band or press <img src="Images/bProperties.GIF"> button for this).</li>
+		<li>Go to "Data" page and select dataset named "Table1" from the list in the appeared window.</li>
+		<li>Do the following for print the dataset fields: 
+		<ul>
+		<li>Add the object TprMemoObj with text "[Table1.CustNo]" - this memo will print the value of CustNo field.</li>
+		<li>Add the object TprMemoObj with text "[Table1. Company] (Country - [Table1.Country])" - this memo will print the values of two fields: Company and Country.</li>
+		</ul>
+		</li>
+      </ul>
+	  <p>After all this operations you receive something like:</p>
+	  <img src="Images/ex1.GIF" width="670" height="391"><br>
+	  <p>That is all, press <img src="Images/bPreview.GIF"> button to see the generated report.</p>
+    </td>
+  </tr>
+</table>
+<!-- InstanceEndEditable -->
+<hr width="100%" size="1">
+<br>&nbsp;&nbsp; &copy; 1999-2004 vtkTools Company. All rights reserved.<br><br><br>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,878 @@
+/*
+English resource
+*/
+
+#include "..\..\Source\pr_strings.pas"
+
+
+STRINGTABLE
+{
+    sPRResBase+0, "Common"
+    sPRResBase+1, "Name:"
+    sPRResBase+2, "Columns:"
+    sPRResBase+3, "Size:"
+    sPRResBase+4, "Print on first page"
+    sPRResBase+sPrintOnLastPage, "Print on last page" /* New in version 1.8.3 */
+    SPRResBase+sPrintWithChildDetail, "Print with child detail:" /* New in version 1.8.3 */
+    sPRResBase+5, "Use vertical bands"
+    sPRResBase+6, "Use horizontal bands"
+    sPRResBase+7, "Data"
+    sPRResBase+8, "Dataset:"
+    sPRResBase+9, "Group:"
+    sPRResBase+10, "Detail band:"
+    sPRResBase+11, "Parent:"
+    sPRResBase+12, "Groups"
+    sPRResBase+13, "Move up"
+    sPRResBase+14, "Move down"
+    sPRResBase+15, "Child bands"
+    sPRResBase+16, "Delete"
+    sPRResBase+17, "Delete link"
+    sPRResBase+18, "Size"
+    sPRResBase+19, "Mode:"
+    sPRResBase+20, "Objects"
+    sPRResBase+21, "Insert band"
+    sPRResBase+22, "Text"
+    sPRResBase+23, "Font"
+    sPRResBase+24, "Font size"
+    sPRResBase+25, "Bold"
+    sPRResBase+26, "Italic"
+    sPRResBase+27, "Underline"
+    sPRResBase+28, "Font color"
+    sPRResBase+29, "Fill color"
+    sPRResBase+30, "Align text left"
+    sPRResBase+31, "Center text horizontally"
+    sPRResBase+32, "Align text right"
+    sPRResBase+33, "Align text top"
+    sPRResBase+34, "Center text vertically"
+    sPRResBase+35, "Align text bottom"
+    sPRResBase+36, "File"
+    sPRResBase+37, "Object"
+    sPRResBase+38, "Borders"
+    sPRResBase+39, "Top border"
+    sPRResBase+40, "Left border"
+    sPRResBase+41, "Bottom border"
+    sPRResBase+42, "Right border"
+    sPRResBase+43, "All borders"
+    sPRResBase+44, "No borders"
+    sPRResBase+45, "Align"
+    sPRResBase+46, "Size"
+    sPRResBase+47, "Nudge"
+    sPRResBase+48, "Create"
+    sPRResBase+49, "Create new report"
+    sPRResBase+50, "Open..."
+    sPRResBase+51, "Open report"
+    sPRResBase+52, "Save"
+    sPRResBase+53, "Save report"
+    sPRResBase+54, "Save as..."
+    sPRResBase+55, "Save as"
+    sPRResBase+56, "Quit"
+    sPRResBase+57, "Groups..."
+    sPRResBase+59, "Aggregate variables..." /* changed in version 1.8 */
+    sPRResBase+61, "Delete selected objects"
+    sPRResBase+62, "Show grid"
+    sPRResBase+63, "Use grid"
+    sPRResBase+64, "Preview"
+    sPRResBase+65, "Print..."
+    sPRResBase+66, "Page params..."
+    sPRResBase+67, "Report params..."
+    sPRResBase+68, "Copy"
+    sPRResBase+69, "Paste"
+    sPRResBase+70, "Cut"
+    sPRResBase+71, "Add page"
+    sPRResBase+72, "Delete page..."
+    sPRResBase+73, "Next page"
+    sPRResBase+74, "Previos page"
+    sPRResBase+75, "Grid size..."
+    sPRResBase+76, "Object links"
+    sPRResBase+78, "Send to back"
+    sPRResBase+79, "Bring to front"
+    sPRResBase+80, "Properties"
+    sPRResBase+81, "Change"
+    sPRResBase+82, "Align left edges"
+    sPRResBase+83, "Center horizontally in band"
+    sPRResBase+84, "Align horizontal centers"
+    sPRResBase+85, "Space equally, horizontally"
+    sPRResBase+86, "Align right edges"
+    sPRResBase+87, "Align top edges"
+    sPRResBase+88, "Center vertically in band"
+    sPRResBase+89, "Align vertical centers"
+    sPRResBase+90, "Space equally, vertically"
+    sPRResBase+91, "Align bottom edges"
+    sPRResBase+92, "Nudge left"
+    sPRResBase+93, "Nudge right"
+    sPRResBase+94, "Nudge top"
+    sPRResBase+95, "Nudge bottom"
+    sPRResBase+96, "Dec width by 1"
+    sPRResBase+97, "Inc width by 1"
+    sPRResBase+98, "Inc height by 1"
+    sPRResBase+99, "Dec height by 1"
+    sPRResBase+100, "Width: shrink to smallest"
+    sPRResBase+101, "Width: grow to largest"
+    sPRResBase+102, "Height: shrink to smallest"
+    sPRResBase+103, "Height: grow to largest"
+    sPRResBase+104, "Align to grid"
+    sPRResBase+105, "Align and resize to grid"
+    sPRResBase+106, "Expression builder"
+    sPRResBase+107, "Category:"
+    sPRResBase+108, "Expression:"
+    sPRResBase+109, "Mask:"
+    sPRResBase+110, "Paste selected object in expression"
+    sPRResBase+111, "Select display format"
+    sPRResBase+112, "Object name:"
+    sPRResBase+113, "OK"
+    sPRResBase+114, "Cancel"
+    sPRResBase+115, "Grid size"
+    sPRResBase+116, "Grid size (step):"
+    sPRResBase+117, "Group editor"
+    sPRResBase+118, "Group name:"
+    sPRResBase+119, "Valid:"
+    sPRResBase+121, "Select database field"
+    sPRResBase+122, "Groups"
+    sPRResBase+123, "Delete group..."
+    sPRResBase+124, "Add group..."
+    sPRResBase+125, "Edit group..."
+    sPRResBase+126, "Paint method:"
+    sPRResBase+127, "Background:"
+    sPRResBase+128, "Background"
+    sPRResBase+129, "Image source:"
+    sPRResBase+130, "Select image"
+    sPRResBase+131, "Show"
+    sPRResBase+132, "Show selected image"
+    sPRResBase+133, "Select file"
+    sPRResBase+134, "Select database field"
+    sPRResBase+135, "File:"
+    sPRResBase+136, "Database field:"
+    sPRResBase+137, "Image"
+    sPRResBase+138, "Left"
+    sPRResBase+139, "Mode:"
+    sPRResBase+140, "Top"
+    sPRResBase+141, "Width"
+    sPRResBase+142, "Height"
+    sPRResBase+143, "Text"
+    sPRResBase+144, "Expression builder"
+    sPRResBase+145, "View"
+    sPRResBase+146, "Fill color:"
+    sPRResBase+147, "Font:"
+    sPRResBase+148, "Font color:"
+    sPRResBase+149, "Rotate 90"
+    sPRResBase+150, "Align"
+    sPRResBase+151, " Vertical: "
+    sPRResBase+152, " Horizontal: "
+    sPRResBase+153, "Borders"
+    sPRResBase+154, "Left:"
+    sPRResBase+155, "Top:"
+    sPRResBase+156, "Right:"
+    sPRResBase+157, "Bottom:"
+    sPRResBase+158, "Additional"
+    sPRResBase+159, "Delete empty lines"
+    sPRResBase+160, "Delete empty lines at end"
+    sPRResBase+161, "Resize horizontally"
+    sPRResBase+162, "Resize vertically"
+    sPRResBase+163, "Word wrap"
+    sPRResBase+164, "Apply"
+    sPRResBase+165, "No objects selected or unaible to show properties of selected objects"
+    sPRResBase+166, "Page params"
+    sPRResBase+167, "Paper"
+    sPRResBase+168, " Sizes "
+    sPRResBase+169, "Minimal:" /* changed in 1.8 */
+    sPRResBase+170, "Width (mm):"
+    sPRResBase+171, "Height (mm):"
+    sPRResBase+173, " Orientation "
+    sPRResBase+174, "Portrait"
+    sPRResBase+175, "Landscape"
+    sPRResBase+176, " Fields (mm) "
+    sPRResBase+177, "Left:"
+    sPRResBase+178, "Right:"
+    sPRResBase+179, "Top:"
+    sPRResBase+180, "Bottom:"
+    sPRResBase+183, "Preview"
+    sPRResBase+185, "Whole page"
+    sPRResBase+186, "Show whole page"
+    sPRResBase+187, "Many pages"
+    sPRResBase+188, "Show many pages"
+    sPRResBase+189, "Page width"
+    sPRResBase+190, "Show page width"
+    sPRResBase+191, "Two page"
+    sPRResBase+192, "Show two page"
+    sPRResBase+193, "Find..."
+    sPRResBase+194, "Find next"
+    sPRResBase+195, "Find prior"
+    sPRResBase+196, "Remove find selection"
+    sPRResBase+197, "Close"
+    sPRResBase+198, "Save generated report..."
+    sPRResBase+199, "Load generated report..."
+    sPRResBase+200, "Report params"
+    sPRResBase+201, "Printer:"
+    sPRResBase+202, "Title:"
+    sPRResBase+203, "Select database field"
+    sPRResBase+204, "Data source:"
+    sPRResBase+205, "Fields list:"
+    sPRResBase+206, "Display format"
+    sPRResBase+207, "Use justify"
+    sPRResBase+208, " Justify: "
+    sPRResBase+209, "Width (in symbols):"
+    sPRResBase+210, "To left"
+    sPRResBase+211, "Center"
+    sPRResBase+212, "To right"
+    sPRResBase+213, "Use display format"
+    sPRResBase+214, " Display format: "
+    sPRResBase+215, "Value type:"
+    sPRResBase+216, "Format:"
+    sPRResBase+217, "Samples:"
+    sPRResBase+218, "Font params"
+    sPRResBase+219, "DOS memo editor"
+    sPRResBase+220, "Font style:"
+    sPRResBase+221, "Paste symbol"
+    sPRResBase+222, "Page type:"
+    sPRResBase+223, "Columns:"
+    sPRResBase+224, "Rows:"
+    sPRResBase+225, "Default font:"
+    sPRResBase+226, "Type:"
+    sPRResBase+227, "Style:"
+    sPRResBase+228, "Preview"
+    sPRResBase+229, "Row: "
+    sPRResBase+230, "Page: "
+    sPRResBase+231, "Font..."
+    sPRResBase+232, "Aggregate variable editor" /* changed in version 1.8 */ 
+    sPRResBase+233, "Var name:"
+    sPRResBase+234, "Method of calc var"
+    sPRResBase+235, "Calc method:"
+    sPRResBase+236, "Dataset:"
+    sPRResBase+237, "Horizontal dataset (for CrossTab):"
+    sPRResBase+238, "Formula:"
+    sPRResBase+240, "Scope of visiblity var"
+    sPRResBase+241, "Scope"
+    sPRResBase+242, "Group:"
+    sPRResBase+243, "Dataset:"
+    sPRResBase+244, "Aggregate variables" /* changed in version 1.8 */
+    sPRResBase+245, "Delete aggregate variable" /* changed in version 1.8 */
+    sPRResBase+246, "Add aggregate variable" /* changed in version 1.8 */
+    sPRResBase+247, "Edit aggregate variable" /* changed in version 1.8 */
+    sPRResBase+248, "&File"
+    sPRResBase+249, "&Edit"
+    sPRResBase+250, "&Object"
+    sPRResBase+251, "&Page"
+    sPRResBase+252, "&View"
+    sPRResBase+253, "Visible"
+    sPRResBase+254, "Toolbars"
+    sPRResBase+255, "File"
+    sPRResBase+256, "Object"
+    sPRResBase+257, "Insert object"
+    sPRResBase+258, "Text"
+    sPRResBase+259, "Borders"
+    sPRResBase+260, "Align"
+    sPRResBase+261, "Size"
+    sPRResBase+262, "Nudge"
+    sPRResBase+263, "Columns mode:"
+    sPRResBase+264, "Columns"
+    sPRResBase+265, "Other"
+    sPRResBase+266, "Reprint on each page"
+    sPRResBase+267, "Print with detail"
+    sPRResBase+268, "Start new page"
+    sPRResBase+269, "On page mast exists band:"
+    sPRResBase+277, "Sizes and position"
+    sPRResBase+270, "Units:"
+    sPRResBase+271, "Left:"
+    sPRResBase+272, "Top:"
+    sPRResBase+273, "Right:"
+    sPRResBase+274, "Bottom:"
+    sPRResBase+275, "Width:"
+    sPRResBase+276, "Height:"
+    sPRResBase+278, "Position, size"
+    sPRResBase+279, "Position and size selected objects"
+    sPRResBase+280, "Process records of dataset while condition is true::"
+    sPRResBase+281, "Print after last band on page"
+    sPRResBase+282, "Aggregate function:"
+    sPRResBase+283, "Export..."
+    sPRResBase+284, "Add format"
+    sPRResBase+285, "Delete format"
+    sPRResBase+286, "Export parameters"
+    sPRResBase+287, " Export: "
+    sPRResBase+288, "All"
+    sPRResBase+289, "Pages   from:"
+    sPRResBase+290, "to:"
+    sPRResBase+291, "Pages list:"
+    sPRResBase+292, "Open after export"
+    sPRResBase+293, "File name:"
+    sPRResBase+294, " Export precision: "
+    sPRResBase+295, "ESC model:"
+    sPRResBase+296, "Code page:"
+    sPRResBase+297, "Lines  from:"
+    sPRResBase+298, "Export to text file"
+    sPRResBase+299, "Columns count:"
+    sPRResBase+300, "Editor/Preview mode"
+    sPRResBase+301, "Use font, installed for page"
+    sPRResBase+302, "Available commands:"
+    sPRResBase+303, "Selected commands:"
+    sPRResBase+304, "Add"
+    sPRResBase+305, "Add all"
+    sPRResBase+306, "Remove"
+    sPRResBase+307, "Remove all"
+    sPRResBase+308, "Options" /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+309, " Grid options: " /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+310, "Grid && Stuck" /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+311, " Stuck options: " /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+312, "Active:" /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+313, "Stuck offset (in pixels):" /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+314, "Stuck to bands" /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+315, "Stuck to objects" /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+316, "Stuck over" /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+317, " Horizontal ruler: " /* version 1.8 - pr_DesignerPanelOptions.pas */ 
+    sPRResBase+318, " Vertical ruler: " /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+319, " Horizontal bands captions: " /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+320, " Vertical bands captions: " /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+321, "Popup forms" /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+322, " Opacity (percent 0-100): " /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+323, "Objects properties:" /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+324, "Object links:" /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+326, "Position and sizes:" /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+327, "Options..." /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+328, "Main" /* version 1.8 - pr_TxDesignerPanelOptions.pas */
+    sPRResBase+329, " Font: " /* version 1.8 */
+    sPRResBase+330, "Name:" /* version 1.8 */
+    sPRResBase+331, "Size:" /* version 1.8 */
+    sPRResBase+332, "Step (in symbols):" /* version 1.8 */
+    sPRResBase+333, "You can define as to act in that case if the printer on which will be printed the report not support used format of a paper: scale to nearest papersize, scale to defined papersize and so on." /* version 1.8 */
+    sPRResBase+334, "Scale mode:" /* version 1.8 */
+    sPRResBase+335, "Predetermined paper size:" /* version 1.8 */
+    sPRResBase+336, "Fit objects" /* version 1.8 */
+    sPRResBase+337, "Scale" /* version 1.8 */
+    sPRResBase+338, "Select possible operation:" /* version 1.8 */
+    sPRResBase+339, "Scale to paper size:" /* version 1.8 */
+    sPRResBase+440, "Skip page" /* version 1.8 */
+    sPRResBase+441, "Don't ask this question again" /* version 1.8 */
+    sPRResBase+442, "Not supported paper size" /* version 1.8 */
+    sPRResBase+443, " Colors: " /* version 1.8 */
+    sPRResBase+444, "Back color:" /* version 1.8 */
+    sPRResBase+445, "Text color:" /* version 1.8 */
+    sPRResBase+446, "Find back color:" /* version 1.8 */
+    sPRResBase+447, "Find text color:" /* version 1.8 */
+    sPRResBase+448, "Selection back color:" /* version 1.8 */
+    sPRResBase+449, "Selection text color:" /* version 1.8 */
+    sPRResBase+450, "Accumulate value" /* version 1.8 */
+    sPRResBase+451, "Conditions" /* version 1.8 */
+    sPRResBase+452, "Print band if condition is true:" /* version 1.8 */
+    sPRResBase+453, "Main" /* version 1.8 */
+    sPRResBase+454, "Design" /* version 1.8 */
+    sPRResBase+455, "Design page size:" /* version 1.8 */
+    sPRResBase+456, "The parameters indicated here are used only by designer and do not used during generation of the report" /* version 1.8 */
+
+    /* TprTemplateFindForm */
+    sPRResBase+457, "Text to find:" /* version 1.8 */
+    sPRResBase+458, "Replace with:" /* version 1.8 */
+    sPRResBase+459, "Whole words only" /* version 1.8 */
+    sPRResBase+460, "Case sensitive" /* version 1.8 */
+    sPRResBase+461, "Find" /* version 1.8 */
+    sPRResBase+462, "Replace all" /* version 1.8 */
+    sPRResBase+463, "Parameters" /* version 1.8 */
+    sPRResBase+464, "Found list" /* version 1.8 */
+    sPRResBase+465, "Find in template" /* version 1.8 */
+    sPRResBase+466, "Prompt on replace" /* version 1.8 */
+
+    sPRResBase+467, "Name" /* version 1.8 */
+    sPRResBase+468, "Type" /* version 1.8 */
+    sPRResBase+469, "Value" /* version 1.8 */
+
+    sPRResBase+470, "Variables..." /* version 1.8 */
+
+    sPRResBase+471, "Add variable" /* version 1.8 */
+    sPRResBase+472, "Edit variable" /* version 1.8 */
+    sPRResBase+473, "Delete variable" /* version 1.8 */
+
+    sPRResBase+sPreviewFirstPage, "First page" /* version 1.8.3.2 */
+    sPRResBase+sPreviewPriorPage, "Prior page" /* version 1.8.3.2 */
+    sPRResBase+sPreviewNextPage, "Next page" /* version 1.8.3.2 */
+    sPRResBase+sPreviewLastPage, "Last page" /* version 1.8.3.2 */
+
+    sPRResBase+sHLineObjDesc, "Horizontal line chars: {%s, %s, %s}, length %d" /* version 1.9 */
+    sPRResBase+sVLineObjDesc, "Vertical line chars: {%s, %s, %s}, length %d" /* version 1.9 */
+
+    sPRResBase+sMainCharTabSheet, "Main char" /* version 1.9 */
+    sPRResBase+sStartingCharTabSheet, "Starting char" /* version 1.9 */
+    sPRResBase+sEndingCharTabSheet, "Ending char" /* version 1.9 */
+    sPRResBase+sHEXCodeLabel, "HEX code of char:" /* version 1.9 */
+    sPRResBase+sAllCharsAsMainChar, "All" /* version 1.9 */
+
+    sPRResBase+sSaveCombination, "Save" /* version 1.9 */
+    sPRResBase+sLoadCombination, "Load" /* version 1.9 */
+    sPRResBase+sCurrentCombination, "Current combination:" /* version 1.9 */
+    sPRResBase+sCombinationsList, "Saved combinations:" /* version 1.9 */
+    sPRResBase+sLineTemplates, "Templates" /* version 1.9 */
+
+    sPRResBase+sShapeStyleMenuCaption, "Shape style" /* version 1.9 */
+    sPRResBase+sShapeCenterHorzLine, "Centered horizontal line" /* version 1.9 */
+    sPRResBase+sShapeBottomLine, "Bottom line" /* version 1.9 */
+    sPRResBase+sShapeTopLine, "Top line" /* version 1.9 */
+    sPRResBase+sShapeCenterVertLine, "Centered vertical line" /* version 1.9 */
+    sPRResBase+sShapeLeftLine, "Left line" /* version 1.9 */
+    sPRResBase+sShapeRightLine, "Right line" /* version 1.9 */
+    sPRResBase+sShapeBox, "Box" /* version 1.9 */
+    sPRResBase+sShapeEllipse, "Ellipse" /* version 1.9 */
+    sPRResBase+sShapeObjCaption, "Shape" /* version 1.9 */
+    sPRResBase+sShapeObjHint, "Shape" /* version 1.9 */
+
+    sPRResBase+sShapeObjEditorMain, "Main" /* version 1.9 */
+    sPRResBase+sShapeObjEditorStyle, "Style:" /* version 1.9 */
+    sPRResBase+sShapeObjEditorPen, " Pen: " /* version 1.9 */
+    sPRResBase+sShapeObjEditorBrush, " Brush: " /* version 1.9 */
+    sPRResBase+sShapeObjEditorColor, "Color:" /* version 1.9 */
+    sPRResBase+sShapeObjEditorPenWidth, "Width:" /* version 1.9 */
+    sPRResBase+sShapeObjSetSizeAsPenWidth, "Set size as pen width" /* version 1.9 */
+
+    sPRResBase+sLinkWidthDependFromMaxWidth, "Width as width of the widest object" /* version 1.9 */
+    sPRResBase+sLinkWidthDependFromMinWidth, "Width as width of the narrowest object" /* version 1.9 */
+    sPRResBase+sLinkWidthDependFromMaxHeight, "Height as height of the highest object" /* version 1.9 */
+    sPRResBase+sLinkWidthDependFromMinHeight, "Height as height of the lowest object" /* version 1.9 */
+
+    SPRResBase+sLinkWidthDependFromSumWidth, "Summary change of width of the linked objects" /* version 1.9.2 */
+    SPRResBase+sLinkWidthDependFromSumHeight, "Summary change of height of the linked objects" /* version 1.9.2 */
+
+    sPRResBase+sBandPrintOnLastPage, "Print on last page" /* version 1.9.2 */
+
+    sPRResBase+sBandResizeNoChange, "No change"
+    sPRResBase+sBandResizeMaxBottom, "Size depends from max bottom in objects"
+    sPRResBase+sBandResizeMaxBottomInLinksList, "Size depends from max bottom in objects list"
+    sPRResBase+sBandResizeMinBottomInLinksList, "Size depends from min bottom in objects list"
+
+    sPRResBase+sFormatExpressionCategoryReportVar, "Variable of report" 
+    sPRResBase+sFormatExpressionCategoryObjectPtoperty, "Object property or method"
+
+    sPRResBase+sImageEditorDrawModeCenter, "Center image"
+    sPRResBase+sImageEditorDrawModeStretch, "Stretch image"
+    sPRResBase+sImageEditorDrawModeStretchProp, "Stretch image proportional"
+    sPRResBase+sImageEditorDrawModeAsImageSize, "Sizes depends from image sizes"
+
+    sPRResBase+sLinkLeftDependFromMaxRight, "X coord depends from max right"
+    sPRResBase+sLinkLeftDependFromMinRight, "X coord depends from min right"
+    sPRResBase+sLinkTopDependFromMaxBottom, "Y coord depends from max bottom"
+    sPRResBase+sLinkTopDependFromMinBottom, "Y coord depends from min bottom"
+
+    sPRResBase+sLinkWidthDependFromMaxRight, "Width depends from max right"
+    sPRResBase+sLinkWidthDependFromMinRight, "Width depends from min right"
+    sPRResBase+sLinkHeightDependFromMaxBottom, "Height depends from max bottom"
+    sPRResBase+sLinkHeightDependFromMinBottom, "Height depends from min bottom"
+
+    sPRResBase+sDisplayFormatStandart, "Standart"
+    sPRResBase+sDisplayFormatNumber, "Number"
+    sPRResBase+sDisplayFormatDate, "Date"
+    sPRResBase+sDisplayFormatTime, "Time"
+    sPRResBase+sDisplayFormatDateTime, "Date and time"
+    sPRResBase+sDisplayFormatText, "Text"
+
+    sPRResBase+NullPointerString, "(none)"                        
+
+    sPRResBase+sPageNumber, "Page %d from %d"
+    sPRResBase+sBandAlreadyExistsInPageName, "Band [%s] already exists on page [%d]"
+    sPRResBase+sBandAlreadyExistsInPageType, "Band [%s] already exists on this page"
+    sPRResBase+sErrorBandLoadUnknownObject, "TprBand.Load : unknown type object [%s]"
+    sPRResBase+sUnknownBandType, "Band of type [%s] not found"
+    sPRResBase+sUnknownBandName, "Band with name [%s] not found"
+    sPRResBase+sBandHeightToBig, "Height of band [%s] is to big"
+    sPRResBase+sBandWidthToBig, "Width of band [%s] is to big"
+    sPRResBase+sDataSetNotFound, "DataSet [%s] not found"
+    sPRResBase+sNoReportName, "No name"
+    sPRResBase+sPreviewCaption, "Preview - [%s]"
+    sPRResBase+sTextNotFound, "Text ""%s"" not found"
+    sPRResBase+sAttention, "Attention"
+    sPRResBase+sEndOfFind, "You go to end of report, continue find from beginning?"
+    sPRResBase+sStartOfFind, "You go to start of report, continue find from ending?"
+    sPRResBase+sErrorClipboardPaste, "To paste objects from clipbard, select any band or object" /* changed in version 1.8 */
+    sPRResBase+sUnknownTypeObject, "Unknown type of object [%s]"
+    sPRResBase+sDeletePageQuestion, "Delete current page?"
+    sPRResBase+sLinkNotSelected, "No link selected"
+    sPRResBase+sVarAlreadyExists, "Var with name [%s] already exists in report [%s]"
+    sPRResBase+sGroupAlreadyExists, "Group with name [%s] already exists in report [%s]"
+
+    sPRResBase+sReportVarNotCalced, "Unaible to calculate value of aggregate variable [%s]" /* changed in version 1.8 */
+    sPRResBase+sVarNotExists, "Aggregate variable [%s] not found" /* changed in version 1.8 */
+    sPRResBase+sGroupNotExists, "Group [%s] not found"                          
+
+    sPRResBase+sPageMarginsWarning, "Entered page margins less then minimal margins for selected printer"
+
+    sPRResBase+sNoObjSelected, "Object not selected"
+
+    sPRResBase+sDefaultProgressFormCaption, "Please wait..."
+    sPRResBase+sActionCanceled, "Action terminated"
+
+    sPRResBase+sFirstPassCaption, "First pass, generate table (Lines: %d, Columns: %d, Cells: %d)"
+    sPRResBase+sSecondPassCaption, "Second pass, generate pages (Generated pages: %d)"
+    sPRResBase+sThirdPassCaption, "Third pass, calculate values (Page %d of %d)"
+
+    sPRResBase+sReportEmptyInPreview, "Report empty"
+
+    sPRResBase+sNoVarVersion, "Aggregate variable [%s] has no version with index [%d]" /* changed in version 1.8 */
+
+    sPRResBase+sDeleteGroupQuestion, "Delete group?"
+    sPRResBase+sDeleteVarQuestion, "Delete var?"
+
+    sPRResBase+sValuesEditorCaption, "Aggregate variables for report [%s]" /* changed in version 1.8 */ 
+    sPRResBase+sGroupsEditorCaption, "Groups for report [%s]"
+
+    sPRResBase+sInvalidVarFormula, "Formula not defined"
+    sPRResBase+sCalcOnDataSetNotDefined, "Dataset not defined"
+
+    sPRResBase+sNoGroupName, "Group name not defined"
+    sPRResBase+sNoGroupValid, "Group valid not defined"
+    sPRResBase+sNoGroupDetailBand, "Group detail band not defined"
+
+    sPRResBase+sCalcOnCrossDataSetNotDefined, "Horizontal dataset not defined (used for CrossTab)"            
+    sPRResBase+sCalcOnError, "Invalid method of calculate var"
+
+    sPRResBase+sResetOnGroupNotDefined, "Not defined group that describe scope visiblity of var"                  
+    sPRResBase+sResetOnDataSetNotDefined, "Not defined dataset that describe scope visiblity of var"                
+
+    sPRResBase+saRecNotInitializated, "TprObj.FirstPass : aRec not initializated"                    
+
+    sPRResBase+sPrintReportCaption, "Print report"
+    sPRResBase+sCreateReportCaption, "Create report"
+    sPRResBase+sPrintReport, "Page %d (copy %d), total pages %d, copies %d"
+
+    sPRResBase+sSetupPrintError1, "Enter list of pages that need to print"
+    sPRResBase+sSetupPrintError2, "List of pages that you entered is invalid, valid range is from %d to %d"
+    sPRResBase+sSetupPrintError3, "Lines range is invalid"
+    sPRResBase+sSetupPrintError4, "Lines range is invalid, valid range is from %d to %d"
+    sPRResBase+sSetupPrintError5, "ESC model of printer is invalid"
+    sPRResBase+sSetupPrintError6, "Invalid defined rows on page"                        
+
+    sPRResBase+prSaveReportTemplateFilter, "Report templates (*.prt)|*.prt|All files (*.*)|*.*"               
+
+    sPRResBase+sPropsFormManyObjectsSelectedCaption, "%d objects selected"
+    sPRResBase+sFormulaNotDefined, "Formula not defined"
+
+    sPRResBase+sErrorPropName, "Unaible to get information about prop [%s]"                           
+
+    sPRResBase+sTotalPages, "Total pages: %d"
+
+    sPRResBase+sErrorTxPreviewPageRange, "In document exists %d pages"
+    sPRResBase+sErrorTxOpenPrinter, "Error then open printer (OpenPrinter): %s" /* changed in 1.8.3 */
+    sPRResBase+sErrorTxStartDoc, "Error create document (StartDocPrinter): %s" /* changed in 1.8.3 */
+    sPRResBase+sErrorTxStartPAge, "Error create page of document (StartPagePrinter): %s"
+    sPRResBase+sErrorTxESCModelNotFound, "ESC model [%s] not found"
+
+    sPRResBase+sErrorNoModalForMDIChild, "MDI form can not bi modal"
+
+    sPRResBase+sFind, "Find:"
+
+    sPRResBase+sErrorSelectPrinter, "Error while select printer#13%s#13#13%s#13#13as default printer"
+    sPRResBase+sErrorSelectPrinter2, "Error while select printer#13%s#13#13%s"
+
+    sPRResBase+sDefaultPrinterName, "Virtual printer"
+    sPRResBase+sInvalidPrinterName, "Invalid printer name"
+    sPRResBase+sPrinterErrorNotInitInfo, "Error while trying to get information about printer (InitInfo)"
+    sPRResBase+sPrinterErrorUnaibleInitializeInfo, "Error while trying to get information about printer"
+    sPRResBase+sPrinterErrorInvalidPaperSize, "Selected page size not supported by printer"
+    sPRResBase+sPrinterErrorUnaibleInitializeStructures, "Unaible to get information about printer structures"
+    sPRResBase+sPrinterErrorUnaibleCreateCanvas, "Unaible create canvas for printer"
+    sPRResBase+sPrinterErrorUnknown, "Unaible to print on printer:#13%s#13Unaible to setup defined params, trying reinstall printer"
+
+    sPRResBase+sStandartDisplayFormatSimpleCurrency, "Simple currency format"
+    sPRResBase+sStandartDisplayFormatShortCurrency, "Short currency format"
+    sPRResBase+sStandartDisplayFormatCurrency, "Currency format"
+    sPRResBase+sStandartDisplayFormatPercent, "Percent format"
+    sPRResBase+sStandartDisplayFormatShortDate, "Short date format"
+    sPRResBase+sStandartDisplayFormatCurrencyWithDelim, "Currency with delimiters"
+    sPRResBase+sStandartDisplayFormatBankCurrency, "Bank currency"
+
+    sPRResBase+sFormatExpressionFields, "Fields:"
+    sPRResBase+sFormatExpressionFunctions, "Functions:"
+    sPRResBase+sFormatExpressionProperties, "Properties:"
+
+    sPRResBase+sGroupsEditorCaptionsName, "Name"
+    sPRResBase+sGroupsEditorCaptionsValid, "Valid"
+    sPRResBase+sGroupsEditorCaptionsDetailBand, "Detail band"
+
+    sPRResBase+sValuesEditorCaptionsVarName, "Var name"
+    sPRResBase+sValuesEditorCaptionsFormula, "Formula"
+    sPRResBase+sValuesEditorCaptionsCalcMethod, "Calc method"
+    sPRResBase+sValuesEditorCaptionsCalcDataset, "Calc dataset"
+    sPRResBase+sValuesEditorCaptionsCrossTabDataset, "CrossTab dataset"
+    sPRResBase+sValuesEditorCaptionsSphere, "Scope of visibility"
+    sPRResBase+sValuesEditorCaptionsSphereGroup, "Scope group"
+    sPRResBase+sValuesEditorCaptionsDataSetSphere, "Scope dataset"
+
+    sPRResBase+sPropertiesEditTemplate, "Edit template"
+    sPRResBase+sPropertiesEditVars, "Edit aggregate variables"
+    sPRResBase+sPropertiesEditGroups, "Edit groups"
+
+    sPRResBase+sVisible, "Visible"
+    sPRResBase+sGetComponentsReportDesc, "This report"
+
+    sPRResBase+sErrorInvalidDatasetForprDataset, "For class TprDatasetLink invalid value for property Dataset"
+    sPRResBase+sErrorCalcExpressionInOnePass, "Unaible to calculate expression in one pass"
+    sPRResBase+sErrorInvalidStringsSource, "Invalid strings source (support: TListBox, TComboBox, TMemo)"
+    sPRResBase+sErrorStringsSourceNotDefined, "Strings source not defined"
+
+    sPRResBase+sVersionsEditorNewVersion, "Add version"
+    sPRResBase+sVersionsEditorDelVersion, "Delete version"
+    sPRResBase+sVersionsEditorMoveUp, "Move current version up"
+    sPRResBase+sVersionsEditorMoveDown, "Move current version down"
+    sPRResBase+sVersionsEditorSetAsDefault, "Set current version as default"
+    sPRResBase+sVersionsEditorEditFormula, "Edit formula for current version"
+    sPRResBase+sErrorDesignerClassNotFound, "Designer form class not found"
+    sPRResBase+sErrorPreviewClassNotFound, "Preview form class not found"
+
+    sPRResBase+sParserErrorUnknownFieldType, "VarFromField : unknown field type"
+    sPRResBase+sParserErrorErrorValueType, "Invalid value type"
+    sPRResBase+sParserErrorCalcExpression, "Error while calculate expression:#13%s"
+    sPRResBase+sParserErrorInvalidFormatString, "Invalid format string"
+    sPRResBase+sParserErrorInFormatString, "Error in format string in position %d:#13%s"
+    sPRResBase+sParserErrorParamsCountForLocate, "Invalid parameters count for function Locate"
+    sPRResBase+sParserErrorGetReferenceToClass, "Unaible to get reference on class [%s]"
+
+
+    sPRResBase+sParserErrorUnknownVariable, "Unknown variable [%s]"
+    sPRResBase+sParserErrorGetVarValue, "Error while reading value:#13%s"
+    sPRResBase+sParserErrorString, "Invalid string"
+    sPRResBase+sParserErrorUnknownOperandType, "Operand [%s] has unknown type"
+    sPRResBase+sParserErrorUnknownOperator, "Unknown operator [%s]"
+    sPRResBase+sParserErrorUnknownFunction, "Unknown function [%s]"
+    sPRResBase+sParserErrorCommonError, "Invalid expression"
+    sPRResBase+sParserErrorInvalidBrackets, "Invalid Brackets"
+    sPRResBase+sParserErrorCompile, "Error while compile expression:#13%s#13#13%s"
+    sPRResBase+sParserErrorInvalidFuncParametersCount, "Invalid parameters count for [%s], passed %d, must be from %d to %d"
+    sPRResBase+sParserErrorStack, "Stack owerflow"
+    sPRResBase+sParserErrorIncompatibleTypes, "Incompatible operands types"
+    sPRResBase+sParserErrorInvalidTypes, "Invalid operands types"
+    sPRResBase+sParserErrorUnknownProp, "Unknown property [%s] class [%s]"
+    sPRResBase+sParserErrorObjectNotFound, "Object not found [%s]"
+    sPRResBase+sParserErrorUnknownObjectFunction, "Function of object not found [%s]"
+    sPRResBase+sParserErrorUnknownReportVariableVersion, "Not found version of aggregate variable [%s]" /* changed in version 1.8 */
+    sPRResBase+sParserErrorParameterWithoutFunction, "Parameter without function" /* version 1.8 */
+    sPRResBase+sParserErrorUnknownOperand, "Unknown operand [%s]" /* version 1.8 */
+    sPRResBase+sParserErrorInvalidSymbol, "Illegal symbol [%s]" /* version 1.8 */
+
+    sPRResBase+sOnePassCalcError, "Expression cannot be calced in one pass:#13[%s]"
+    sPRResBase+sImageObjDescFileMask, "File: [%s]"
+    sPRResBase+sImageObjDescDBFieldMask, "Field: [%s]"
+    sPRResBase+sOtherPageSize, "Other"
+
+    sPRResBase+sValuesEditorCaptionsAggFunction, "Agg. function"
+    sPRResBase+sReportEmptyInExport, "Report empty"
+    sPRResBase+sExportErrorInitOLEServer, "Error initializating OLE Server [%s]:#13%s"
+
+    sPRResBase+sPreviewFileMask, "Reports (*.pr)|*.pr|All files (*.*)|*.*"
+
+    sPRResBase+sExportReportCaption, "Export report to file [%s]"
+    sPRResBase+sExportReportProgress, "Page %d of %d"
+
+    sPRResBase+sExportPrecisionLow, "Low"
+    sPRResBase+sExportPrecisionNormal, "Normal"
+    sPRResBase+sExportPrecisionHigh, "High"
+    sPRResBase+sExportFileNotDefined, "Select file for export"
+    sPRResBase+sExportPagesRangeNotValid, "Pages range is not valid"
+    sPRResBase+sExportPagesListNotValid, "Pages list is not valid"
+
+    sPRResBase+sExportNotUseESCModels, "Not use ESC commands"
+    sPRResBase+sExportLinesRangeNotValid, "Lines range is not valid"
+    sPRResBase+sExportTXTErrorCreateFile, "Error create file for export:#13%s"
+    sPRResBase+sExportReportProgressLines, "Line %d of %d"
+    sPRResBase+sExportTXTErrorWriteFile, "Error write to file:#13%s"
+
+    sPRResBase+sTxPreviewPages, "Page: %d of %d"
+
+    sPRResBase+sError, "Error"
+
+    sPRResBase+sReportObjectName, "Report"
+
+    sPRResBase+sErrorGetPreviewUserDataClass, "Error get class by name [%s], possibly not registered"
+    sPRResBase+sNoObjectsSelected, "No objects selected"
+    sPRResBase+sSelectedMoreThenOneObject, "Selected %d objects"
+    sPRResBase+sColorBtnOtherColorCaption, "&Other"
+    sPRResBase+sColorBtnNoColorCaption, "Transp."
+    sPRResBase+sPreviewPropsFormOneObjectSelectedCaption, "Properties selected object"
+    sPRResBase+sPreviewSelectPageForPaste, "Please select page for paste"
+    sPRResBase+sPreviewDeletePageQuestion, "Delete selected page?"
+    sPRResBase+sPreviewModeEdit, "Editor mode"
+    sPRResBase+sPreviewModePreview, "Preview mode"
+    sPRResBase+sCurrencyFormat, "#,0.00;-#,0.00"
+    sPRResBase+sShortCurrencyFormat, "0.00;-0.00"
+    sPRResBase+sSimpleCurrencyFormat, "0.00;-0.00"
+    sPRResBase+sPercentFormat, "0.00%;-0.00%"
+    sPRResBase+sSpacedCurrencyFormat, "#,0.00;-#,0.00"
+    sPRResBase+sBankCurrencyFormat, "\\ds-0.00;-0.00"
+    sPRResBase+sWidthAsVerticalBand, "Set width as width vertical band"
+    sPRResBase+sHeightAsHorizontalBand, "Set height as height horizontal band"
+    sPRResBase+sObjOptions, "Options"
+    sPRResBase+sExportFormExportFormat, "Export format:"
+    sPRResBase+sXLSExportFilterDesc, "Excel workbook"
+    sPRResBase+sHTMExportFilterDesc, "Web page"
+    sPRResBase+sTXTExportFilterDesc, "Text file"
+    sPRResBase+sExportFilterNotDefined, "Export format not defined"
+
+    sPRResBase+sbthTitle, "Report title"
+    sPRResBase+sbthSummary, "Report summary"
+    sPRResBase+sbthPageHeader, "Page header"
+    sPRResBase+sbthPageFooter, "Page footer"
+    sPRResBase+sbthDetail, "Detail"
+    sPRResBase+sbthDetailHeader, "Detail header"
+    sPRResBase+sbthDetailFooter, "Detail footer"
+    sPRResBase+sbthGroupHeader, "Group header"
+    sPRResBase+sbthGroupFooter, "Group footer"
+    sPRResBase+sbtvTitle, "Vertical report title"
+    sPRResBase+sbtvSummary, "Vertical report summary"
+    sPRResBase+sbtvPageHeader, "Vertical page header"
+    sPRResBase+sbtvPageFooter, "Vertical page footer"
+    sPRResBase+sbtvDetail, "Vertical detail"
+    sPRResBase+sbtvDetailHeader, "Vertical detail header"
+    sPRResBase+sbtvDetailFooter, "Vertical detail footer"
+    sPRResBase+sbtvGroupHeader, "Vertical group header"
+    sPRResBase+sbtvGroupFooter, "Vertical group footer"
+
+    sPRResBase+sMemoObjCaption, "Text"
+    sPRResBase+sMemoObjHint, "Rectangle with text"
+    sPRResBase+sImageObjCaption, "Image"
+    sPRResBase+sImageObjHint, "Image"
+
+    sPRResBase+sTxMemoObjCaption, "Text"
+    sPRResBase+sTxMemoObjHint, "Text"
+
+    sPRResBase+sRichObjCaption, "Rich text"
+    sPRResBase+sRichObjHint, "Rich text"
+    
+    sPRResBase+sTxCommandObjCaption, "ESC command" 
+    sPRResBase+sTxCommandObjHint, "ESC command"
+
+    sPRResBase + sTxHLineObjCaption, "Horizontal line" /* version 1.9 */
+    sPRResBase + sTxHLineObjHint, "Horizontal line" /* version 1.9 */
+    sPRResBase + sTxVLineObjCaption, "Vertical line" /* version 1.9 */
+    sPRResBase + sTxVLineObjHint, "Vertical line" /* version 1.9 */
+
+    sPRResBase+sUnitDescPixel, "Pixels"
+    sPRResBase+sUnitDescMM, "Millimeters"
+    sPRResBase+sUnitDescSM, "Centimetres"
+    sPRResBase+sUnitDescInch, "Inches"
+    sPRResBase+sUnitDescM, "Meters"
+
+    sPRResBase+sMonthsNamesOffset, "January"
+    sPRResBase+sMonthsNamesOffset-1, "February"
+    sPRResBase+sMonthsNamesOffset-2, "March"
+    sPRResBase+sMonthsNamesOffset-3, "April"
+    sPRResBase+sMonthsNamesOffset-4, "May"
+    sPRResBase+sMonthsNamesOffset-5, "June"
+    sPRResBase+sMonthsNamesOffset-6, "July"
+    sPRResBase+sMonthsNamesOffset-7, "August"
+    sPRResBase+sMonthsNamesOffset-8, "September"
+    sPRResBase+sMonthsNamesOffset-9, "Oktober"
+    sPRResBase+sMonthsNamesOffset-10, "November"
+    sPRResBase+sMonthsNamesOffset-11, "December"
+    sPRResBase+sMonthsNamesOffset-12, "January"
+    sPRResBase+sMonthsNamesOffset-13, "February"
+    sPRResBase+sMonthsNamesOffset-14, "March"
+    sPRResBase+sMonthsNamesOffset-15, "April"
+    sPRResBase+sMonthsNamesOffset-16, "May"
+    sPRResBase+sMonthsNamesOffset-17, "June"
+    sPRResBase+sMonthsNamesOffset-18, "July"
+    sPRResBase+sMonthsNamesOffset-19, "August"
+    sPRResBase+sMonthsNamesOffset-20, "September"
+    sPRResBase+sMonthsNamesOffset-21, "Oktober"
+    sPRResBase+sMonthsNamesOffset-22, "November"
+    sPRResBase+sMonthsNamesOffset-23, "December"
+
+    sPRResBase+sTemplaceSaveQuestion, "Report template changed, save?"
+    sPRResBase+sDesignerCaption, "Designer - [%s]"
+
+    sPRResBase+sTxCodePageTitleDOS866, "DOS"
+    sPRResBase+sTxCodePageTitleWIN1251, "Windows"
+
+    sPRResBase+sBandsCaptionsDefineLink, "Define link" /* version 1.8 */ 
+    sPRResBase+sLinksControlDefineLeftLink, "Define left link" /* version 1.8 */
+    sPRResBase+sLinksControlDefineTopLink, "Define top link" /* version 1.8 */
+    sPRResBase+sLinksControlDefineWidthLink, "Define link on width" /* version 1.8 */
+    sPRResBase+sLinksControlDefineHeightLink, "Define link on height" /* version 1.8 */
+
+    sPRResBase+sHorizontalAlignment, "Horizontal alignment" /* version 1.8 */
+    sPRResBase+sVerticalAlignment, "Vertical alignment" /* version 1.8 */
+    sPRResBase+sPrinterUnavailable, "Printer [%s] is unavailable, virtual printer selected" /* version 1.8 */
+    sPRResBase+sPrinterErrorInvalidPaperSizeIndex, "Invalid paper size index [%d]" /* version 1.8 */
+    sPRResBase+sPrinterErrorUnsupportedPaperSize, "Printer [%s] not support paper size [%d]" /* version 1.8 */
+    sPRResBase+sPrinterErrorOpenPrinter, "Error while open printer [%s]#13[%s]" /* version 1.8 */
+
+    sPRResBase+sStuckModeCaptionsOffsetDisabled, "Disabled" /* version 1.8 */
+    sPRResBase+sStuckModeCaptionsOffsetAlways, "Always" /* version 1.8 */
+    sPRResBase+sStuckModeCaptionsOffsetCtrlButton, "When the Ctrl key is pressed" /* version 1.8 */
+
+    sPRResBase+sPageScaleModeCaptionsToNearest, "To nearest paper size" /* version 1.8 */
+    sPRResBase+sPageScaleModeCaptionsToDefined, "To predetermined paper size" /* version 1.8 */
+    sPRResBase+sPageScaleModeCaptionsUserSelected, "User selected" /* version 1.8 */
+    sPRResBase+sNotSupportedPaperSize, "Printer:   %s#13not support paper size %s, selected for page ¹ %d:" /* version 1.8 */
+    sPRResBase+sPopupMainMenu, "Main menu" /* version 1.8 */
+    sPRResBase+sCancelInsertObject, "Cancel insert object" /* version 1.8 */
+
+    sPRResBase+sTemplateFindFormCaptionsObject, "Object" /* version 1.8 */
+    sPRResBase+sTemplateFindFormCaptionsProperty, "Property" /* version 1.8 */
+    sPRResBase+sTemplateFindFormCaptionsText, "Text" /* version 1.8 */
+
+    sPRResBase+sNotFoundInTemplate, "String not found in template" /* version 1.8 */
+    sPRResBase+sFindInTemplate, "Find in template..." /* version 1.8 */
+
+    sPRResBase+sTemplateFindReportDesc, "Report" /* version 1.8 */
+    sPRResBase+sTemplateFindGroupDesc, "Group: %s" /* version 1.8 */
+    sPRResBase+sTemplateFindValueDesc, "Aggregate variable: %s" /* version 1.8 */
+    sPRResBase+sTemplateFindPageDesc, "Page: ¹ %d (%s)" /* version 1.8 */
+    sPRResBase+sTemplateFindBandDesc, "Band: %s" /* version 1.8 */
+    sPRResBase+sTemplateFindObjectDesc, "%s" /* version 1.8 */
+    sPRResBase+sTemplateFindObjectVersionDesc, "%d: %s" /* version 1.8 */
+
+    sPRResBase+sTemplateFindReplaceQuestion, "Replace text [%s]#13with text [%s]?#13#13Object: [%s]#13Property: [%s]" /* version 1.8 */
+    sPRResBase+sTemplateFindVariableDesc, "Variable: %s" /* version 1.8 */
+    sPRResBase+sSimpleVarNotExists, "Variable [%s] not exists" /* version 1.8 */
+
+    /* TxMemoObj PopupMenu */
+    sPRResBase+sTxMemoObjFontStyle, "Font" /* version 1.8 */
+    sPRResBase+sTxMemoObjFontOptions, "Font styles" /* version 1.8 */
+
+    sPRResBase+sVariablesEditorFormValueFormula, "Formula" /* version 1.8 */
+    sPRResBase+sVariablesEditorFormValueString, "String" /* version 1.8 */
+    sPRResBase+sVariablesEditorFormValueInteger, "Integer" /* version 1.8 */
+    sPRResBase+sVariablesEditorFormValueDouble, "Double" /* version 1.8 */
+    sPRResBase+sVariablesEditorFormValueDateTime, "Date" /* version 1.8 */
+    sPRResBase+sVariablesEditorFormValueNull, "Null" /* version 1.8 */
+    sPRResBase+sVariablesEditorFormCaption, "Variables for report [%s]" /* version 1.8 */
+    sPRResBase+sVariablesEditorFormDuplicateVariableName, "Variable with this name already exists" /* version 1.8 */
+
+    sPRResBase+sBandCanSplit, "Can split" // version 1.9.5
+    sPRResBase+sObjCanSplit, "Can split" // version 1.9.5
+
+    SPRResBase+sSubReport, "Sub report:" // version 1.9.7
+    sPRResBase+sMinDataRecords, "Band will be visible only if the group data has the specified number of records at least:" // version 1.9.7
+    SPRResBase+sTextAlignJustify, "Justify text" // version 1.9.7
+
+    SPRResBase+sJustifyLastLine, "Justify last line" // version 1.9.7
+    SPRResBase+sEolIsEndOfParagraph, "Eol is end of paragraph" // version 1.9.7
+
+    sPRResBase+sBarCodeObjCaption, "Barcode" /* version 1.9.7 */
+    sPRResBase+sBarCodeObjHint, "Barcode" /* version 1.9.7 */
+
+    sPRResBase+sBarCodeEditorText, "Text:" // version 1.9.7
+    sPRResBase+sBarCodeEditorBarcodeType, "Barcode type:" // version 1.9.7
+    sPRResBase+sBarCodeEditorShowTextOverLines, "Show text over lines" // version 1.9.7
+    sPRResBase+sBarCodeEditorCaptionType, "Caption type:" // version 1.9.7
+    sPRResBase+sBarCodeEditorPosition, "Position:" // version 1.9.7
+    sPRResBase+sBarCodeEditorTextFont, "Font:" // version 1.9.7
+    sPRResBase+sBarCodeEditorBackground, "Background:" // version 1.9.7
+    sPRResBase+sBarCodeEditorForeground, "Foreground:" // version 1.9.7
+    sPRResBase+sBarCodeEditorRotation, " Rotation: " // version 1.9.7
+
+    sPRResBase+sBarCodeEditorShowTextTypeNone, "None" // version 1.9.7
+    sPRResBase+sBarCodeEditorShowTextTypeCode, "Code" // version 1.9.7
+    sPRResBase+sBarCodeEditorShowTextTypeType, "Type of barcode" // version 1.9.7
+    sPRResBase+sBarCodeEditorShowTextTypeBoth, "Code and type" // version 1.9.7
+
+    sPRResBase+sBarCodeEditorTextPositionTopLeft, "Top and left" // version 1.9.7
+    sPRResBase+sBarCodeEditorTextPositionTopRight, "Top and right" // version 1.9.7
+    sPRResBase+sBarCodeEditorTextPositionTopCenter, "Top and center" // version 1.9.7
+    sPRResBase+sBarCodeEditorTextPositionBottomLeft, "Bottom and left" // version 1.9.7
+    sPRResBase+sBarCodeEditorTextPositionBottomRight, "Bottom and right" // version 1.9.7
+    sPRResBase+sBarCodeEditorTextPositionBottomCenter, "Bottom and center" // version 1.9.7
+
+    sPRResBase+sBarCodeEditorSheetMain, "Main" // version 1.9.7
+    sPRResBase+sBarCodeEditorSheetText, "Text" // version 1.9.7
+    sPRResBase+sBarCodeEditorSheetView, "View" // version 1.9.7
+    sPRResBase+sBarCodeRotationNone, "None" // version 1.9.7
+    sPRResBase+sBarCodeAutoSize, "Autosize" // version 1.9.8
+
+    sPRResBase+sTxMemoCustomBorderScheme, "Custom border scheme:" // version 1.9.8
+    sPRResBase+sTxMemoPredefinedBorderSchemas, "Predefined border schemas:" // version 1.9.8
+    sPRResBase+sTxMemoNoBorderSchemas, "The current recode table is not specified or it has no border schemas." // version 1.9.8
+    sPRResBase+sRecodeTable, "Recode table:" // version 1.9.8
+}

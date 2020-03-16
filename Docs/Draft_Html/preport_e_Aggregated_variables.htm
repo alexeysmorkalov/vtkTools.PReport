@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/preport.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Aggregated variables</title>
+<!-- InstanceEndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable --> 
+<link href="PReport.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table cellspacing=0 cellpadding=0 bgcolor="#FBEAEA" align="center" width=100%>
+  <tr>
+    <td align="left"> &nbsp;<i>PReport</i><br>
+        &nbsp;<b><script language=Javascript>document.write(document.title);</script><br>
+      <br>
+    </b></td>
+  </tr>
+</table>
+<!-- <h3 align=center><img src=logo-gridreport.gif><br>Grid Report description</h3> -->
+
+
+<!-- InstanceBeginEditable name="EditRegion1" -->
+<table width="100%" border="0">
+  <tr> 
+    <td>
+	<h5>Directory: <font color="#0000FF">PReport\DEMO\Demos\04_VarsDemo</font></h5>
+	<p>The aggregate variables are used for counting of aggregated values in PReport, for example: 
+	the group summary, report summary and so on. The aggregate value can be used not only in footer bands but also in headings, for example in TprHGroupHeaderBand, TprReportTitle and so on.</p>
+	<p>Create new application and copy in it components from the previous example.</p>
+	Use item "Aggregate variables…" of the menu "Edit" to call the aggregate variables editor. Use button <img src="Images/bNewItem.GIF"> for adding an aggregate variable, you must specify variable properties in the appeared window.</p>
+
+	<br>
+      <table width="100%" border="1" cellspacing="0" cellpadding="0">
+        <tr> 
+          <th width="15%">Page</th>
+          <th width="28%">Field</th>
+          <th width="57%">Description</th>
+        </tr>
+        <tr> 
+          <td rowspan="5">Method of calc var</td>
+          <td>Aggregate function</td>
+          <td>Specifies an aggregate function that is used for calculate an aggregate 
+            value: in our case it is prafCount &#8211; count of records.</td>
+        </tr>
+        <tr> 
+          <td>Formula</td>
+          <td>Specifies the expression, on which the aggregated function is counted, 
+            for example, a DataSet field can be indicated here for prafSum function. 
+            In our case it isn't necessary anything to indicated here(for prafCount)</td>
+        </tr>
+        <tr> 
+          <td>Calc method</td>
+          <td><p>Specifies the method of value calculation, the aggregated function 
+              is calculated in what moment :</p>
+            <ul><li><strong>cvtDatasetNext</strong> - the aggregated function 
+              is calculated at the time of moving over dataset. </li>
+              <li><strong>cvtCrossTab</strong> - while counting of aggregated values</li></ul>
+            <p>In our case <strong>cvtDatasetNext</strong> is used.<br>
+            </p></td>
+        </tr>
+        <tr> 
+          <td>Dataset</td>
+          <td>Query1.</td>
+        </tr>
+        <tr> 
+          <td>Horizontal dataset (for CrossTab)</td>
+          <td>Used in Cross-tab reports, will be described in the following example.</td>
+        </tr>
+        <tr> 
+          <td rowspan="3">Scope of visibility var</td>
+          <td>Scope</td>
+          <td><p>Defines on what variable is counted:</p>
+            <ul>
+              <li><strong>rvtReport</strong> - The report summary, the report 
+                average and so on.</li>
+              <li><strong>rvtGroup</strong> - The group summary, the group average 
+                and so on.</li>
+              <li><strong>rvtPage</strong> - The page summary, the page average, 
+                the page min and so on.</li>
+              <li><strong>rvtDatasetEof</strong> - The dataset summary, the dataset 
+                average and so on. Sum of all records in the dataset is calculated.</li>
+            </ul></td>
+        </tr>
+        <tr> 
+          <td>Group</td>
+          <td>Must be specified, if Scope = rvtGroup</td>
+        </tr>
+        <tr> 
+          <td>Dataset</td>
+          <td>Must be specified, if Scope = rvtDataset</td>
+        </tr>
+      </table>
+	  <p>You must create two variables, one will count the amount of records in the first group prGroup1 - CountryCount, second on prGroup2 - AlphaCount. </p>
+<strong>CountryCount</strong>:
+<blockquote>
+        <table width="100%" border="1" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="34%">Aggregate function</td>
+            <td width="66%">prafCount</td>
+          </tr>
+          <tr> 
+            <td>Formula</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr> 
+            <td>Calc method</td>
+            <td>cvtDatasetNext</td>
+          </tr>
+          <tr> 
+            <td>Dataset</td>
+            <td>Query1</td>
+          </tr>
+          <tr> 
+            <td>Horizontal dataset (for CrossTab)</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr> 
+            <td>Scope</td>
+            <td>rvtGroup</td>
+          </tr>
+          <tr> 
+            <td>Group</td>
+            <td>prGroup1</td>
+          </tr>
+          <tr>
+            <td>Dataset</td>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+</blockquote>
+<p><strong>AlphaCount</strong></p>
+<blockquote>
+<table width="100%" border="1" cellpadding="0" cellspacing="0" dwcopytype="CopyTableRow">
+          <tr> 
+            <td width="34%">Aggregate function</td>
+            <td width="66%">prafCount</td>
+          </tr>
+          <tr> 
+            <td>Formula</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr> 
+            <td>Calc method</td>
+            <td>cvtDatasetNext</td>
+          </tr>
+          <tr> 
+            <td>Dataset</td>
+            <td>Query1</td>
+          </tr>
+          <tr> 
+            <td>Horizontal dataset (for CrossTab)</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr> 
+            <td>Scope</td>
+            <td>rvtGroup</td>
+          </tr>
+          <tr> 
+            <td>Group</td>
+            <td>prGroup2</td>
+          </tr>
+          <tr>
+            <td>Dataset</td>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+</blockquote>
+<p>You must write the variable name in square brackets to use it in memo objects (TprMemoObj, TprTxMemoObj, TprRichObj). Put object TprMemoObj and write [CountryCount] in square brackets for example.</p>
+	   </td>
+  </tr>
+</table>
+<!-- InstanceEndEditable -->
+<hr width="100%" size="1">
+<br>&nbsp;&nbsp; &copy; 1999-2004 vtkTools Company. All rights reserved.<br><br><br>
+</body>
+<!-- InstanceEnd --></html>

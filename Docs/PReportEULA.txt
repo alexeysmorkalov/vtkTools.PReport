@@ -1,0 +1,43 @@
+                               PReport
+           report generator for Delphi 4/5/6/7 and C++Builder 5/6
+
+All copyrights to PReport owned by the author - Alexander Manuzin.
+
+You can freely use PReport in any non-commercial objectives.
+
+The use PReport in any commercial objectives (including on conditions
+SHAREWARE) requires registration. The information about a method and cost
+of registration can be found on site www.vtktools.ru, or to communicate on
+E-Mail vtkroot@vtktools.ru.
+
+The PReport may be freely distributed provided the distribution package is
+not modified. No person or company may charge a fee for the distribution of
+PReport without written permission from the copyright holder.
+
+PReport IS DISTRIBUTED "AS IS".  NO WARRANTY OF ANY KIND IS    EXPRESSED OR
+IMPLIED.  YOU USE AT YOUR OWN RISK. THE AUTHOR WILL NOT BE LIABLE FOR DATA
+LOSS, DAMAGES, LOSS OF PROFITS OR ANY OTHER KIND OF LOSS WHILE USING OR
+MISUSING THIS SOFTWARE.
+
+Once registered, the user is granted a non-exclusive license to use PReport
+on one computer (i.e. a single CPU), for any legal purpose, at a time.
+Registered users receive source codes, get technical support and can
+upgrade to the next version of PReport with no additional payment.
+
+You  may  not  use,  copy,  emulate,  clone,  rent, lease, sell, modify,
+decompile,  disassemble,  otherwise  reverse  engineer,  or transfer the
+licensed  program,  or  any  subset  of  the licensed program, except as
+provided  for in this agreement.  Any such unauthorized use shall result in
+immediate and automatic termination of this license and may result in
+criminal and/or civil prosecution.
+
+All rights not expressly granted here are reserved by Alexander Manuzin and
+Alexey Smorkalov.
+
+Installing and using PReport signifies acceptance of these terms and
+conditions of the license.
+
+If  you  do  not  agree  with  the terms of this license you must remove
+PReport  files  from  your  storage  devices and cease to use the product.
+
+                      Thank you for using PReport!

@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/preport.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Groups</title>
+<!-- InstanceEndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable --> 
+<link href="PReport.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table cellspacing=0 cellpadding=0 bgcolor="#FBEAEA" align="center" width=100%>
+  <tr>
+    <td align="left"> &nbsp;<i>PReport</i><br>
+        &nbsp;<b><script language=Javascript>document.write(document.title);</script><br>
+      <br>
+    </b></td>
+  </tr>
+</table>
+<!-- <h3 align=center><img src=logo-gridreport.gif><br>Grid Report description</h3> -->
+
+
+<!-- InstanceBeginEditable name="EditRegion1" -->
+<table width="100%" border="0">
+  <tr> 
+    <td>
+	<p>
+      Groups used for grouping data by some criteria. You can use any PReport 
+      expression as group condition (usually used expression based on DB fields). 
+      When this expression changes, PReport starts new group.
+      Groups are represented by the TprGroup class. For each group three properties 
+      must be specified:</p>
+      <ul><li><strong>The group name.</strong> Must be unique in the report.</li>
+      <li><strong>The detail band (vertical or horizontal) to which group are linked.</strong></li>
+      <li><strong>The group expression.</strong> Can be any PReport expression, usually expression 
+      are based on DB fields. Examples of group expressions:<br>
+	  <ul>
+            <li><strong><em>Table1.CustomerName</em></strong> &#8211; data will 
+              be grouped by the CustomerName DB field.</li>
+            <li><em><strong>Copy(Table.Name, 1, 1)</strong></em> &#8211; data 
+              will be grouped by the first letter of the Name DB field.</li>
+            <br>
+      If the report template has enclosed groups, the subgroup expression must 
+      include expression of the parent group. For example: the dataset (Query1) 
+      based on this query:<br>
+            <font face="Courier New, Courier, mono"><strong>select</strong> * 
+            <strong>from</strong> customer <strong>order</strong> <strong>by</strong> 
+            country, name</font><br>
+      This dataset linked to the detail band named Detail. The report must be 
+      grouped by the country and first letter of the customer name. You must create 
+      two groups: <br>
+      <ul><li>First group:</li>
+      <ul><li>The group name &#8211; ContryGroup</li>
+      <li>The detail band &#8211; Detail</li>
+      <li>The group expression &#8211; Query1.Country.</li></ul>
+      <li>Second group:</li>
+      <ul><li>The group name &#8211; NameGroup</li>
+      <li>The detail band &#8211; Detail</li>
+      <li>The group expression &#8211; UID(Query1.Country, Copy(Query1.Name, 1, 
+      1))</li></ul></ul>
+      The UID function, accepts one and more input parameters and returns a string 
+      formed by concatenation of input parameters (if a parameter not a string, 
+      it is converted to a string). The strings are divided by a numeral with 
+      a code #01 (0x01).</ul></li></ul> </td>
+  </tr>
+</table>
+<!-- InstanceEndEditable -->
+<hr width="100%" size="1">
+<br>&nbsp;&nbsp; &copy; 1999-2004 vtkTools Company. All rights reserved.<br><br><br>
+</body>
+<!-- InstanceEnd --></html>

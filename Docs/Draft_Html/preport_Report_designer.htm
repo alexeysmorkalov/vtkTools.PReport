@@ -1,0 +1,330 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/preport.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Report designer</title>
+<!-- InstanceEndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable --> 
+<link href="PReport.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table cellspacing=0 cellpadding=0 bgcolor="#FBEAEA" align="center" width=100%>
+  <tr>
+    <td align="left"> &nbsp;<i>PReport</i><br>
+        &nbsp;<b><script language=Javascript>document.write(document.title);</script><br>
+      <br>
+    </b></td>
+  </tr>
+</table>
+<!-- <h3 align=center><img src=logo-gridreport.gif><br>Grid Report description</h3> -->
+
+
+<!-- InstanceBeginEditable name="EditRegion1" -->
+<table width="100%" border="0">
+  <tr> 
+    <td>
+<p><strong>Report designer</strong></p>
+
+      <p>Following images shows the TprReport designer:</p>
+      <p><img src="Images/TprReportDesigner.GIF" width="686" height="506"></p>
+      <p>Following images shows the TprTxReport designer:</p>
+      <p><img src="Images/TprTxReportDesigner.GIF" width="674" height="446"></p>
+      <p>As you see designers of the TprReport and TprTxReport are very similar. The 
+        following table contains description of the toolbar buttons and main menu.</p>
+      <table width="100%" border="1" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td colspan="2"><strong>Standard toolbar</strong></td>
+        </tr>
+        <tr> 
+          <td width="10%"><div align="center"><img src="Images/bNew.GIF" width="16" height="16"></div></td>
+          <td width="90%">Creates new report template.</td>
+        </tr>
+        <tr> 
+          <td><div align="center"><img src="Images/bOpen.GIF" width="16" height="16"></div></td>
+          <td>Load existing report template into designer.</td>
+        </tr>
+        <tr> 
+          <td><div align="center"><img src="Images/bSave.GIF" width="16" height="16"></div></td>
+          <td>Saves edited report template.</td>
+        </tr>
+        <tr> 
+          <td><div align="center"><img src="Images/bPreview.GIF" width="16" height="16"></div></td>
+          <td>Generates and preview the report. At design time you can receive 
+            exception, Because in many cases not all datasets can be opened at 
+            design time.</td>
+        </tr>
+        <tr> 
+          <td><div align="center"><img src="Images/bPrint.GIF" width="16" height="16"></div></td>
+          <td>Generates and print the report. At design time you can receive exception, 
+            Because in many cases not all datasets can be opened at design time.</td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <table width="100%" border="1" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td colspan="2"><strong>Object toolbar</strong></td>
+        </tr>
+        <tr> 
+          <td width="10%"><div align="center"><img src="Images/bCut.GIF" width="16" height="16"></div></td>
+          <td width="90%">Cut selected objects to clipboard (bands and pages can 
+            not be copied, only objects within bands).</td>
+        </tr>
+        <tr> 
+          <td><div align="center"><img src="Images/bCopy.GIF" width="16" height="16"></div></td>
+          <td>Copy selected objects to clipboard (bands and pages can not be copied, 
+            only objects within bands).</td>
+        </tr>
+        <tr> 
+          <td><div align="center"><img src="Images/bPaste.GIF" width="16" height="16"></div></td>
+          <td>Paste object from clipboard into the currently selected band.</td>
+        </tr>
+        <tr> 
+          <td><div align="center"><img src="Images/bLinks.GIF" width="16" height="16"></div></td>
+          <td><p>Shows a popup window that allows editing links from the currently 
+              selected object.</p>
+            <p>Object can has links of the four types:</p>
+            <ul>
+              <li>From left side, these links change X coordinate of object.</li>
+              <li>From top side, these links change Y coordinate of object.</li>
+              <li>From right side, these links change width of object.</li>
+              <li>From bottom side, these links change height of object.</li>
+            </ul>
+            <p>To define link from object do the following:</p>
+            <ul>
+              <li>Move mouse to the needed side of the object.</li>
+              <li>Press left mouse button and move mouse to the other object (to 
+                which link must be defined)</li>
+              <li>Leave mouse button.</li>
+              <li>Link must be created and shows as black line from one object 
+                to other.</li>
+            </ul>
+            Please see demo &#8220;<strong>14_NewObjectsLinksModes</strong>&#8221;.</td>
+        </tr>
+        <tr> 
+          <td><div align="center"><img src="Images/bSizes.GIF" width="16" height="16"></div></td>
+          <td>Shows a popup window that allows editing sizes of the currently 
+            selected objects.</td>
+        </tr>
+        <tr> 
+          <td><div align="center"><img src="Images/bProperties.GIF" width="16" height="16"></div></td>
+          <td>Shows a popup window that allows editing properties of the currently 
+            selected objects.</td>
+        </tr>
+        <tr> 
+          <td><div align="center"><img src="Images/bInplaceEdit.GIF" width="16" height="16"></div></td>
+          <td>Starts the inplace editing of the selected object. </td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <table width="100%" border="1" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td colspan="2"><strong>Objects toolbar</strong></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="center" valign="middle"><img src="Images/bInsertBand.GIF" width="16" height="16"></td>
+          <td width="90%">This buttons shows the popup menu that allows selecting 
+            the type of band for inserting into page of the report template. Position 
+            of the inserted band calculated automatically according to it type.</td>
+        </tr>
+        <tr> 
+          <td height="45" align="center" valign="middle"> 
+            <p><img src="Images/bObjMemo.GIF" width="16" height="16"><img src="Images/bObjImage.GIF" width="16" height="16"><img src="Images/bObjRichMemo.GIF" width="16" height="16"><img src="Images/bObjShape.GIF" width="16" height="16"><br>
+              <img src="Images/bObjTxCommand.GIF" width="16" height="16"><img src="Images/bObjTxMemo.GIF" width="16" height="16"><img src="Images/bObjTxHLine.GIF" width="16" height="16"><img src="Images/bObjTxVLine.GIF" width="16" height="16"> 
+              <br>
+            </p>
+            </td>
+          <td>These buttons used to inserting various objects to the report template. 
+            Object can be inserted only into band. Types of objects will be described 
+            below.</td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <table width="100%" border="1" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td colspan="2"><strong>Text toolbar</strong></td>
+        </tr>
+        <tr> 
+          <td width="10%"><div align="center"><img src="Images/bFill.GIF" width="16" height="16"></div></td>
+          <td width="90%">Select background color of the object.</td>
+        </tr>
+        <tr> 
+          <td><div align="center"><img src="Images/bFontColor.GIF" width="16" height="16"></div></td>
+          <td>Select font color of the object.</td>
+        </tr>
+        <tr> 
+          <td><div align="center"><img src="Images/bAlignTextHCenter.GIF" width="16" height="16"></div></td>
+          <td>Center text horizontally.</td>
+        </tr>
+        <tr> 
+          <td><div align="center"><img src="Images/bAlignHLeft.GIF" width="16" height="16"></div></td>
+          <td>Align text left.</td>
+        </tr>
+        <tr> 
+          <td><div align="center"><img src="Images/bAlignHRight.GIF" width="16" height="16"></div></td>
+          <td>Align text right.</td>
+        </tr>
+        <tr> 
+          <td><div align="center"><img src="Images/bAlignTextVCenter.GIF" width="16" height="16"></div></td>
+          <td>Align text center.</td>
+        </tr>
+        <tr> 
+          <td><div align="center"><img src="Images/bAlignVTop.GIF" width="16" height="16"></div></td>
+          <td>Align text top.</td>
+        </tr>
+        <tr> 
+          <td><div align="center"><img src="Images/bAlignVBottom.GIF" width="16" height="16"></div></td>
+          <td>Align text bottom.</td>
+        </tr>
+        <tr> 
+          <td><div align="center"><img src="Images/bTextFont.GIF" width="16" height="16"></div></td>
+          <td>This button shows a popup menu that allows selecting font options 
+            for TprTxMemoObj.</td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <table width="100%" border="1" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td colspan="2"><strong>Borders toolbar</strong></td>
+        </tr>
+        <tr> 
+          <td width="10%"><div align="center"><img src="Images/bBorderBottom.GIF" width="16" height="16"></div></td>
+          <td width="90%">Show / hide bottom border.</td>
+        </tr>
+        <tr> 
+          <td><div align="center"><img src="Images/bBorderLeft.GIF" width="16" height="16"></div></td>
+          <td>Show / hide left border.</td>
+        </tr>
+        <tr> 
+          <td><div align="center"><img src="Images/bBorderRight.GIF" width="16" height="16"></div></td>
+          <td>Show / hide right border.</td>
+        </tr>
+        <tr> 
+          <td><div align="center"><img src="Images/bBorderTop.GIF" width="16" height="16"></div></td>
+          <td>Show / hide top border.</td>
+        </tr>
+        <tr> 
+          <td><div align="center"><img src="Images/bBorderNone.GIF" width="16" height="16"></div></td>
+          <td>Hide all borders.</td>
+        </tr>
+        <tr> 
+          <td><div align="center"><img src="Images/bBorderAll.GIF" width="16" height="16"></div></td>
+          <td>Show all borders.</td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <table width="100%" border="1" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td colspan="2"><strong>Align toolbar</strong></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="center" valign="middle"><img src="Images/bAlignToLeft.GIF" width="16" height="16"></td>
+          <td width="90%">Align left edges.</td>
+        </tr>
+        <tr> 
+          <td align="center" valign="middle"><img src="Images/bAlignCenterInBand.GIF" width="16" height="16"></td>
+          <td>Center horizontally in band.</td>
+        </tr>
+        <tr> 
+          <td align="center" valign="middle"><img src="Images/bAlignHorCenters.GIF" width="16" height="16"></td>
+          <td>Align horizontal centers.</td>
+        </tr>
+        <tr> 
+          <td align="center" valign="middle"><img src="Images/bAlignSpaceHor.GIF" width="16" height="16"></td>
+          <td>Space equally.</td>
+        </tr>
+        <tr> 
+          <td align="center" valign="middle"><img src="Images/bAlignToRight.GIF" width="16" height="16"></td>
+          <td>Align right edges.</td>
+        </tr>
+        <tr> 
+          <td align="center" valign="middle"><img src="Images/bAlignToTop.GIF" width="16" height="16"></td>
+          <td>Align top edges.</td>
+        </tr>
+        <tr> 
+          <td align="center" valign="middle"><img src="Images/bAlignCenterInBandVert.GIF" width="16" height="16"></td>
+          <td>Center vertically in band.</td>
+        </tr>
+        <tr> 
+          <td align="center" valign="middle"><img src="Images/bAlignVCenter.GIF" width="16" height="16"></td>
+          <td>Align vertical centers.</td>
+        </tr>
+        <tr> 
+          <td align="center" valign="middle"><img src="Images/bAlignSpaceVer.GIF" width="16" height="16"></td>
+          <td>Space equally.</td>
+        </tr>
+        <tr>
+          <td align="center" valign="middle"><img src="Images/bAlignToBottom.GIF" width="16" height="16"></td>
+          <td>Align bottom edges.</td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <table width="100%" border="1" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td colspan="2"><strong>Sizes toolbar</strong></td>
+        </tr>
+        <tr> 
+          <td width="10%" align="center" valign="middle"><img src="Images/bDecW.GIF" width="16" height="16"></td>
+          <td width="90%">Reduces a width of selected objects by one pixel</td>
+        </tr>
+        <tr> 
+          <td align="center" valign="middle"><img src="Images/bIncW.GIF" width="16" height="16"></td>
+          <td>Increases a width of selected objects by one pixel</td>
+        </tr>
+        <tr> 
+          <td align="center" valign="middle"><img src="Images/bDecH.GIF" width="16" height="16"></td>
+          <td>Reduces height of selected objects by one pixel</td>
+        </tr>
+        <tr> 
+          <td align="center" valign="middle"><img src="Images/bIncH.GIF" width="16" height="16"></td>
+          <td>Increases height of selected objects by one pixel</td>
+        </tr>
+        <tr> 
+          <td align="center" valign="middle"><img src="Images/bMinW.GIF" width="16" height="16"></td>
+          <td>Set width as width of smallest object.</td>
+        </tr>
+        <tr> 
+          <td align="center" valign="middle"><img src="Images/bMaxW.GIF" width="16" height="16"></td>
+          <td>Set width as width of largest object.</td>
+        </tr>
+        <tr> 
+          <td align="center" valign="middle"><img src="Images/bMinH.GIF" width="16" height="16"></td>
+          <td>Set height as height of smallest object.</td>
+        </tr>
+        <tr>
+          <td align="center" valign="middle"><img src="Images/bMaxH.GIF" width="16" height="16"></td>
+          <td>Set height as height of largest object.</td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <table width="100%" border="1" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td colspan="2"><strong>Nudge toolbar</strong></td>
+        </tr>
+        <tr> 
+          <td width="10%"><div align="center"><img src="Images/bNLeft.GIF" width="16" height="16"></div></td>
+          <td width="90%">Shifts the selected objects to left.</td>
+        </tr>
+        <tr> 
+          <td><div align="center"><img src="Images/bNRight.GIF" width="16" height="16"></div></td>
+          <td>Shifts the selected objects to right.</td>
+        </tr>
+        <tr> 
+          <td><div align="center"><img src="Images/bNTop.GIF" width="16" height="16"></div></td>
+          <td>Shifts the selected objects to top.</td>
+        </tr>
+        <tr> 
+          <td><div align="center"><img src="Images/bNBottom.GIF" width="16" height="16"></div></td>
+          <td>Shifts the selected objects to bottom.</td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+	</td>
+  </tr>
+</table>
+<!-- InstanceEndEditable -->
+<hr width="100%" size="1">
+<br>&nbsp;&nbsp; &copy; 1999-2004 vtkTools Company. All rights reserved.<br><br><br>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,816 @@
+object TprTxReport
+  ShowProgress = True
+  CanUserEdit = False
+  DesignerFormMode = fmNormal
+  PreviewFormMode = fmNormal
+  Collate = False
+  Copies = 1
+  FromPage = -1
+  ToPage = -1
+  PrintPagesMode = ppmAll
+  ExportOptions = [preoShowParamsDlg, preoShowProgress, preoShowAfterGenerate]
+  ExportPagesMode = ppmAll
+  ExportFromPage = 0
+  ExportToPage = 0
+  Values = <
+    item
+      Group = OrderGroup
+      Name = 'OrderTotal'
+      AggFunction = prafSum
+      Formula = 'RepQuery.Qty*RepQuery.ListPrice'
+      ResetOn = rvtGroup
+      CalcOn = cvtDataSetNext
+      DataSetName = 'RepQuery'
+    end
+    item
+      Group = CustomerGroup
+      Name = 'CustomerTotal'
+      AggFunction = prafSum
+      Formula = 'RepQuery.Qty*RepQuery.ListPrice'
+      ResetOn = rvtGroup
+      CalcOn = cvtDataSetNext
+      DataSetName = 'RepQuery'
+    end
+    item
+      Group = CustomerGroup
+      Name = 'CustomerAvg'
+      AggFunction = prafAvg
+      Formula = 'RepQuery.Qty*RepQuery.ListPrice'
+      ResetOn = rvtGroup
+      CalcOn = cvtDataSetNext
+      DataSetName = 'RepQuery'
+    end
+    item
+      Group = OrderGroup
+      Name = 'OrderPartCount'
+      AggFunction = prafCount
+      ResetOn = rvtGroup
+      CalcOn = cvtDataSetNext
+      DataSetName = 'RepQuery'
+    end>
+  LeftSpaces = 0
+  WrapAfterColumn = 0
+  StartNewLineOnWrap = False
+  PaperType = ptPage
+  UseLinesOnPage = False
+  LinesOnPage = 0
+  MakeFormFeedOnRulon = False
+  PrintRulonMode = prmAllLines
+  FromLine = 0
+  ToLine = 0
+  ExportTxOptions = []
+  ExportFromLine = 0
+  ExportToLine = 0
+  ExportCodePage = prtxcpDOS866
+  SystemInfo = (
+    'OS: WIN32_NT 5.1.2600 '
+    ''
+    'PageSize: 4096'
+    'ActiveProcessorMask: $1000'
+    'NumberOfProcessors: 1'
+    'ProcessorType: 586'
+    ''
+    'Compiler version: Delphi5'
+    'PReport version: 1.70.0')
+  object prTxPage1: TprTxPage
+    Width = 0
+    Height = 0
+    LineNum = 60
+    ColNum = 80
+    PageType = tptPage
+    DefTxFontStyleEx = tfsNormal
+    object prTxHTitleBand1: TprTxHTitleBand
+      ResizeMode = prbrmNone
+      Visible = True
+      Height = 3
+      UseVerticalBands = False
+      object prTxMemoObj1: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              'Clients')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhCenter
+            vAlign = prvCenter
+            DefaultFont = False
+            WordWrap = False
+            TxFontStyleEx = tfsNormal
+          end>
+        dRec.Left = 27
+        dRec.Top = 1
+        dRec.Right = 53
+        dRec.Bottom = 2
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+    end
+    object prTxHDetailBand1: TprTxHDetailBand
+      ResizeMode = prbrmNone
+      Visible = True
+      Height = 1
+      UseVerticalBands = False
+      DataSetName = 'RepQuery'
+      ColCount = 1
+      ColDirection = prcdTopBottomLeftRight
+      Groups = (
+        'CustomerGroup'
+        'OrderGroup')
+      object prTxMemoObj2: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              '[RepQuery.PartNo]')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhRight
+            vAlign = prvTop
+            DefaultFont = False
+            WordWrap = False
+            TxFontStyleEx = tfsNormal
+          end>
+        dRec.Left = 1
+        dRec.Top = 0
+        dRec.Right = 8
+        dRec.Bottom = 1
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+      object prTxMemoObj3: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              '[RepQuery.Description]')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhLeft
+            vAlign = prvTop
+            DefaultFont = False
+            WordWrap = False
+            TxFontStyleEx = tfsNormal
+          end>
+        dRec.Left = 9
+        dRec.Top = 0
+        dRec.Right = 34
+        dRec.Bottom = 1
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+      object prTxMemoObj4: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              '[:<c>RepQuery.ListPrice]')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhRight
+            vAlign = prvTop
+            DefaultFont = False
+            WordWrap = False
+            TxFontStyleEx = tfsNormal
+          end>
+        dRec.Left = 35
+        dRec.Top = 0
+        dRec.Right = 49
+        dRec.Bottom = 1
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+      object prTxMemoObj5: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              '[:<#,0.000>RepQuery.Qty]')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhRight
+            vAlign = prvTop
+            DefaultFont = False
+            WordWrap = False
+            TxFontStyleEx = tfsNormal
+          end>
+        dRec.Left = 50
+        dRec.Top = 0
+        dRec.Right = 64
+        dRec.Bottom = 1
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+      object prTxMemoObj6: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              '[:<c>RepQuery.ListPrice*RepQuery.Qty]')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhRight
+            vAlign = prvTop
+            DefaultFont = False
+            WordWrap = False
+            TxFontStyleEx = tfsNormal
+          end
+          item
+            Formula = 'CustomerAvg<(RepQuery.ListPrice*RepQuery.Qty)'
+            Visible = True
+            Memo.Strings = (
+              '[:<c>RepQuery.ListPrice*RepQuery.Qty]')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhRight
+            vAlign = prvTop
+            DefaultFont = False
+            WordWrap = False
+            TxFontStyleEx = tfsNormal
+            TxFontOptionsEx = (
+              tfoUnderline)
+          end
+          item
+            Formula = 'OrderPartCount=1'
+            Visible = True
+            Memo.Strings = (
+              '[:<c>RepQuery.ListPrice*RepQuery.Qty]')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhRight
+            vAlign = prvTop
+            DefaultFont = False
+            WordWrap = False
+            TxFontStyleEx = tfsNormal
+            TxFontOptionsEx = (
+              tfoItalic)
+          end>
+        dRec.Left = 65
+        dRec.Top = 0
+        dRec.Right = 79
+        dRec.Bottom = 1
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+    end
+    object prTxHGroupHeaderBand1: TprTxHGroupHeaderBand
+      ResizeMode = prbrmNone
+      Visible = True
+      Height = 5
+      UseVerticalBands = False
+      Group = OrderGroup
+      ColCount = 0
+      ColDirection = prcdTopBottomLeftRight
+      LinkToDetail = False
+      StartNewPage = False
+      object prTxMemoObj7: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              'Order N [RepQuery.OrderNo] [:<d>RepQuery.SaleDate]')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhLeft
+            vAlign = prvTop
+            DefaultFont = False
+            WordWrap = False
+            TxFontStyleEx = tfsNormal
+          end>
+        dRec.Left = 1
+        dRec.Top = 1
+        dRec.Right = 79
+        dRec.Bottom = 2
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+      object prTxMemoObj8: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              'Number')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhLeft
+            vAlign = prvTop
+            DefaultFont = False
+            WordWrap = False
+            TxFontStyleEx = tfsNormal
+          end>
+        dRec.Left = 1
+        dRec.Top = 3
+        dRec.Right = 8
+        dRec.Bottom = 4
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+      object prTxMemoObj9: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              'Description')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhLeft
+            vAlign = prvTop
+            DefaultFont = False
+            WordWrap = False
+            TxFontStyleEx = tfsNormal
+          end>
+        dRec.Left = 9
+        dRec.Top = 3
+        dRec.Right = 34
+        dRec.Bottom = 4
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+      object prTxMemoObj11: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              'Cost')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhRight
+            vAlign = prvTop
+            DefaultFont = False
+            WordWrap = False
+            TxFontStyleEx = tfsNormal
+          end>
+        dRec.Left = 35
+        dRec.Top = 3
+        dRec.Right = 49
+        dRec.Bottom = 4
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+      object prTxMemoObj12: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              'Quantity')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhRight
+            vAlign = prvTop
+            DefaultFont = False
+            WordWrap = False
+            TxFontStyleEx = tfsNormal
+          end>
+        dRec.Left = 50
+        dRec.Top = 3
+        dRec.Right = 64
+        dRec.Bottom = 4
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+      object prTxMemoObj13: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              'Sum')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhRight
+            vAlign = prvTop
+            DefaultFont = False
+            WordWrap = False
+            TxFontStyleEx = tfsNormal
+          end
+          item
+            Formula = 'CustomerAvg<(RepQuery.ListPrice*RepQuery.Qty)'
+            Visible = True
+            Memo.Strings = (
+              '[:<c>RepQuery.ListPrice*RepQuery.Qty]')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhRight
+            vAlign = prvTop
+            DefaultFont = False
+            WordWrap = False
+            TxFontStyleEx = tfsNormal
+            TxFontOptionsEx = (
+              tfoUnderline)
+          end
+          item
+            Formula = 'OrderPartCount=1'
+            Visible = True
+            Memo.Strings = (
+              '[:<c>RepQuery.ListPrice*RepQuery.Qty]')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhRight
+            vAlign = prvTop
+            DefaultFont = False
+            WordWrap = False
+            TxFontStyleEx = tfsNormal
+            TxFontOptionsEx = (
+              tfoItalic)
+          end>
+        dRec.Left = 65
+        dRec.Top = 3
+        dRec.Right = 79
+        dRec.Bottom = 4
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+    end
+    object prTxHGroupFooterBand1: TprTxHGroupFooterBand
+      ResizeMode = prbrmNone
+      Visible = True
+      Height = 2
+      UseVerticalBands = False
+      Group = OrderGroup
+      ColCount = 0
+      ColDirection = prcdTopBottomLeftRight
+      LinkToDetail = False
+      object prTxMemoObj10: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              'Sum by order: [:<c>OrderTotal]')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhRight
+            vAlign = prvTop
+            DefaultFont = False
+            WordWrap = False
+            TxFontStyleEx = tfsNormal
+          end>
+        dRec.Left = 1
+        dRec.Top = 1
+        dRec.Right = 79
+        dRec.Bottom = 2
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+    end
+    object prTxHGroupHeaderBand2: TprTxHGroupHeaderBand
+      ResizeMode = prbrmNone
+      Visible = True
+      Height = 7
+      UseVerticalBands = False
+      Group = CustomerGroup
+      ColCount = 0
+      ColDirection = prcdTopBottomLeftRight
+      LinkToDetail = False
+      StartNewPage = False
+      object prTxMemoObj14: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              'Company')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhLeft
+            vAlign = prvTop
+            DefaultFont = False
+            WordWrap = False
+            TxFontStyleEx = tfsNormal
+          end>
+        dRec.Left = 1
+        dRec.Top = 1
+        dRec.Right = 39
+        dRec.Bottom = 2
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+      object prTxMemoObj15: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              'Phone')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhLeft
+            vAlign = prvTop
+            DefaultFont = False
+            WordWrap = False
+            TxFontStyleEx = tfsNormal
+          end>
+        dRec.Left = 40
+        dRec.Top = 1
+        dRec.Right = 60
+        dRec.Bottom = 2
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+      object prTxMemoObj16: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              'Fax')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhLeft
+            vAlign = prvTop
+            DefaultFont = False
+            WordWrap = False
+            TxFontStyleEx = tfsNormal
+          end>
+        dRec.Left = 61
+        dRec.Top = 1
+        dRec.Right = 79
+        dRec.Bottom = 2
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+      object prTxMemoObj17: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              '[RepQuery.Company]')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhLeft
+            vAlign = prvTop
+            DefaultFont = False
+            WordWrap = False
+            TxFontStyleEx = tfsNormal
+          end>
+        dRec.Left = 1
+        dRec.Top = 3
+        dRec.Right = 39
+        dRec.Bottom = 4
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+      object prTxMemoObj18: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              '[RepQuery.Phone]')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhLeft
+            vAlign = prvTop
+            DefaultFont = False
+            WordWrap = False
+            TxFontStyleEx = tfsNormal
+          end>
+        dRec.Left = 40
+        dRec.Top = 3
+        dRec.Right = 60
+        dRec.Bottom = 4
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+      object prTxMemoObj19: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              '[RepQuery.FAX]')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhLeft
+            vAlign = prvTop
+            DefaultFont = False
+            WordWrap = False
+            TxFontStyleEx = tfsNormal
+          end>
+        dRec.Left = 61
+        dRec.Top = 3
+        dRec.Right = 79
+        dRec.Bottom = 4
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+      object prTxMemoObj20: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              'Average sum: [:<c>CustomerAvg]')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhRight
+            vAlign = prvTop
+            DefaultFont = False
+            WordWrap = False
+            TxFontStyleEx = tfsNormal
+          end>
+        dRec.Left = 40
+        dRec.Top = 5
+        dRec.Right = 79
+        dRec.Bottom = 6
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+    end
+    object prTxHGroupFooterBand2: TprTxHGroupFooterBand
+      ResizeMode = prbrmNone
+      Visible = True
+      Height = 4
+      UseVerticalBands = False
+      Group = CustomerGroup
+      ColCount = 0
+      ColDirection = prcdTopBottomLeftRight
+      LinkToDetail = False
+      object prTxMemoObj21: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              'Sum by company      : [:<c>CustomerTotal]'
+              'Average sum position: [:<c>CustomerAvg]')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhLeft
+            vAlign = prvTop
+            DefaultFont = False
+            WordWrap = False
+            TxFontStyleEx = tfsNormal
+          end>
+        dRec.Left = 22
+        dRec.Top = 1
+        dRec.Right = 79
+        dRec.Bottom = 3
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+      object prTxMemoObj22: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              
+                '----------------------------------------------------------------' +
+                '--------------')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhLeft
+            vAlign = prvTop
+            DefaultFont = False
+            WordWrap = False
+            TxFontStyleEx = tfsNormal
+          end>
+        dRec.Left = 1
+        dRec.Top = 3
+        dRec.Right = 79
+        dRec.Bottom = 4
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+    end
+  end
+  object OrderGroup: TprGroup
+    Valid = 'RepQuery.OrderNo'
+    DetailBand = prTxHDetailBand1
+  end
+  object CustomerGroup: TprGroup
+    Valid = 'RepQuery.CustNo'
+    DetailBand = prTxHDetailBand1
+  end
+end

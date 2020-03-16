@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/preport.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Title</title>
+<!-- InstanceEndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable --> 
+<link href="PReport.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table cellspacing=0 cellpadding=0 bgcolor="#FBEAEA" align="center" width=100%>
+  <tr>
+    <td align="left"> &nbsp;<i>PReport</i><br>
+        &nbsp;<b><script language=Javascript>document.write(document.title);</script><br>
+      <br>
+    </b></td>
+  </tr>
+</table>
+<!-- <h3 align=center><img src=logo-gridreport.gif><br>Grid Report description</h3> -->
+
+
+<!-- InstanceBeginEditable name="EditRegion1" -->
+<table width="100%" border="0">
+  <tr> 
+    <td> <p>The majority of the matrix printers work with the text in OEM character 
+        set, but Windows uses ANSI character set therefore the text of report 
+        should be converted from ANSI to OEM before a printing. Windows contains 
+        special functions for such transformation:<br>
+        <strong>CharToOem</strong> - translates a string into the OEM-defined 
+        character set.<br>
+        <strong>OemToChar</strong> - translates a string from the OEM-defined 
+        character set into either an ANSI or a wide-character string.<br>
+        <br>
+        However these functions have one essential restriction - they change the 
+        text in OEM character set if it contains pseudographic symbols because 
+        the ANSI does not contain the pseudographic symbols. An example: the text 
+        "<img src="Images/pseudo.GIF" width="107" height="15">" will be transformed 
+        in "=========== ". The pseudographic very much often is used in the text 
+        reports, therefore for the decision of this problem the concept of the 
+        recode table is entered. It is used for transformations: OEM-> ANSI and 
+        ANSI-> OEM. Such table is defined by two chars arrays from 128 elements 
+        (for symbols with codes large than 127) one array is used for transformation 
+        OEM-> ANSI, another for ANSI-> OEM. A principle of job the following: <br>
+        The first symbol of an array is used for transformation ANSI-> OEM and 
+        contains a code of a symbol in OEM character set that has a code 128 in 
+        ANSI character set.<br> The second symbol of an array is used for transformation 
+        ANSI-> OEM and contains a code of a symbol in OEM character set that has 
+        a code 129 in ANSI character set.<br>The third symbol of an array is used 
+        for transformation ANSI-> OEM and contains a code of a symbol in OEM character 
+        set that has a code 130 in ANSI character set.<br><br>
+        For ANSI-> OEM converting is used: 
+      <p> <font face="Courier New, Courier, mono"><strong>procedure</strong> TprTxRecodeTable.WINtoOEM(sSource, 
+        sDest: PChar);<br>
+        <strong>begin</strong><br>
+        &nbsp;&nbsp;Decode(sSource, sDest, WINtoOEMTable);<br>
+        <strong>end</strong>;<br>
+        </font> </p>
+        For ANSI-> OEM converting is used: 
+      <p> <font face="Courier New, Courier, mono"><strong>procedure</strong> TprTxRecodeTable.OEMtoWIN(sSource, 
+        sDest: PChar);<br>
+        <strong>begin</strong><br>
+        &nbsp;&nbsp;Decode(sSource, sDest, OEMtoWINTable);<br>
+        <strong>end</strong>;<br>
+        </font> </p>
+		
+      <p> <font face="Courier New, Courier, mono"> <strong>procedure</strong> 
+        TprTxRecodeTable.Decode(sSource, sDest, Table: PChar);<br>
+        <strong>var</strong><br>
+  &nbsp;&nbsp;I: integer;<br>
+        <strong>begin</strong><br>
+        &nbsp;&nbsp;<strong>for</strong> i := 0 <strong>to</strong> lstrlen(sSource) 
+        - 1 <strong>do</strong><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<strong>if</strong> byte(sSource[i]) >= 128 <strong>then</strong><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sDest[I] := Table[byte(sSource[I]) 
+        - 128];<br>
+        <strong>end</strong>;<br>
+
+        </font> </p>
+		For each country, as a rule, there is a combination of ANSI and OEM codings, 
+      for example for Russia: ANSI - Win1251, OEM - Dos866, for Turkey: ANSI - 
+      Win1254, OEM - Dos857. Therefore we had been developed the program: <strong>RecodeTableGenerator</strong> 
+      for automatic creation of the recode tables, you can download it from our 
+      site. The recode table is represented by the TprRecodeTable class, copies 
+      of this class are loaded at program startup from <strong>TxRO.ini</strong> 
+      a file, the structure of this file will be described below. </td>
+  </tr>
+</table>
+<!-- InstanceEndEditable -->
+<hr width="100%" size="1">
+<br>&nbsp;&nbsp; &copy; 1999-2004 vtkTools Company. All rights reserved.<br><br><br>
+</body>
+<!-- InstanceEnd --></html>

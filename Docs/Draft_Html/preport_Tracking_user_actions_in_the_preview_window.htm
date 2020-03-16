@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/preport.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Tracking user actions in the preview window</title>
+<!-- InstanceEndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable --> 
+<link href="PReport.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table cellspacing=0 cellpadding=0 bgcolor="#FBEAEA" align="center" width=100%>
+  <tr>
+    <td align="left"> &nbsp;<i>PReport</i><br>
+        &nbsp;<b><script language=Javascript>document.write(document.title);</script><br>
+      <br>
+    </b></td>
+  </tr>
+</table>
+<!-- <h3 align=center><img src=logo-gridreport.gif><br>Grid Report description</h3> -->
+
+
+<!-- InstanceBeginEditable name="EditRegion1" -->
+<table width="100%" border="0">
+  <tr> 
+    <td>
+      <p>You can use these events of TprReport and TprTxReport components to track 
+      user actions in the preview window:</p>
+	  <h5>OnPreviewGetUserData event </h5>
+	  <p>Event occurs during the report generating, 
+        after processing each object. With use of this event the developer can 
+        assign the own data for each object of the generated report. Syntax:</p>
+      <p><font face="Courier New, Courier, mono"><strong>property</strong> OnPreviewGetUserData: 
+        TOnPreviewGetUserData <strong>read</strong> <strong>write</strong>;</font><br>
+        <font face="Courier New, Courier, mono">TOnPreviewGetUserData = <strong>procedure</strong>(Sender: 
+        TObject; Obj: TprObj; ObjRec: TprObjRec; <strong>var</strong> PreviewUserData: 
+        TprPreviewUserData) <strong>of</strong> <strong>object</strong>; </font></p>
+		
+		
+      <table width="100%" height="528" border="1" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td width="20%" height="25" valign="top"><strong>Sender</strong></td>
+          <td width="80%">Report fires the event</td>
+        </tr>
+        <tr> 
+          <td height="26" valign="top"><strong>Obj</strong></td>
+          <td>The object of the report, which is processed</td>
+        </tr>
+        <tr> 
+          <td height="28" valign="top"><strong>ObjRec</strong></td>
+          <td>The parameters record of object.</td>
+        </tr>
+        <tr> 
+          <td height="383" valign="top"><strong>PreviewUserData</strong></td>
+          <td><p>In this parameter you must return own data. Data is represented 
+              by the TprPreviewUserData class, you can inherit new child class 
+              from TprPreviewUserData. Declaration of the TprPreviewUserData:</p>
+            <p> <font face="Courier New, Courier, mono">TprPreviewUserData = <strong>class</strong>(TPersistent)<br>
+              <strong>public</strong><br>
+              &nbsp;&nbsp;Tag: integer;<br>
+              &nbsp;&nbsp;<strong>procedure</strong> Assign(Source: TPersistent); 
+              <strong>override</strong>;<br>
+              &nbsp;&nbsp;<strong>procedure</strong> SaveToStream(Stream: TStream); 
+              <strong>virtual</strong>;<br>
+              &nbsp;&nbsp;<strong>procedure</strong> LoadFromStream(Stream: TStream); 
+              <strong>virtual</strong>;<br>
+              <strong>end</strong>;</font></p>
+            <p>At a creating of a new class you should take into account the following:</p>
+            <ol>
+              <li>Only instances of classes inherited from TprPreviewUserData 
+                can be used in OnPreviewGetUserData event.</li>
+              <li>You should not destroy these objects, they will be automatically 
+                destroyed.</li>
+              <li>The derived class should be registered through Classes.RegisterClass 
+                function.</li>
+            </ol>
+            <p>Methods:</p>
+            <ul>
+              <li><strong>Assign</strong> - copying of properties from one object 
+                to other</li>
+              <li><strong>SaveToStream</strong> - saving all object properties 
+                to a stream</li>
+              <li><strong>LoadFromStream</strong> - reading all object properties 
+                from a stream</li>
+            </ul>
+            The methods SaveToStream and LoadFromStream are used while saving 
+            / reading the report by methods SavePreparedReport / LoadPreparedReport. 
+          </td>
+        </tr>
+      </table>
+      <h5>OnPreviewMouseMove event</h5>
+	  <p>Occurs when mouse move over client area of the preview window. Syntax:</p>
+      <font face="Courier New, Courier, mono"><strong>property</strong> OnPreviewMouseMove: 
+      TOnPreviewMouseMove <strong>read</strong> <strong>write</strong>;</font> 
+      <br><br>
+      <font face="Courier New, Courier, mono">TOnPreviewMouseMove = <strong>procedure</strong>(Sender: 
+      TObject; PreviewUserData: TprPreviewUserData; <strong>var</strong> cur: 
+      TCursor; <strong>var</strong> HighlightObject: boolean) <strong>of</strong> 
+      <strong>object</strong>;</font> <br><br>
+      <table width="100%" height="100" border="1" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td width="19%" height="13"><strong>Sender</strong></td>
+          <td width="81%">Report firing the event</td>
+        </tr>
+        <tr> 
+          <td height="13"><strong>PreviewUserData</strong></td>
+          <td>User data that was transferred in OnPreviewGetUserData event, can 
+            be null if mouse not within object.</td>
+        </tr>
+        <tr> 
+          <td height="13"><strong>Cur</strong></td>
+          <td>You can return the type of the mouse cursor in this parameter.</td>
+        </tr>
+        <tr> 
+          <td height="13"><strong>HighlightObject</strong></td>
+          <td>If you return true in this parameter the object will be highlighted.</td>
+        </tr>
+      </table> 
+	  <h5><br>
+        OnPreviewMouseDown event </h5>
+      <p>Occurs when user click mouse button within client area of the preview 
+        window. Syntax:</p>
+        
+      <font face="Courier New, Courier, mono"><strong>property</strong> OnPreviewMouseDown: 
+      TOnPreviewMouseDown <strong>read</strong> <strong>write</strong>;</font><br>
+      <font face="Courier New, Courier, mono">TOnPreviewMouseDown = <strong>procedure</strong> 
+      (Sender: TObject; PreviewUserData: TprPreviewUserData; Shift: TShiftState) 
+      <strong>of</strong> <strong>object</strong>;</font><br>
+      <br>
+      <table width="100%" height="100" border="1" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td width="19%" height="15"><strong>Sender</strong></td>
+          <td width="81%">Report fires the event</td>
+        </tr>
+        <tr> 
+          <td height="15"><strong>PreviewUserData</strong></td>
+          <td>User data that was transferred in OnPreviewGetUserData event, can 
+            be null if mouse not within object.</td>
+        </tr>
+        <tr> 
+          <td height="15"><strong>Shift</strong></td>
+          <td>Indicates the state of the Alt, Ctrl, and Shift keys and the mouse 
+            buttons.</td>
+        </tr>
+      </table>
+	  <h5><br>
+        OnPreviewDblClick event </h5>
+      <p>Occurs when the user double-clicks the left mouse button within client area of preview window. Syntax:</p>
+      <p><font face="Courier New, Courier, mono"><strong>property</strong> OnPreviewDblClick: 
+        TOnPreviewDblClick <strong>read</strong> <strong>write</strong>;</font><br>
+        <font face="Courier New, Courier, mono">TOnPreviewMouseDown = <strong>procedure</strong> 
+        (Sender: TObject; PreviewUserData: TprPreviewUserData) <strong>of</strong> 
+        <strong>object</strong>;</font>
+        <br>
+      </p>
+      <table width="100%" height="50" border="1" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td width="19%" height="18"><strong>Sender</strong></td>
+          <td width="81%">Report fires the event</td>
+        </tr>
+        <tr> 
+          <td height="18"><strong>PreviewUserData</strong></td>
+          <td>User data that was transferred in OnPreviewGetUserData event, can 
+            be null if mouse not within object.</td>
+        </tr>
+      </table>
+      <p>When the user double-clicks the left button at first comes OnPreviewMouseDown then OnPreviewDblClick. </p></td>
+  </tr>
+</table>
+<!-- InstanceEndEditable -->
+<hr width="100%" size="1">
+<br>&nbsp;&nbsp; &copy; 1999-2004 vtkTools Company. All rights reserved.<br><br><br>
+</body>
+<!-- InstanceEnd --></html>

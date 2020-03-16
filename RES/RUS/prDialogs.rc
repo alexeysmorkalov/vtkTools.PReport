@@ -1,0 +1,120 @@
+
+1002 DIALOGEX 32, 32, 356, 226
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CONTEXTHELP | 
+    WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Print"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    COMBOBOX        1139,58,18,148,152,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    COMBOBOX        1002,58,34,148,152,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    EDITTEXT        1154,309,18,32,12,ES_NUMBER | WS_GROUP
+    EDITTEXT        1003,309,34,32,12,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        1005,309,50,32,12,ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "",1072,7,109,159,88,WS_GROUP
+    CONTROL         "Печать на &листы",1007,"Button",BS_AUTORADIOBUTTON,20,109,
+                    71,10
+    RADIOBUTTON     "&Все",1056,20,121,64,11,WS_GROUP
+    RADIOBUTTON     "Страницы",1058,20,135,45,11
+    EDITTEXT        1152,92,134,24,12,ES_NUMBER | WS_GROUP
+    EDITTEXT        1153,135,134,24,12,ES_NUMBER | WS_GROUP
+    RADIOBUTTON     "&Выбранное",1057,20,151,95,9
+    CONTROL         "&Список страниц:",1000,"Button",BS_AUTORADIOBUTTON,20,164,68,
+                    10
+    EDITTEXT        1001,91,163,67,12
+    CONTROL         "Строк на странице:",1004,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,47,180,80,10
+    EDITTEXT        1157,134,179,24,12,ES_NUMBER | WS_GROUP
+    GROUPBOX        "",1074,172,109,177,64,WS_GROUP
+    CONTROL         "Печать на &рулон",1008,"Button",BS_AUTORADIOBUTTON,186,109,
+                    71,10
+    RADIOBUTTON     "Все строки",1059,186,121,64,11,WS_GROUP
+    RADIOBUTTON     "Строки",1060,186,135,70,11
+    EDITTEXT        1155,274,134,24,12,ES_NUMBER | WS_GROUP
+    EDITTEXT        1156,316,134,24,12,ES_NUMBER | WS_GROUP
+    CONTROL         "Прокручивать страницы",1006,"Button",BS_AUTOCHECKBOX | 
+                    BS_TOP | BS_MULTILINE | WS_TABSTOP,187,156,155,10
+    CONTROL         "Прокрутить страницу после окончания печати",1009,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,172,187,174,10
+    DEFPUSHBUTTON   "ОК",1,247,206,48,14,WS_GROUP
+    PUSHBUTTON      "Отмена",2,301,206,48,14
+    PUSHBUTTON      "Свойства",1025,180,210,60,14,WS_GROUP
+    CONTROL         "П&ечать в файл",1040,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,126,211,51,12
+    CONTROL         "Разобрать",1041,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,83,212,39,10
+    PUSHBUTTON      "Справка",1038,5,210,48,14
+    GROUPBOX        "Принтер",1075,8,4,208,100,WS_GROUP
+    LTEXT           "&Имя:",1093,12,20,42,8
+    LTEXT           "Состояние:",1095,12,53,41,10,SS_NOPREFIX
+    CONTROL         "",1099,"Static",SS_LEFTNOWORDWRAP | SS_NOPREFIX | 
+                    WS_GROUP,58,53,150,10
+    LTEXT           "Тип:",1094,12,65,36,10,SS_NOPREFIX
+    CONTROL         "",1098,"Static",SS_LEFTNOWORDWRAP | SS_NOPREFIX | 
+                    WS_GROUP,58,65,150,10
+    LTEXT           "Порт:",1097,12,77,36,10,SS_NOPREFIX
+    CONTROL         "",1101,"Static",SS_LEFTNOWORDWRAP | SS_NOPREFIX | 
+                    WS_GROUP,58,77,150,10
+    LTEXT           "Заметки:",1096,12,89,36,10,SS_NOPREFIX
+    CONTROL         "",1100,"Static",SS_LEFTNOWORDWRAP | SS_NOPREFIX | 
+                    WS_GROUP,58,89,150,10
+    RTEXT           "&с:",1089,68,136,20,8
+    RTEXT           "&по:",1090,118,136,12,8
+    GROUPBOX        "Дополнительно",1073,221,4,128,100,WS_GROUP
+    LTEXT           "&Число копий:",1092,227,20,77,8
+    ICON            "",1086,58,204,0,0,SS_CENTERIMAGE | WS_GROUP
+    LTEXT           "ESC модель:",-1,12,36,42,8
+    RTEXT           "с:",1091,251,136,18,8
+    RTEXT           "по:",1102,300,136,12,8
+    LTEXT           "Отступ слева:",-1,227,36,80,8
+    LTEXT           "Разрыв по колонке:",-1,227,52,80,8
+END
+
+1001 DIALOGEX 32, 32, 288, 218
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CONTEXTHELP | 
+    WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Print"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    GROUPBOX        "Принтер",1075,8,4,272,84,WS_GROUP
+    LTEXT           "&Имя:",1093,16,20,31,8
+    COMBOBOX        1139,58,18,148,152,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    PUSHBUTTON      "Свойства",1025,212,17,60,14,WS_GROUP
+    LTEXT           "Состояние:",1095,16,36,41,10,SS_NOPREFIX
+    CONTROL         "",1099,"Static",SS_LEFTNOWORDWRAP | SS_NOPREFIX | 
+                    WS_GROUP,58,36,218,10
+    LTEXT           "Тип:",1094,16,48,36,10,SS_NOPREFIX
+    CONTROL         "",1098,"Static",SS_LEFTNOWORDWRAP | SS_NOPREFIX | 
+                    WS_GROUP,58,48,218,10
+    LTEXT           "Порт:",1097,16,60,36,10,SS_NOPREFIX
+    CONTROL         "",1101,"Static",SS_LEFTNOWORDWRAP | SS_NOPREFIX | 
+                    WS_GROUP,58,60,218,10
+    LTEXT           "Заметки:",1096,16,72,36,10,SS_NOPREFIX
+    CONTROL         "",1100,"Static",SS_LEFTNOWORDWRAP | SS_NOPREFIX | 
+                    WS_GROUP,58,72,150,10
+    CONTROL         "П&ечать в файл",1040,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,212,72,64,12
+    GROUPBOX        "Страницы",1072,8,92,139,99,WS_GROUP
+    RADIOBUTTON     "Все",1056,12,105,64,11,WS_GROUP
+    RADIOBUTTON     "Страницы",1058,12,122,45,11
+    RADIOBUTTON     "Выбранное",1057,12,139,95,9
+    RTEXT           "с:",1089,60,123,10,8
+    EDITTEXT        1152,75,121,24,12,ES_NUMBER | WS_GROUP
+    RTEXT           "по:",1090,102,123,12,8
+    EDITTEXT        1153,118,121,24,12,ES_NUMBER | WS_GROUP
+    GROUPBOX        "Копии",1073,151,92,129,68,WS_GROUP
+    LTEXT           "Число копий:",1092,156,108,63,8
+    EDITTEXT        1154,230,106,32,12,ES_NUMBER | WS_GROUP
+    ICON            "",1086,159,124,70,40,SS_CENTERIMAGE | WS_GROUP
+    CHECKBOX        "Разобрать",1041,230,148,48,10,BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP | WS_VISIBLE
+    DEFPUSHBUTTON   "ОК",1,179,196,48,14,WS_GROUP
+    PUSHBUTTON      "Отмена",2,231,196,48,14
+    PUSHBUTTON      "Справка",1038,8,196,48,14
+    CONTROL         "Список страниц:",1000,"Button",BS_AUTORADIOBUTTON,12,156,95,
+                    10
+    EDITTEXT        1001,25,170,117,13
+END
+

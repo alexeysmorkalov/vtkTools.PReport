@@ -1,0 +1,295 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/preport.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Functions of PReport parser</title>
+<!-- InstanceEndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable --> 
+<link href="PReport.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table cellspacing=0 cellpadding=0 bgcolor="#FBEAEA" align="center" width=100%>
+  <tr>
+    <td align="left"> &nbsp;<i>PReport</i><br>
+        &nbsp;<b><script language=Javascript>document.write(document.title);</script><br>
+      <br>
+    </b></td>
+  </tr>
+</table>
+<!-- <h3 align=center><img src=logo-gridreport.gif><br>Grid Report description</h3> -->
+
+
+<!-- InstanceBeginEditable name="EditRegion1" -->
+<table width="100%" border="0">
+  <tr> 
+    <td>
+	<br>
+      <table width="100%" border="1" cellspacing="0" cellpadding="0">
+        <tr> 
+          <th width="12%">Name</th>
+          <th width="32%">Parameters</th>
+          <th width="35%">Description</th>
+          <th width="21%">Type of return value</th>
+        </tr>
+        <tr> 
+          <td><strong>DateTime</strong></td>
+          <td>None</td>
+          <td>Current date and time</td>
+          <td>TDateTime</td>
+        </tr>
+        <tr> 
+          <td><strong>Time</strong></td>
+          <td>None</td>
+          <td>Current time</td>
+          <td>TDateTime</td>
+        </tr>
+        <tr> 
+          <td><strong>GetMonth</strong></td>
+          <td>TDateTime <br>
+            or<br>
+            YearMonth <br></td>
+          <td>Returns number of a month from 1 to 12</td>
+          <td>integer</td>
+        </tr>
+        <tr> 
+          <td><strong>GetYear</strong></td>
+          <td>TDateTime<br>
+            or<br>
+            YearMonth<br></td>
+          <td>Returns a year</td>
+          <td>integer</td>
+        </tr>
+        <tr> 
+          <td><strong>GetLastDayMonth</strong></td>
+          <td>TDateTime<br>
+            or<br>
+            YearMonth<br>
+            or<br>
+            integer - month (from 1 to 12)<br>
+            integer - year<br></td>
+          <td>Returns the TDateTime value that represents the last day of the 
+            month.<br>
+            Date can be represented by the TDateTime value or YearMonth value, 
+            or two integers which contains year and month.<br></td>
+          <td>TDateTime</td>
+        </tr>
+        <tr> 
+          <td><strong>GetFirstDayMonth</strong></td>
+          <td>TDateTime<br>
+            or <br>
+            YearMonth<br>
+            or<br>
+            integer - month (from 1 to 12)<br>
+            integer - year<br></td>
+          <td>Returns the TDateTime value that represents the first day of the 
+            month.<br>
+            Date can be represented by the TDateTime value or YearMonth value, 
+            or two integers which contains year and month.<br></td>
+          <td>TDateTime</td>
+        </tr>
+        <tr> 
+          <td><strong>GetMonthName</strong></td>
+          <td>Integer - month</td>
+          <td>Returns the month name by its number from 1 to 12.</td>
+          <td>string</td>
+        </tr>
+        <tr> 
+          <td><strong>HourBetween</strong></td>
+          <td>TDateTime - first date<br>
+            TDateTime - second date<br>
+            string - first time<br>
+            string - second time<br></td>
+          <td>Counts a difference in hours between two dates. <br>
+            The last two parameters not required, it represents time in format: 
+            &#8220;hh:mm:ss&#8221;.<br></td>
+          <td>integer</td>
+        </tr>
+        <tr> 
+          <td><strong>MonthsBetween</strong></td>
+          <td>TDateTime - first date<br>
+            TDateTime - second date<br></td>
+          <td>Counts a difference between two dates in months and returns them.</td>
+          <td>integer</td>
+        </tr>
+        <tr> 
+          <td><strong>DaysBetween</strong></td>
+          <td>TDateTime - first date<br>
+            TDateTime - second date<br></td>
+          <td>Counts a difference in days between two dates and returns them.</td>
+          <td>integer</td>
+        </tr>
+        <tr> 
+          <td><strong>IncMonth</strong></td>
+          <td>TDateTime - date<br>
+            integer - how many months should be added<br></td>
+          <td>Adds the specified number of months to date and returns them.</td>
+          <td>TDateTime</td>
+        </tr>
+        <tr> 
+          <td><strong>IncDay</strong></td>
+          <td>TDateTime - date<br>
+            integer - how many days should be added<br></td>
+          <td>Adds the specified number of days to date and returns them.</td>
+          <td>TDateTime</td>
+        </tr>
+        <tr> 
+          <td><strong>GetYM</strong></td>
+          <td>TDateTime - date<br>
+            or<br>
+            integer - month (from 1 to 12)<br>
+            integer - year<br></td>
+          <td>Returns the YearMonth value.</td>
+          <td>YearMonth</td>
+        </tr>
+        <tr> 
+          <td><strong>IncYM</strong></td>
+          <td>YearMonth - month and year<br>
+            integer - how many month should be added<br></td>
+          <td>Adds the indicated number of months to a YearMonth value and returns 
+            them. </td>
+          <td>YearMonth</td>
+        </tr>
+        <tr> 
+          <td><strong>GetDateFromYM</strong></td>
+          <td>YearMonth - month and year<br>
+            integer - number of days<br></td>
+          <td>Returns the date value.</td>
+          <td>TDateTime</td>
+        </tr>
+        <tr> 
+          <td><strong>Round</strong></td>
+          <td>double - number which should be rounded off<br>
+            integer - number of signs after point <br></td>
+          <td>Rounds the number, up to the given number of signs after a point. 
+            The second parameter can be not specified 2 used by default.</td>
+          <td>double</td>
+        </tr>
+        <tr> 
+          <td><strong>Trunc</strong></td>
+          <td>double </td>
+          <td>Truncates a real number to an integer and returns them.</td>
+          <td>integer</td>
+        </tr>
+        <tr> 
+          <td><strong>IsZero</strong></td>
+          <td>double<br>
+            or<br>
+            integer<br></td>
+          <td>Returns the true if the specified number equals to zero or very 
+            close to zero (if double number is passed).</td>
+          <td>boolean</td>
+        </tr>
+        <tr> 
+          <td><strong>IsNotZero</strong></td>
+          <td>double<br>
+            or<br>
+            integer<br></td>
+          <td>Returns the true if the specified number not equals to zero.</td>
+          <td>boolean</td>
+        </tr>
+        <tr> 
+          <td><strong>iif</strong></td>
+          <td>Boolean - condition<br>
+            Any type - first value<br>
+            Any type - second value<br></td>
+          <td>If a condition is true, the first value is returned otherwise &#8211; 
+            second.</td>
+          <td>any</td>
+        </tr>
+        <tr> 
+          <td><strong>Copy</strong></td>
+          <td>string - line<br>
+            integer - from what char to cut<br>
+            integer - Amount of chars to cut, can be omitted. In this case all 
+            chars are cut up till the end<br></td>
+          <td>Returns a substring of a string.</td>
+          <td>string</td>
+        </tr>
+        <tr> 
+          <td><strong>MakeStr</strong></td>
+          <td>integer - length of the string.<br>
+            string - char that is repeated, can be omitted, in this case the space 
+            is used.<br></td>
+          <td>Returns string with value indicated by a specified character repeated 
+            a specified number of times</td>
+          <td>string</td>
+        </tr>
+        <tr> 
+          <td><strong>AnsiUpperCase</strong></td>
+          <td>string</td>
+          <td>Converts a string to upper case.</td>
+          <td>string</td>
+        </tr>
+        <tr> 
+          <td><strong>AnsiLowerCase</strong></td>
+          <td>string</td>
+          <td>Converts a string to upper case.</td>
+          <td>string</td>
+        </tr>
+        <tr> 
+          <td><strong>Trim</strong></td>
+          <td>string</td>
+          <td>Removes all spaces in the beginning and at the end of a string.</td>
+          <td>string</td>
+        </tr>
+        <tr> 
+          <td><strong>UID</strong></td>
+          <td>More than one parameter of any type</td>
+          <td>Each parameter converted to the string after that strings are united 
+            and as delimiter the char with 0x01 code is used.<br>
+            This function can be used to specify the condition of the subgroups.<br></td>
+          <td>string</td>
+        </tr>
+        <tr> 
+          <td><strong>In</strong></td>
+          <td>More than one parameter</td>
+          <td>Returns true if the first parameter equals to one of other.</td>
+          <td>boolean</td>
+        </tr>
+        <tr> 
+          <td><strong>AddLeft</strong></td>
+          <td>string - initial string<br>
+            string - char to add<br>
+            integer - length of the resulting line<br></td>
+          <td>Adds the given char to the end of string up to given length.</td>
+          <td>string</td>
+        </tr>
+        <tr> 
+          <td><strong>AddRight</strong></td>
+          <td>string - initial string<br>
+            string - char to add<br>
+            integer - length of the resulting line<br></td>
+          <td>Adds the given char to the begin of string up to given length.</td>
+          <td>string</td>
+        </tr>
+        <tr> 
+          <td><strong>Length</strong></td>
+          <td>string</td>
+          <td>Returns length of string</td>
+          <td>integer</td>
+        </tr>
+        <tr> 
+          <td><strong>Null</strong></td>
+          <td>None</td>
+          <td>Returns Null value</td>
+          <td>Null</td>
+        </tr>
+        <tr> 
+          <td><strong>Abs</strong></td>
+          <td>Integer<br>
+            Or<br>
+            double</td>
+          <td>Returns an absolute value.</td>
+          <td>integer or double</td>
+        </tr>
+      </table> </td>
+  </tr>
+</table>
+<br>
+<!-- InstanceEndEditable -->
+<hr width="100%" size="1">
+<br>&nbsp;&nbsp; &copy; 1999-2004 vtkTools Company. All rights reserved.<br><br><br>
+</body>
+<!-- InstanceEnd --></html>

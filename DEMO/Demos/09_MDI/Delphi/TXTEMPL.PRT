@@ -1,0 +1,179 @@
+object TprTxReport
+  ShowProgress = False
+  CanUserEdit = False
+  DesignerFormMode = fmNormal
+  PreviewFormMode = fmNormal
+  Collate = False
+  Copies = 1
+  FromPage = -1
+  ToPage = -1
+  PrintPagesMode = ppmAll
+  ExportOptions = [preoShowParamsDlg, preoShowProgress, preoShowAfterGenerate]
+  ExportPagesMode = ppmAll
+  ExportFromPage = 0
+  ExportToPage = 0
+  Values = <>
+  LeftSpaces = 0
+  WrapAfterColumn = 0
+  StartNewLineOnWrap = False
+  PaperType = ptPage
+  UseLinesOnPage = False
+  LinesOnPage = 0
+  MakeFormFeedOnRulon = False
+  PrintRulonMode = prmAllLines
+  FromLine = 0
+  ToLine = 0
+  ExportTxOptions = []
+  ExportFromLine = 0
+  ExportToLine = 0
+  ExportCodePage = prtxcpDOS866
+  SystemInfo = (
+    'OS: WIN32_NT 5.1.2600 '
+    ''
+    'PageSize: 4096'
+    'ActiveProcessorMask: $1000'
+    'NumberOfProcessors: 1'
+    'ProcessorType: 586'
+    ''
+    'Compiler version: Delphi5'
+    'PReport version: 1.60.1')
+  object prTxPage1: TprTxPage
+    Width = 0
+    Height = 0
+    LineNum = 60
+    ColNum = 80
+    PageType = tptPage
+    DefTxFontStyle = tfsNormal
+    DefTxFontOptions = []
+    object prTxHTitleBand1: TprTxHTitleBand
+      ResizeMode = prbrmNone
+      Visible = True
+      Height = 4
+      UseVerticalBands = False
+      object prTxMemoObj1: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              'List of customers'
+              '------------------------------------------')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhCenter
+            vAlign = prvCenter
+            DefaultFont = False
+            TxFontStyle = tfsNormal
+            TxFontOptions = []
+            WordWrap = False
+          end>
+        dRec.Left = 18
+        dRec.Top = 1
+        dRec.Right = 60
+        dRec.Bottom = 3
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+    end
+    object prTxHDetailBand1: TprTxHDetailBand
+      ResizeMode = prbrmNone
+      Visible = True
+      Height = 2
+      UseVerticalBands = False
+      DataSetName = 'Table1'
+      ColCount = 0
+      ColDirection = prcdTopBottomLeftRight
+      object prTxMemoObj2: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              '[Table1.CustNo]')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhLeft
+            vAlign = prvTop
+            DefaultFont = False
+            TxFontStyle = tfsNormal
+            TxFontOptions = []
+            WordWrap = False
+          end>
+        dRec.Left = 1
+        dRec.Top = 0
+        dRec.Right = 13
+        dRec.Bottom = 1
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+      object prTxMemoObj3: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              '[Table1.Company] [Table1.Country]')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhLeft
+            vAlign = prvTop
+            DefaultFont = False
+            TxFontStyle = tfsNormal
+            TxFontOptions = []
+            WordWrap = False
+          end>
+        dRec.Left = 15
+        dRec.Top = 0
+        dRec.Right = 79
+        dRec.Bottom = 1
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+      object prTxMemoObj4: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              
+                '””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””' +
+                '””””””””””””””””')
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            hAlign = prhLeft
+            vAlign = prvTop
+            DefaultFont = False
+            TxFontStyle = tfsNormal
+            TxFontOptions = []
+            WordWrap = False
+          end>
+        dRec.Left = 0
+        dRec.Top = 1
+        dRec.Right = 80
+        dRec.Bottom = 2
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+    end
+  end
+end

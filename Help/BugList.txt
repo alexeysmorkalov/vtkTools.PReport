@@ -1,0 +1,222 @@
+----------------------------
+$BUG_0001 TAG1.9.1 10.10.2003 Манузин
+$CATEGORY: TprDataset
+$DESCRIPTION:
+Неверно выводится значение в подвале группы, которая организована поверх
+TprDataset
+$FIXED: TAG1.9.1 23.10.2003 Манузин
+Баг неподтвердился, все вообщем то работает.
+----------------------------
+$BUG_0002 TAG1.9.1 22.10.2003 Манузин
+$CATEGORY: Print
+$DESCRIPTION:
+Если выставлена толщина линии более 1 то она неверно показывается при печати.
+$FIXED: TAG1.9.1 23.10.2003 Манузин
+$COMMENTARY:
+Ошибка была в процедуре DrawObjBorders.SetPs
+----------------------------
+$BUG_0003 TAG1.9.1 22.10.2003 Манузин
+$CATEGORY: TprParser
+$DESCRIPTION:
+Если в качестве DecimalSeparator выставлена не точка то получаем ошибки при
+анализе выражений в которых есть дробные числа.
+Проблема происходит при разборе выражений и при анализе типа выражений - 
+TextToFloat не работает если DecimalSeparator = , и написано 0.003.
+$FIXED: TAG1.9.1 23.10.2003 Манузин
+$COMMENTARY:
+Отныне число с плавающей точкой должно писаться через ТОЧКУ и DecimalSeparator
+не влияет.
+----------------------------
+$BUG_0004 TAG1.9.1 27.10.2003 Манузин
+$CATEGORY: 
+$DESCRIPTION:
+Если для TprMemoObj установлено WordWrap = true, то удаляются ведущие (слева)
+пробелы в строке (функция pr_Classes.WordWrap)
+$FIXED TAG1.9.1 27.10.2003 Манузин
+----------------------------
+$BUG_0005 TAG1.9.1 31.10.2003 Манузин
+$CATEGORY: 
+$DESCRIPTION:
+Неверно восстанавливались скрытые (Visible = false) toolbar`ы
+$FIXED TAG1.9.1 31.10.2003 Манузин
+----------------------------
+$BUG_0005 TAG1.9.2 06.11.2003 Манузин
+$CATEGORY: 
+$DESCRIPTION:
+Баг в TprStringsDataset который приводил к Stack overflow, происходил, 
+когда присваивали что-то свойству TprStringsDataset.Strings
+$FIXED TAG1.9.2 06.11.2003 Манузин
+----------------------------
+$BUG_0006 TAG1.9.2 21.11.2003 Сморкалов
+$CATEGORY: TprPreviewPanel
+$DESCRIPTION:
+Попытка использования prPreviewPanel приводит к ошибке List index of bounds
+(после вызова prReport.PrepareReport)
+$FIXED TAG1.9.2 09.01.2004 Манузин
+----------------------------
+$BUG_0007 TAG1.9.2 21.11.2003 Сморкалов
+$CATEGORY: TprPreviewPanel
+$DESCRIPTION:
+Если в дизайнере установить свойство Report, а потом очистить его, 
+возникает Access Violation
+$FIXED TAG1.9.2 09.01.2004 Манузин
+----------------------------
+$BUG_0008 TAG1.9.2 07.01.2004 Манузин
+$CATEGORY: TprImageObj
+$DESCRIPTION:
+Надо сделать чтобы при таком вот написании:
+TprImageObjRecVersion(i.dRec.Versions[0]).Picture = image1.Picture;
+Срабатывал Assign а не простое присваивание!!!
+$FIXED TAG1.9.2 09.01.2004 Манузин
+----------------------------
+$BUG_0009 TAG1.9.2 09.01.2004 Манузин
+$CATEGORY: TprMemoObj
+$DESCRIPTION:
+Баг при выводе текста, повернутого на 90 градусов - неверно работает 
+выравнивание: если в designer`е выравнивание по нижнему краю то в preview 
+по верхнему и наоборот
+$FIXED TAG1.9.2 09.01.2004 Манузин
+----------------------------
+$BUG_0010 TAG1.9.2 09.01.2004 Манузин
+$CATEGORY: TprMemoObj
+$DESCRIPTION:
+В TprDesigner для кнопочки с акцией APosSize не та иконка показывается
+$FIXED TAG1.9.2 09.01.2004 Манузин
+----------------------------
+$BUG_0011 TAG1.9.4 01.02.2004 Манузин
+$CATEGORY: TprMemoObj, WordWrap
+$DESCRIPTION:
+Если для TprMemoObj включен WordWrap то удалялись все пустые строки.
+$FIXED TAG1.9.4 01.02.2004 Манузин
+----------------------------
+$BUG_0012 TAG1.9.4 26.01.2004 Alexander Shkut
+$CATEGORY: ReportEngine
+$DESCRIPTION:
+Опечатка:
+В PreviewPreparedReport вместо PreviewFormMode использовалось
+DesignerFormMode
+$FIXED TAG1.9.4 06.02.2004 Манузин
+----------------------------
+$BUG_0013 TAG1.9.4 07.02.2004 Alexander Cruz Mбrquez
+$CATEGORY: Common
+$DESCRIPTION:
+Файл prTxRO.rc не входит в дистрьюбутив, из-за этого человек не может
+скомпилировать пакет с измененным TxRO.ini
+$FIXED TAG1.9.4 07.02.2004 Манузин
+----------------------------
+$BUG_0014 TAG1.9.4 18.02.2004 Manuzin Alexander
+$CATEGORY: Designer
+$DESCRIPTION:
+баг дизайнера - при выделении нескольких объектов для совокупности невозможно вызвать контекстное меню (с целью выбрать оттуда, например, свойства) - пропадает выделение. шоткатом работает 
+
+там же - при выделении нескольких объектов кнопка "шрифт" disabled. 
+для каждого по отдельности - enabled 
+----------------------------
+$BUG_0015 TAG1.9.4 19.02.2004 Manuzin Alexander
+$CATEGORY: Designer
+$DESCRIPTION:
+Если в TprTxPreviewPanel уйти на самую последнюю строчку и нажать Ctrl+End то
+получим exception.
+$FIXED TAG1.9.4 19.02.2004 Манузин
+----------------------------
+$BUG_0016 TAG1.9.5 25.02.2004 Manuzin Alexander
+$CATEGORY: TprMemoObj
+$DESCRIPTION:
+Серьезный баг с отрисовкой TprMemoObjRecVersion, когда она имеет цвет заливки
+равный clNone.
+$FIXED TAG1.9.5 25.02.2004 Манузин
+----------------------------
+$BUG_0017 TAG1.9.6 15.03.2004 Manuzin Alexander
+$CATEGORY: TprMemoObj
+$DESCRIPTION:
+Убран баг с редактированием текста для TprTxMemoObj.
+при вызове DOS memo editor происходил exception.
+$FIXED TAG1.9.6 15.03.2004 Манузин
+----------------------------
+$BUG_0018 TAG1.9.6 15.03.2004 Manuzin Alexander
+$CATEGORY: ReportEngine
+$DESCRIPTION:
+Сообщение OnBeforePrint - перед печатью отчета.
+$FIXED TAG1.9.7 17.05.2004 Манузин
+----------------------------
+$BUG_0019 TAG1.9.6 29.04.2004 Manuzin Alexander
+$CATEGORY: Export
+$DESCRIPTION:
+При экспорте в Excel не с первой страницы - все зависает.
+$FIXED TAG1.9.6 02.05.2004 Манузин
+----------------------------
+$BUG_0020 TAG1.9.6 29.04.2004 Manuzin Alexander
+$CATEGORY: Preview
+$DESCRIPTION:
+---------------------------
+Debugger Exception Notification
+---------------------------
+Project MyProject.exe raised exception class EZeroDivide with message 
+'Floating point division by zero'. Process stopped. Use Step or Run to continue.
+---------------------------
+OK   Help   
+---------------------------
+Версия 194
+Происходит при Preview отчета с объектом Image и 
+установке свойства "Растягивать пропорционально",
+если рисунок сохранен в поле БД. (Рисунок bmp, база mdb)
+
+Ошибка происходит в строке 3473 модуля pr_Classes.
+
+===================================================
+P.S.
+Я решил проблему вставив в строку 3430 такой код:
+
+3428:  pw := Round(Picture.Width * pdi.kx);
+3429:  ph := Round(Picture.Height * pdi.ky);
+3430:  if (pw=0) or (ph=0) then Exit; // моя строка -> работает без глюка
+----------------------------
+$BUG_0021 TAG1.9.6 02.05.2004 Manuzin Alexander
+$CATEGORY: ReportEngine
+$DESCRIPTION:
+Баги при формировании многоколоночого отчета с StartNewPage, RepeatOnEachPage
+$FIXED TAG1.9.6 02.05.2004 Manuzin Alexander
+----------------------------
+$BUG_0022 TAG1.9.7 22.06.2004 Manuzin Alexander
+$CATEGORY: ReportEngine, Groups
+$DESCRIPTION:
+Неработает свойство TprGroup.LineNo - всегда выдает 1.
+$FIXED TAG1.9.7 22.06.2004 Manuzin Alexander
+----------------------------
+$BUG_0023 TAG1.9.9 17.02.2005 Manuzin Alexander
+$CATEGORY: TprTxReport
+$DESCRIPTION:
+Не работают print variables если нету OnPrintLine event handler'а.
+$FIXED TAG1.9.9 17.02.2005 Manuzin Alexander
+----------------------------
+$BUG_0024 TAG1.9.9 17.02.2005 Manuzin Alexander
+$CATEGORY: Designer
+$DESCRIPTION:
+Если окно дизайнера открыто как modal то окна свойств объектов перекрывают
+диалоговые окна, открываемые из дизайнера.
+----------------------------
+$BUG_0025 TAG1.9.9 03.03.2005 Manuzin Alexander
+$CATEGORY: General
+$DESCRIPTION:
+Проскакивают Range Error если для объекта включено - WordWrap.
+$FIXED TAG1.9.9 03.03.2005 Manuzin Alexander
+$COMMENTARY:
+В vgr_GUIFunctions были объявлены типы array [0..0] of integer.
+----------------------------
+$BUG_0026 TAG1.9.9 03.03.2005 Manuzin Alexander
+$CATEGORY: Designer
+$DESCRIPTION:
+Такой баг:
+1. Положить DesignerPanel на форму
+2. Загрузить в нее что-то
+3. Выбрать в форме объект
+4. Открыть дизайнер этого же отчета
+5. удалить в нем объект, который выбран в DesignerPanel
+6, После закрытия designer получим AV
+$FIXED TAG1.9.9 03.03.2005 Manuzin Alexander
+----------------------------
+$BUG_0027 TAG1.9.9 03.03.2005 Manuzin Alexander
+$CATEGORY: General
+$DESCRIPTION:
+Не передается количество копий в окно задания параметров печати
+$FIXED TAG1.9.9 03.03.2005 Manuzin Alexander

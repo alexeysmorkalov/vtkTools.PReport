@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/preport.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Links between objects (dynamic change size / position of objects)</title>
+<!-- InstanceEndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable --> 
+<link href="PReport.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table cellspacing=0 cellpadding=0 bgcolor="#FBEAEA" align="center" width=100%>
+  <tr>
+    <td align="left"> &nbsp;<i>PReport</i><br>
+        &nbsp;<b><script language=Javascript>document.write(document.title);</script><br>
+      <br>
+    </b></td>
+  </tr>
+</table>
+<!-- <h3 align=center><img src=logo-gridreport.gif><br>Grid Report description</h3> -->
+
+
+<!-- InstanceBeginEditable name="EditRegion1" -->
+<table width="100%" border="0">
+  <tr> 
+    <td> <h5>Objects links </h5>
+      <p>In PReport the mechanism of dynamic change of the sizes and positions 
+        of objects is realized. Size and position of object may depend from its 
+        contents and from contents of other objects. For example object TprMemoObj 
+        (or TprTxMemoObj) can change the sizes depending on the text and the size 
+        of a font. Also between objects of the report template the links can be 
+        defined which determine dependences between objects. In PReport can be 
+        links of the four types:</p>
+      <ul>
+        <li><strong>The height of the object changes depending on other objects.</strong> 
+          These links are established from bottom side of the object.</li>
+        <li><strong>The width of the object changes depending on other objects.</strong> 
+          These links are established from right side of the object.</li>
+        <li><strong>The X coordinate of object changes depending on other objects.</strong> 
+          These links are established from left side of the object.</li>
+        <li><strong>The Y coordinate of object changes depending on other objects.</strong> 
+          These links are established from top side of the object.</li>
+      </ul>
+      <p>About that how define links between objects in the report designer you 
+        can to read in section &quot;Designer&quot;. To edit the work mode of 
+        links use popup window opened by <img src="Images/bLinks.GIF" width="16" height="16"> 
+        button. In this window you can delete links and edit properties TopMode, 
+        LeftMode, HeightMode and WidthMode.<br>
+      </p>
+      <br> <img src="Images/links_window.GIF" width="143" height="107"> </p> 
+      <p>The links from object are specified by these properties:</p>
+      <font face="Courier New, Courier, mono"><strong>property</strong> TopObjs: 
+      TprObjs <strong>read</strong>;</font> <blockquote> Contains the list of 
+        objects with which links from the top side of object are established (influencing 
+        on Y coordinate of object). </blockquote>
+        <font face="Courier New, Courier, mono"><strong>property</strong> TopMode: 
+          TprVLinkMode <strong>read</strong> <strong>write</strong> <strong>default</strong> 
+          prlmMaxBottom</font>;<blockquote> Specifies how the links are influencing on Y coordinate 
+          of object.<br>
+        <font face="Courier New, Courier, mono">TprVLinkMode = (prlmMaxBottom, 
+        prlmMinBottom);</font><br>
+        <font face="Courier New, Courier, mono"><strong>prlmMaxBottom</strong></font> 
+        - coordinate Y will change on so much as far as the bottom coordinate 
+        of the lowest object will change.<br>
+        <font face="Courier New, Courier, mono"><strong>prlmMinBottom</strong></font> 
+        - coordinate Y will change on so much as far as the bottom coordinate 
+        of the highest object will change.</blockquote>
+      <font face="Courier New, Courier, mono"><strong>property</strong> LeftObjs: 
+      TprObjs <strong>read</strong>; </font> 
+      <blockquote>Contains the list of objects with which links from the left side of object 
+        are established (influencing on X coordinate of object).</blockquote>
+        
+      <font face="Courier New, Courier, mono"><strong>property</strong> LeftMode 
+      : TprHLinkMode <strong>read</strong> <strong>write</strong> <strong>default</strong> 
+      prlmMaxRight; </font> 
+      <blockquote>Specifies how the links are influencing on X coordinate of object.<br>
+        <font face="Courier New, Courier, mono">TprHLinkMode = (prlmMaxRight, 
+        prlmMinRight);</font><br>
+        <strong>prlmMaxRight</strong> - coordinate X will change on so much as 
+        far as the right coordinate of the lowest object will change.<br>
+        <strong>prlmMinRight</strong> - coordinate X will change on so much as 
+        far as the right coordinate of the highest object will change.</blockquote>
+      <font face="Courier New, Courier, mono"><strong>property</strong> HeightObjs: 
+      TprObjs <strong>read</strong>;</font> 
+      <blockquote>
+        Contains the list of objects with which links from the bottom side of 
+        object are established (influencing on height of object).</blockquote>
+        
+      <font face="Courier New, Courier, mono"><strong>property</strong> HeightMode: 
+      TprVResizeMode <strong>read</strong> <strong>write</strong> <strong>default</strong> 
+      prrmMaxBottom; </font> 
+      <blockquote>Specifies how the links are influencing on height of object.<br>
+        <font face="Courier New, Courier, mono">TprVResizeMode = (prrmMaxBottom, 
+        prrmMinBottom, prrmMaxHeight, prrmMinHeight, prrmHeightSum);</font><br>
+        <strong>prrmMaxBottom</strong> &#8211; height of the object will change 
+        on so much as far as the bottom coordinate of the lowest object will change.<br>
+        <strong>prrmMinBottom</strong> &#8211; height of the object will change 
+        on so much as far as the bottom coordinate of the highest object will 
+        change.<br>
+        <strong>prrmMaxHeight</strong> &#8211; height of object is defined to 
+        equal height of the highest object.<br>
+        <strong>prrmMinHeight</strong> &#8211; height of object is defined to 
+        equal height of the lowest object.<br>
+        <strong>prrmHeightSum</strong> &#8211;height of object changes on size 
+        equal to total change of height of objects.</blockquote>
+      <font face="Courier New, Courier, mono"><strong>property</strong> WidthObjs: 
+      TprObjs <strong>read</strong>; </font> 
+      <blockquote>
+        Contains the list of objects with which links from the right side of object 
+        are established (influencing on width of object).</blockquote>
+        
+      <font face="Courier New, Courier, mono"><strong>property</strong> WidthMode: 
+      TprHResizeMode <strong>read</strong> <strong>write</strong> default prrmMaxRight; 
+      </font> 
+      <blockquote>Specifies how the links are influencing on width of object.<br>
+        <font face="Courier New, Courier, mono">TprHResizeMode = (prrmMaxRight, 
+        prrmMinRight, prrmMaxWidth, prrmMinWidth, prrmWidthSum);</font><br>
+        <strong>prrmMaxRight</strong> &#8211; width of the object will change 
+        on so much as far as the right coordinate of the lowest object will change.<br>
+        <strong>prrmMinRight</strong> &#8211; width of the object will change 
+        on so much as far as the right coordinate of the highest object will change.<br>
+        <strong>prrmMaxWidth</strong> &#8211; width of object is defined to equal 
+        width of the widest object.<br>
+        <strong>prrmMinHeight</strong> &#8211; width of object is defined to equal 
+        width of the narrowest object.<br>
+        <strong>prrmHeightSum</strong> &#8211; width of object changes on size 
+        equal to total change of width of objects.</blockquote>
+      <h5>Example of objects links using </h5>
+      <table width="100%" border="1" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="51%" valign="top">There are 3 objects, objects 1 and 2 can 
+            change the height depending on values of fields in the Table dataset.</td>
+          <td width="49%" align="center" valign="middle"><img src="Images/links1.GIF" width="300" height="186"></td>
+        </tr>
+        <tr> 
+          <td valign="top">Without links we can receive following output:</td>
+          <td align="center" valign="middle"><p><img src="Images/links2.GIF" width="285" height="133"></p>
+            <p>or:</p>
+            <p><img src="Images/links3.GIF" width="282" height="122"></p></td>
+        </tr>
+        <tr> 
+          <td valign="top">If we define links from the top side of the third object 
+            to the first and second objects we receive more correct solution:</td>
+          <td align="center" valign="middle"><img src="Images/links4.GIF" width="283" height="165"></td>
+        </tr>
+        <tr> 
+          <td valign="top">If we define links from bottom side of the first object 
+            to the second object and from bottom side of the second object to 
+            the first object we receive solution:</td>
+          <td align="center" valign="middle"><img src="Images/links5.GIF" width="284" height="163"></td>
+        </tr>
+      </table>
+      <h5>Bands links</h5>
+      <p>For section links to objects inside section can be established. These 
+        links can change size of the band. The band links are specified by the 
+        properties:</p>
+      <font face="Courier New, Courier, mono"><strong>property</strong> ResizeObjs: 
+      TprObjs <strong>read</strong>;</font><br>
+        <blockquote>Contains the list of objects with which links are defined.</blockquote>
+        
+      <font face="Courier New, Courier, mono"><strong>property</strong> ResizeMode: 
+      TprBandResizeMode <strong>read</strong> <strong>write</strong> <strong>default</strong> 
+      prbrmNone; </font> 
+      <blockquote>        Specifies how the links are influencing on size of the band.<br>
+        <font face="Courier New, Courier, mono">TprBandResizeMode = (prbrmNone, 
+        prbrmMaxObj, prbrmMaxResizeObj, prbrmMinResizeObj);</font><br>
+        <strong>prbrmNone</strong> &#8211; size of the band does not change.<br>
+        <strong>prbrmMaxObj</strong> &#8211; size of the band defined as the <br>
+        <strong>prbrmMaxResizeObj</strong><br>
+        <strong>prbrmMinResizeObj</strong></blockquote>
+      <p>About that how define links between objects in the report designer you 
+        can to read in section &quot;Designer&quot;. To edit the work mode of 
+        links use popup window opened by <img src="Images/bLinks.GIF" width="16" height="16"> 
+        button or band property window. In these windows you can delete links 
+        and edit value of the ResizeMode property.<br>
+        <img src="Images/band_properties_window.GIF" width="275" height="101"> 
+        <img src="Images/links_window2.GIF" width="143" height="110"> </p>
+      <p>&nbsp; </p></td>
+  </tr>
+</table>
+<!-- InstanceEndEditable -->
+<hr width="100%" size="1">
+<br>&nbsp;&nbsp; &copy; 1999-2004 vtkTools Company. All rights reserved.<br><br><br>
+</body>
+<!-- InstanceEnd --></html>

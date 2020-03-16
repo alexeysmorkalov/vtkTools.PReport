@@ -1,0 +1,127 @@
+package prPackage7;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'vtkTools PReport'}
+{$IMPLICITBUILD OFF}
+
+requires
+  vcl,
+  vcldb,
+  vclx,
+  designide,
+  rtl,
+  vclactnband,
+  dbrtl,
+  vgr_CommonControlsD7,
+  vcljpg;
+
+contains
+  pr_ValuesEditor in 'pr_ValuesEditor.pas' {prValuesEditorForm},
+  pr_Classes in 'pr_Classes.pas',
+  pr_Designer in 'pr_Designer.pas' {prDesignerForm},
+  pr_FormatExpression in 'pr_FormatExpression.pas' {prFormatExpressionForm},
+  pr_GridSize in 'pr_GridSize.pas' {prGridSizeForm},
+  pr_GroupEditor in 'pr_GroupEditor.pas' {prGroupEditorForm},
+  pr_GroupsEditor in 'pr_GroupsEditor.pas' {prGroupsEditorForm},
+  pr_ImageEditor in 'pr_ImageEditor.pas' {prImageEditorForm},
+  pr_ImagePreview in 'pr_ImagePreview.pas' {prImagePreviewForm},
+  pr_Link in 'pr_Link.pas' {prObjLinksForm},
+  pr_MemoEditor in 'pr_MemoEditor.pas' {prMemoEditorForm},
+  pr_PageParams in 'pr_PageParams.pas' {prPageParamsForm},
+  pr_Parser in 'pr_Parser.pas',
+  pr_Preview in 'pr_Preview.pas' {prPreviewForm},
+  pr_Progress in 'pr_Progress.pas' {prProgressForm},
+  pr_Properties in 'pr_Properties.pas',
+  pr_Reg in 'pr_Reg.pas',
+  pr_ReportParams in 'pr_ReportParams.pas' {prReportParamsForm},
+  pr_SelectField in 'pr_SelectField.pas' {prSelectFieldForm},
+  pr_SelectFormat in 'pr_SelectFormat.pas' {prSelectFormatForm},
+  pr_Strings in 'pr_Strings.pas',
+  pr_ValueEditor in 'pr_ValueEditor.pas' {prValueEditorForm},
+  pr_BandEditor in 'pr_BandEditor.pas' {prBandEditorForm},
+  pr_Utils in 'pr_Utils.pas',
+  pr_VersionsEditor in 'pr_VersionsEditor.pas',
+  pr_Common in 'pr_Common.pas',
+  pr_CommonDesigner in 'pr_CommonDesigner.pas',
+  pr_DesignerFunctions in 'pr_DesignerFunctions.pas',
+  pr_ObjectsProps in 'pr_ObjectsProps.pas' {prObjectsPropsForm},
+  pr_TxClasses in 'pr_TxClasses.pas',
+  pr_TxConsts in 'pr_TxConsts.pas',
+  pr_TxDesigner in 'pr_TxDesigner.pas' {prTxDesignerForm},
+  pr_TxMemoEditor in 'pr_TxMemoEditor.pas' {prTxMemoEditorForm},
+  pr_TxMemoLinesEditorForm in 'pr_TxMemoLinesEditorForm.pas' {prTxMemoLinesEditorForm},
+  pr_TxPageParams in 'pr_TxPageParams.pas' {prTxPageParamsForm},
+  pr_TxPreview in 'pr_TxPreview.pas' {prTxPreviewForm},
+  pr_TxReportParams in 'pr_TxReportParams.pas' {prTxReportParamsForm},
+  pr_TxUtils in 'pr_TxUtils.pas',
+  pr_MultiLang in 'pr_MultiLang.pas',
+  pr_MultiLangForm in 'pr_MultiLangForm.pas' {prMultiLangForm},
+  pr_TxObjectPosSizeForm in 'pr_TxObjectPosSizeForm.pas' {prTxObjectPosSizeForm},
+  pr_ObjectPosSizeForm in 'pr_ObjectPosSizeForm.pas' {prObjectPosSizeForm},
+  pr_Dataset in 'pr_Dataset.pas',
+  pr_RichEditor in 'pr_RichEditor.pas' {prRichEditorForm},
+  pr_XLSConts in 'pr_XLSConts.pas',
+  pr_TxExportParams in 'pr_TxExportParams.pas' {prTxExportParamsForm},
+  pr_ExportParams in 'pr_ExportParams.pas' {prExportParamsForm},
+  pr_PreviewObjectsProps in 'pr_PreviewObjectsProps.pas' {prPreviewObjectsPropsForm},
+  pr_PrvImageEditor in 'pr_PrvImageEditor.pas' {prPrvImageEditorForm},
+  pr_PrvMemoEditor in 'pr_PrvMemoEditor.pas' {prPrvMemoEditorForm},
+  pr_PrvRichEditor in 'pr_PrvRichEditor.pas' {prPrvRichEditorForm},
+  BIFF8_Types in 'BIFF8_Types.pas',
+  vteConsts in 'vteConsts.pas',
+  vteExcel in 'vteExcel.pas',
+  vteExcelTypes in 'vteExcelTypes.pas',
+  vteWriters in 'vteWriters.pas',
+  pr_TxExportFilters in 'pr_TxExportFilters.pas',
+  pr_ExportFilters in 'pr_ExportFilters.pas',
+  pr_TxCommandEditor in 'pr_TxCommandEditor.pas' {prTxCommandEditorForm},
+  pr_CommonDesignerPanel in 'pr_CommonDesignerPanel.pas',
+  pr_CommonPreviewPanel in 'pr_CommonPreviewPanel.pas',
+  pr_BandHint in 'pr_BandHint.pas' {prBandHintForm},
+  pr_DesignerPanel in 'pr_DesignerPanel.pas',
+  pr_DesignerPanelOptions in 'pr_DesignerPanelOptions.pas' {prDesignerPanelOptionsForm},
+  pr_PreviewPanel in 'pr_PreviewPanel.pas',
+  pr_PreviewPanelOptions in 'pr_PreviewPanelOptions.pas' {prPreviewPanelOptionsForm},
+  pr_SelectPrintPaperSize in 'pr_SelectPrintPaperSize.pas' {prSelectPrintPaperSizeForm},
+  pr_TxDesignerPanel in 'pr_TxDesignerPanel.pas',
+  pr_TxDesignerPanelOptions in 'pr_TxDesignerPanelOptions.pas' {prTxDesignerPanelOptionsForm},
+  pr_TxPreviewPanel in 'pr_TxPreviewPanel.pas',
+  pr_TxPreviewPanelOptions in 'pr_TxPreviewPanelOptions.pas' {prTxPreviewPanelOptionsForm},
+  vteExcelFormula in 'vteExcelFormula.pas',
+  vteExcelFormula_iftab in 'vteExcelFormula_iftab.pas',
+  pr_TemplateFindForm in 'pr_TemplateFindForm.pas' {prTemplateFindForm},
+  pr_VariablesEditor in 'pr_VariablesEditor.pas' {prVariablesEditorForm},
+  pr_TxAddon in 'pr_TxAddon.pas',
+  pr_TxLineEditor in 'pr_TxLineEditor.pas' {prTxLineEditorForm},
+  pr_PrvShapeEditor in 'pr_PrvShapeEditor.pas' {prPrvShapeEditorForm},
+  pr_ShapeEditor in 'pr_ShapeEditor.pas' {prShapeEditorForm},
+  pr_ShapeObj in 'pr_ShapeObj.pas',
+  pr_ArrayDataset in 'pr_ArrayDataset.pas',
+  pr_CommonClasses in 'pr_CommonClasses.pas',
+  pr_PrvBarCodeEditor in 'pr_PrvBarCodeEditor.pas' {prPrvBarCodeEditorForm},
+  pr_BarCodeObj in 'pr_BarCodeObj.pas',
+  pr_BarCodeEditor in 'pr_BarCodeEditor.pas' {prBarCodeEditorForm},
+  pr_OemCharSelectForm in 'pr_OemCharSelectForm.pas' {prOemCharSelectForm};
+
+end.

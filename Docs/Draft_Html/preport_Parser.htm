@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/preport.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Parser - interpreter of expressions</title>
+<!-- InstanceEndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable --> 
+<link href="PReport.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table cellspacing=0 cellpadding=0 bgcolor="#FBEAEA" align="center" width=100%>
+  <tr>
+    <td align="left"> &nbsp;<i>PReport</i><br>
+        &nbsp;<b><script language=Javascript>document.write(document.title);</script><br>
+      <br>
+    </b></td>
+  </tr>
+</table>
+<!-- <h3 align=center><img src=logo-gridreport.gif><br>Grid Report description</h3> -->
+
+
+<!-- InstanceBeginEditable name="EditRegion1" -->
+<table width="100%" border="0">
+  <tr> 
+    <td> <p> PReport has the embedded expressions interpreter. From expressions 
+        you can access to the application components and their properties. The 
+        PReport interpreter does not support RTTI properties, it supports limited 
+        list of properties that are described below. The interpreter supports 
+        data types: String, Boolean, Integer, DateTime, and Double. Also is introduced 
+        new data type &#8211; YearMonth this type represents the integer of the 
+        format: YYYYMM where:</p>
+      <ul>
+        <li>YYYY &#8211; year</li>
+        <li>MM &#8211; month</li>
+        <li>For example: 200312 &#8211; December of 2002 year.</li>
+      </ul>
+      <p>For access to the objects methods and properties the point is used, for 
+        example: Table1.Eof() or Table1.RecordCount. For access to properties 
+        and methods of the report you can not write a name of the report; simply 
+        write a name of a property or method. The order of search of components:</p>
+      <ol>
+        <li> Within the report component (TprReport or TprTxReport) (FindComponent 
+          method is used).</li>
+        <li>Within the owner of the report component (if it not nil), i.e. it 
+          is the form or DataModule in which the report places. (FindComponent 
+          method is used) </li>
+        <li>Within all datamodules of application. (Screen.DataModules).</li>
+        <li>Within all forms of application (Screen.Forms). You may provide your 
+          list of the available components, use OnGetAvailableComponents event 
+          of the TprCustomReport component for that.</li>
+      </ol></p>
+      </td>
+  </tr>
+</table>
+<!-- InstanceEndEditable -->
+<hr width="100%" size="1">
+<br>&nbsp;&nbsp; &copy; 1999-2004 vtkTools Company. All rights reserved.<br><br><br>
+</body>
+<!-- InstanceEnd --></html>

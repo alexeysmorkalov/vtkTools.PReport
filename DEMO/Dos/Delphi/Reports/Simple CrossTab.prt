@@ -1,0 +1,106 @@
+object TprTxReport
+  ShowProgress = False
+  DesignerFormMode = fmNormal
+  PreviewFormMode = fmNormal
+  Collate = False
+  Copies = 1
+  FromPage = -1
+  ToPage = -1
+  PrintPagesMode = ppmAll
+  Values = <>
+  LeftSpaces = 0
+  WrapAfterColumn = 0
+  PaperType = ptPage
+  UseLinesOnPage = False
+  LinesOnPage = 0
+  MakeFormFeedOnRulon = False
+  PrintRulonMode = prmAllLines
+  FromLine = 0
+  ToLine = 0
+  object prTxPage1: TprTxPage
+    Width = 0
+    Height = 0
+    LineNum = 60
+    ColNum = 80
+    PageType = tptPage
+    DefTxFontStyle = tfsNormal
+    DefTxFontOptions = []
+    object prTxHTitleBand1: TprTxHTitleBand
+      ResizeMode = prbrmNone
+      Visible = True
+      Height = 4
+      UseVerticalBands = False
+      object prTxMemoObj1: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              'Vertical  : Table2'
+              'Horizontal: Table1')
+            hAlign = prhLeft
+            vAlign = prvTop
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            TxFontStyle = tfsNormal
+            TxFontOptions = []
+            WordWrap = False
+          end>
+        dRec.Left = 26
+        dRec.Top = 1
+        dRec.Right = 57
+        dRec.Bottom = 3
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+    end
+    object prTxHDetailBand1: TprTxHDetailBand
+      ResizeMode = prbrmNone
+      Visible = True
+      Height = 3
+      UseVerticalBands = True
+      DataSetName = 'Table2'
+      ColCount = 1
+      object prTxMemoObj2: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              'T1: [Table1.CODE]'
+              'T2: [Table2.CODE]')
+            hAlign = prhLeft
+            vAlign = prvTop
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            TxFontStyle = tfsNormal
+            TxFontOptions = []
+            WordWrap = False
+          end>
+        dRec.Left = 0
+        dRec.Top = 0
+        dRec.Right = 14
+        dRec.Bottom = 2
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+    end
+    object prTxVDetailBand1: TprTxVDetailBand
+      ResizeMode = prbrmNone
+      Visible = True
+      Width = 15
+      UseHorizontalBands = True
+      DataSetName = 'Table1'
+    end
+  end
+end

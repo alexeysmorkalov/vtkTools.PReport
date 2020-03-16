@@ -1,0 +1,86 @@
+A:link
+{
+    COLOR: #000066;
+    TEXT-DECORATION: none; 
+    font-family:Verdana
+}
+A:visited
+{
+    COLOR: #000066;
+    TEXT-DECORATION: none;
+    font-family:Verdana
+}
+A:hover
+{
+    COLOR: #FF0000;
+    TEXT-DECORATION: none;
+    font-family:Verdana
+}
+A:active
+{
+    COLOR: #FF0000;
+    TEXT-DECORATION: none;
+    font-family:Verdana
+}
+BODY
+{
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana;
+    TEXT-DECORATION: none
+}
+TD
+{
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana;
+    TEXT-DECORATION: none
+}
+UL
+{
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana;
+    TEXT-DECORATION: none
+}
+OL
+{
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana;
+    TEXT-DECORATION: none
+}
+PRE
+{
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana;
+    BACKGROUND-COLOR: #EFFFEC;
+    TEXT-DECORATION: none
+}
+DIV.code
+{
+    BORDER-RIGHT: #236595 1px solid;
+    BORDER-TOP: #236595 1px solid;
+    FONT-SIZE: 11px;
+    BACKGROUND: #ffffff;
+    BORDER-LEFT: #236595 1px solid;
+    COLOR: #000000;
+    BORDER-BOTTOM: #236595 1px solid;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana;
+    TEXT-DECORATION: none
+}
+.small
+{
+    FONT-SIZE: 8px;
+    COLOR: #000000;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana;
+    TEXT-DECORATION: none
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/preport.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Algorithm of the report generating</title>
+<!-- InstanceEndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable --> 
+<link href="PReport.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table cellspacing=0 cellpadding=0 bgcolor="#FBEAEA" align="center" width=100%>
+  <tr>
+    <td align="left"> &nbsp;<i>PReport</i><br>
+        &nbsp;<b><script language=Javascript>document.write(document.title);</script><br>
+      <br>
+    </b></td>
+  </tr>
+</table>
+<!-- <h3 align=center><img src=logo-gridreport.gif><br>Grid Report description</h3> -->
+
+
+<!-- InstanceBeginEditable name="EditRegion1" -->
+<table width="100%" border="0">
+  <tr> 
+    <td>
+	<p>
+      The report template contains the unlimited number of pages (base class - 
+      TprCustomPage). Each page contains a set of bands (base class of band - 
+      TprCustomBand). The band contains objects (base class - TprObj). Each object 
+      contains two parameters records (base class - TprObjRec), one parameters 
+      record is used when the report are designed and other when the report are 
+      generating. Each parameters record contains the list of the views (base 
+      class TprObjRecVersion), for each view the formula is specified, that specifies 
+      when (under what conditions) a view can be used. Also TprObjRec contains 
+      index of default view, which shows at designer and is used by default.</p>
+      <p>The report generating happens in three passes.</p>
+	  <ul>
+        <li>Each TprCustomPage object generates the table in which rows are formed 
+          by horizontal bands and columns by vertical bands. If the report template 
+          does not contains vertical bands the table are formed only from rows. 
+          All views of objects are generating because on first pass not always 
+          it is possible to select the necessary view, for example if in the formula 
+          are used the group summary.</li>
+        <li> The generated table divides by the end pages (objects of the TprCustomEndPage 
+          class), which forms a prepared report.</li>
+        <li> All aggregate values are calculated, for each object the necessary 
+          view is selected and these views are transferred on TprCustomEndPage.</li>
+      </ul></td>
+  </tr>
+</table>
+<!-- InstanceEndEditable -->
+<hr width="100%" size="1">
+<br>&nbsp;&nbsp; &copy; 1999-2004 vtkTools Company. All rights reserved.<br><br><br>
+</body>
+<!-- InstanceEnd --></html>

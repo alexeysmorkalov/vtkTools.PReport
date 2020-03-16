@@ -1,0 +1,36 @@
+{$IFDEF VER170}
+  {$DEFINE VTK_D9}
+  {$DEFINE VTK_D6_OR_D7}
+  {$WARN UNSAFE_CODE OFF}
+  {$WARN UNSAFE_TYPE OFF}
+  {$WARN UNSAFE_CAST OFF}
+{$ELSE}
+  {$IFDEF VER150}
+    {$DEFINE VTK_D6_OR_D7}
+    {$DEFINE VTK_D7}
+    {$WARN UNSAFE_CODE OFF}
+    {$WARN UNSAFE_TYPE OFF}
+    {$WARN UNSAFE_CAST OFF}
+  {$ELSE}
+    {$IFDEF VER140}
+      {$DEFINE VTK_D6}
+    {$DEFINE VTK_D6_OR_D7}
+      {$IFDEF BCB}
+        {$DEFINE VTK_CB6}
+      {$ENDIF}
+    {$ELSE}
+      {$IFDEF VER130}
+        {$DEFINE VTK_D5}
+        {$IFDEF BCB}
+          {$DEFINE VTK_CB5}
+        {$ENDIF}
+      {$ELSE}
+        {$IFDEF VER120}
+          {$DEFINE VTK_D4}
+        {$ENDIF}
+      {$ENDIF}
+    {$ENDIF}
+  {$ENDIF}
+{$ENDIF}
+
+//{$DEFINE VGR_DEBUG}

@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.05.03"/>
+    <PROJECT value="prPackageCB5.bpl"/>
+    <OBJFILES value="pr_XLSConts.obj pr_Classes.obj pr_Common.obj pr_CommonDesigner.obj 
+      pr_Dataset.obj pr_designer.obj pr_DesignerFunctions.obj 
+      pr_FormatExpression.obj pr_GridSize.obj pr_GroupEditor.obj 
+      pr_GroupsEditor.obj pr_ImageEditor.obj pr_ImagePreview.obj pr_Link.obj 
+      pr_MemoEditor.obj pr_MultiLang.obj pr_MultiLangForm.obj 
+      pr_ObjectPosSizeForm.obj pr_ObjectsProps.obj pr_PageParams.obj 
+      pr_Parser.obj pr_Preview.obj pr_Progress.obj pr_Properties.obj pr_Reg.obj 
+      pr_ReportParams.obj pr_RichEditor.obj pr_SelectField.obj 
+      pr_SelectFormat.obj pr_Strings.obj pr_TxClasses.obj pr_TxConsts.obj 
+      pr_TxDesigner.obj pr_TxMemoEditor.obj pr_TxMemoLinesEditorForm.obj 
+      pr_TxObjectPosSizeForm.obj pr_TxPageParams.obj pr_TxPreview.obj 
+      pr_TxReportParams.obj pr_TxUtils.obj pr_Utils.obj pr_ValueEditor.obj 
+      pr_ValuesEditor.obj pr_VersionsEditor.obj pr_BandEditor.obj 
+      pr_ExportParams.obj pr_TxExportParams.obj pr_PrvRichEditor.obj 
+      pr_PreviewObjectsProps.obj pr_PrvImageEditor.obj pr_PrvMemoEditor.obj 
+      vteWriters.obj vteConsts.obj vteExcel.obj vteExcelTypes.obj 
+      BIFF8_Types.obj pr_TxExportFilters.obj pr_ExportFilters.obj 
+      pr_TxCommandEditor.obj pr_TxDesignerPanelOptions.obj 
+      pr_CommonDesignerPanel.obj pr_CommonPreviewPanel.obj pr_DesignerPanel.obj 
+      pr_DesignerPanelOptions.obj pr_PreviewPanel.obj pr_PreviewPanelOptions.obj 
+      pr_SelectPrintPaperSize.obj pr_TxDesignerPanel.obj pr_BandHint.obj 
+      pr_TxPreviewPanel.obj pr_TxPreviewPanelOptions.obj vteExcelFormula.obj 
+      pr_TemplateFindForm.obj vteExcelFormula_iftab.obj pr_VariablesEditor.obj 
+      pr_TxLineEditor.obj pr_ArrayDataset.obj pr_PrvShapeEditor.obj 
+      pr_ShapeEditor.obj pr_ShapeObj.obj pr_TxAddon.obj pr_CommonClasses.obj 
+      prPackageCB5.obj"/>
+    <RESFILES value="prPackageCB5.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) pr_designer.dfm pr_FormatExpression.dfm pr_GridSize.dfm 
+      pr_GroupEditor.dfm pr_GroupsEditor.dfm pr_ImageEditor.dfm 
+      pr_ImagePreview.dfm pr_Link.dfm pr_MemoEditor.dfm pr_MultiLangForm.dfm 
+      pr_ObjectPosSizeForm.dfm pr_ObjectsProps.dfm pr_PageParams.dfm 
+      pr_Preview.dfm pr_Progress.dfm pr_ReportParams.dfm pr_RichEditor.dfm 
+      pr_SelectField.dfm pr_SelectFormat.dfm pr_TxDesigner.dfm 
+      pr_TxMemoEditor.dfm pr_TxMemoLinesEditorForm.dfm 
+      pr_TxObjectPosSizeForm.dfm pr_TxPageParams.dfm pr_TxPreview.dfm 
+      pr_TxReportParams.dfm pr_ValueEditor.dfm pr_ValuesEditor.dfm 
+      pr_BandEditor.dfm pr_ExportParams.dfm pr_TxExportParams.dfm 
+      pr_TxCommandEditor.dfm pr_TxDesignerPanelOptions.dfm 
+      pr_DesignerPanelOptions.dfm pr_PreviewPanelOptions.dfm 
+      pr_SelectPrintPaperSize.dfm pr_BandHint.dfm pr_TxPreviewPanelOptions.dfm 
+      pr_TemplateFindForm.dfm pr_VariablesEditor.dfm pr_TxLineEditor.dfm 
+      pr_PrvShapeEditor.dfm pr_ShapeEditor.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <PACKAGES value="vcl50.bpi dsnide50.bpi VCLX50.bpi VCLDB50.bpi vgr_CommonControlsBCB5.bpi 
+      vcljpg50.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="tlink32"/>
+    <USERDEFINES value=""/>
+    <SYSDEFINES value="_RTLDLL;NO_STRICT;USEPACKAGES"/>
+    <MAINSOURCE value="prPackageCB5.cpp"/>
+    <INCLUDEPATH value="$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\CommonControls\Source;..\..\CommonControls;..\CommonControls\Source;..\CommonControls"/>
+    <WARNINGS value="-w-par"/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I$(BCB)\include -I$(BCB)\include\vcl -src_suffix cpp -boa"/>
+    <CFLAG1 value="-O2 -H=$(BCB)\lib\vcl50.csm -Hc -Vx -Ve -X- -a8 -b- -k- -vi -c -tWM"/>
+    <PFLAGS value="-$Y- -$L- -$D- -$C- -v -JPHNE -M -LUvcl50"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zn"/>
+    <LFLAGS value="-D&quot;vtkTools PReport&quot; -aa -Tpp -x -Gn -Gl -Gi"/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0pkg32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+  </LINKER>
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=0
+MajorVer=1
+MinorVer=9
+Release=3
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1033
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=vtkTools
+FileDescription=
+FileVersion=1.9.3.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=PReport - report generator
+ProductVersion=1.8.0.0
+Comments=
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+  </IDEOPTIONS>
+</PROJECT>

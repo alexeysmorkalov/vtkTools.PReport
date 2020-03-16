@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+<font color="#000099" size="+2"><strong>PReport 1.9.9.1</strong></font> 
+<ul>
+  <ll> 
+  <table width="100%">
+    <tr> 
+      <td bgcolor="#999999"><font size="+1">New features </font></td>
+    </tr>
+  </table>
+  <ul>
+    <li>Support of Delphi2005 is added.</li>
+    <li>Demo "32_PrintStringListAsRTF" is added, demonstrates
+printing the RTF from TStringList.</li>
+  </ul>
+    <table width="100%">
+      <tr> 
+        <td bgcolor="#999999"><font size="+1">Removed bugs</font></td>
+      </tr>
+    </table>
+    
+  <ul>
+    <li>Serious errors with processing of the print variables in TprReport and TprTxReport are fixed.</li>
+    <li>"Range check error" exception occurs when project is compiled with option "Range check". Fixed.</li>
+    <li>AV occurs in this scenario:<br>
+1. Open report template in TprDesignerPanel or TprTxDesignerPanel<br>
+2. Select some objects in panel.<br>
+3. Open new designer of report connected to designer panel in another window.<br>
+4. Delete objects in this new designer which are selected in designer panel.<br>
+5. Close designer<br>
+6. AV occurs. Fixed.</li>
+    <li>The "Print setup dialog" of TprReport works incorrectly in this situation:<br>
+1. Set TprReport.Copies to some value (3,4,10 etc).<br>
+2. Call TprReport.SetupPrintOptions method<br>
+3. The dialog displays 1 copy to print.<br>
+This bug depends on type of printer. Fixed.</li>
+  </ul>
+</ul>
+</ul>
+</body>
+</html>

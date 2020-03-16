@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+<font color="#000099" size="+2"><strong>PReport 1.9.7</strong></font> 
+<ul>
+  <ll> 
+  <table width="100%">
+    <tr> 
+      <td bgcolor="#999999"><font size="+1">New features </font></td>
+    </tr>
+  </table>
+  <ul>
+    <li><strong>Support of nested reports is added</strong>: 
+      <ul>
+        <li>Property <strong>SubReportName</strong> is added for <em>horizontal</em> 
+          bands: Summary, Detail, DetailHeader, DetailFooter, GroupHeader, GroupFooter. 
+          Use this property to specify name of another TprCustomReport object, 
+          which holds subreport template.</li>
+        <li>Event <strong>TprCustomReport.OnBeginSubReportGenerate</strong> is 
+          added, use this event to initialize data for subreport.</li>
+      </ul>
+      See &quot;26_SubReports&quot; demo for details. </li>
+    <li>Improved RTF support: 
+      <ul>
+        <li>Last version of Microsoft RichEdit dll is supported (msftedit.dll) 
+          this dll is distributed with WinXP SP1.</li>
+        <li>The TprRichObj object now can be split between pages.</li>
+      </ul>
+    </li>
+	<li>
+	Added justify align for TprMemoObj and TprTxMemoObj objects.
+	</li>
+    <li>Property <strong>MinDataRecords</strong> is added for bands: GroupHeader, 
+      GroupFooter. <br>
+      This property gets or sets the value indicating that the group header must 
+      be printed only when the group data contains at least of the specified amount 
+      of records. By default this value equals to 0 ie the group header will be 
+      printed always.</li>
+    <li>New event for TprCustomReport is added: 
+      <ul>
+        <li><strong>OnPrintStart</strong> - occurs immediately before printing.</li>
+      </ul>
+    </li>
+    <li>New event for TprTxReport is added: 
+      <ul>
+        <li><strong>OnPrintLine</strong> - occurs before printing a line of the 
+          report.</li>
+      </ul>
+    <li>TprCustomPreviewPanel (parent class for TprPreviewPanel and TprTxPreviewPanel), 
+      added properties and methods: 
+      <ul>
+        <li>PageIndex - Gets or sets the zero-based index of the displayed page.</li>
+        <li>PageCount - Returns the count of pages in the connected report.</li>
+        <li>GotoPage - Displays the page with specified index.</li>
+        <li>GotoPriorPage - Displays the previous page.</li>
+        <li>GotoNextPage - Displays the next page.</li>
+        <li>GotoFirstPage - Displays the first page.</li>
+        <li>GotoLastPage - Displays the last page.</li>
+      </ul>
+    </li>
+    <li>TprCustomPreview</li></li>
+    (parent class for TprPreview and TprTxPreview), instance of this class is 
+    returned by the TprCustomReport.PreviewForm property; added properties and 
+    methods: <strong>PageIndex</strong>, <strong>PageCount</strong>, <strong>GotoPage</strong>, 
+    <strong>GotoPriorPage</strong>, <strong>GotoNextPage</strong>, <strong>GotoFirstPage</strong>, 
+    <strong>GotoLastPage</strong> 
+  </ul></li>
+  <ll> 
+  <table width="100%">
+    <tr> 
+      <td bgcolor="#999999"><font size="+1">Changes</font></td>
+    </tr>
+  </table>
+  <ul>
+    <li>Now you can use <strong>aggregate variables in the TprBand.VisibleFormula</strong> 
+      property, using that you can hide the group header if group summary less 
+      than some value, for example.</li>
+    <li><strong>TprPreviewPanel.CurPage</strong> is renamed to <strong>ActivePage</strong>.</li>
+    <li><strong>TprPreviewPanel.CurShowPageIndex</strong> property is removed, 
+      use PageIndex property instead. </li>
+    <li><strong>TprTxPreviewPanel.CurPage</strong> property is removed, use <strong>PageIndex</strong> 
+      instead.</li>
+    <li><strong>TprTxPreviewPanel.PagesCount</strong> property is removed, use 
+      <strong>PageCount</strong> instead.</li>
+  </ul></li>
+  <ll> 
+  <table width="100%">
+    <tr> 
+      <td bgcolor="#999999"><font size="+1">Removed bugs</font></td>
+    </tr>
+  </table>
+  <ul>
+    <li>Operator [!] (not) does not work. Fixed.</li>
+    <li>If the multicolumn report contains the group header with StartNewPage 
+      = true and ReprintOnEachPage = true then the report is forming incorrectly. 
+      Fixed.</li>
+    <li>If the TprReport is exported to Excel or HTML from not first page then 
+      the application freezes (the eternal cycle occurs). Fixed.</li>
+    <li>If the TprImageObj has the zero width or height then AV occurs. Fixed.</li>
+    <li>In OnUnknownFunction, OnUnknownObjFunction methods only first parameter 
+      is accessible under C++Builder. Fixed.</li>
+  </ul></li>
+  
+</ul>
+</body>
+</html>

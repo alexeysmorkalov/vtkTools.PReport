@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/preport.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Functions of classes</title>
+<!-- InstanceEndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable --> 
+<link href="PReport.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table cellspacing=0 cellpadding=0 bgcolor="#FBEAEA" align="center" width=100%>
+  <tr>
+    <td align="left"> &nbsp;<i>PReport</i><br>
+        &nbsp;<b><script language=Javascript>document.write(document.title);</script><br>
+      <br>
+    </b></td>
+  </tr>
+</table>
+<!-- <h3 align=center><img src=logo-gridreport.gif><br>Grid Report description</h3> -->
+
+
+<!-- InstanceBeginEditable name="EditRegion1" -->
+<table width="100%" border="0">
+  <tr> 
+    <td>
+	<br>
+      <table width="100%" border="1" cellspacing="0" cellpadding="0">
+        <tr> 
+          <th width="10%">Class</th>
+          <th width="17%">Name of function</th>
+          <th width="24%">Parameters</th>
+          <th width="23%">Description</th>
+          <th width="26%">Type of return value</th>
+        </tr>
+        <tr> 
+          <td colspan="5"><strong>TDataSet</strong></td>
+        </tr>
+        <tr> 
+          <td>TDataSet</td>
+          <td><strong>Eof</strong></td>
+          <td>None</td>
+          <td>Returns true, a dataset is positioned at the last record.</td>
+          <td>boolean</td>
+        </tr>
+        <tr> 
+          <td>TDataSet</td>
+          <td><strong>Locate</strong></td>
+          <td>Variable number of parameters, depends on an amount of fields, on 
+            which it is necessary to search, the parameters are passed as follows:<br> 
+            &quot;Name of first field&quot;, <br> &quot;Value of first field&quot;,<br> 
+            &quot;Name of second field&quot;, <br> &quot;Value of second field&quot;<br></td>
+          <td>Searches an record in a dataset, returns true if the record is found.</td>
+          <td>boolean</td>
+        </tr>
+        <tr> 
+          <td>TDataSet</td>
+          <td><strong>IsNullField</strong></td>
+          <td>string - the field name </td>
+          <td>Returns the true if the field has NULL value.</td>
+          <td>boolean</td>
+        </tr>
+        <tr> 
+          <td>TDataSet</td>
+          <td><strong>IsZeroField</strong></td>
+          <td>string - the field name </td>
+          <td>Returns the true, if the field value equals to zero, if the field 
+            equals to NULL also returns true.</td>
+          <td>boolean</td>
+        </tr>
+        <tr> 
+          <td>TDataSet</td>
+          <td><strong>LineNo</strong></td>
+          <td>None</td>
+          <td>Returns the current line of a dataset from beginning. Dataset must 
+            be linked to the detail band.</td>
+          <td>integer</td>
+        </tr>
+        <tr> 
+          <td>TDataSet</td>
+          <td><strong>GetFieldValue</strong></td>
+          <td>String - the field name</td>
+          <td>Returns the field value. Use this function if the field name has 
+            spaces or other special chars.</td>
+          <td>Depends on a type of a field</td>
+        </tr>
+        <tr> 
+          <td>TDataSet</td>
+          <td><strong>FieldDisplayText</strong></td>
+          <td>String - the field name</td>
+          <td>Returns the string, which represents the value of the TField.DisplayText 
+            property.</td>
+          <td>string</td>
+        </tr>
+        <tr> 
+          <td colspan="5"><strong>TprGroup</strong></td>
+        </tr>
+        <tr> 
+          <td>TprGroup</td>
+          <td><strong>LineNo</strong></td>
+          <td>None</td>
+          <td>Returns number of a current line in group from a beginning, can 
+            be used for a print of a ordinal number of a line in group.</td>
+          <td>integer</td>
+        </tr>
+        <tr> 
+          <td colspan="5"><strong>TprDataSet</strong></td>
+        </tr>
+        <tr> 
+          <td>TprDataSet</td>
+          <td><strong>LineNo</strong></td>
+          <td>None</td>
+          <td>Returns number of a current line in a dataset from a beginning, 
+            can be used for a print of a ordinal number.</td>
+          <td>integer</td>
+        </tr>
+        <tr> 
+          <td>TprDataSet</td>
+          <td><strong>GetFieldValue</strong></td>
+          <td>String - the field name</td>
+          <td>Returns the field value. Use this function if the field name has 
+            spaces or other special chars.</td>
+          <td>Depends on a type of a field</td>
+        </tr>
+      </table> </td>
+  </tr>
+</table>
+<!-- InstanceEndEditable -->
+<hr width="100%" size="1">
+<br>&nbsp;&nbsp; &copy; 1999-2004 vtkTools Company. All rights reserved.<br><br><br>
+</body>
+<!-- InstanceEnd --></html>

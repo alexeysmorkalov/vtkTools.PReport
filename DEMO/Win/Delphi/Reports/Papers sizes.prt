@@ -1,0 +1,416 @@
+object TprReport
+  ShowProgress = True
+  CanUserEdit = True
+  DesignerFormMode = fmNormal
+  PreviewFormMode = fmNormal
+  Collate = False
+  Copies = 1
+  FromPage = 65535
+  ToPage = 1
+  PrintPages = '6'
+  PrintPagesMode = ppmPagesList
+  ExportOptions = [preoShowParamsDlg, preoShowProgress, preoShowAfterGenerate]
+  ExportPagesMode = ppmAll
+  ExportFromPage = 0
+  ExportToPage = 0
+  Values = <>
+  PrinterName = 'HP LaserJet 1200 Series PCL'
+  ExportPrecision = 1
+  ExportPrecisionLow = 10
+  ExportPrecisionNormal = 5
+  ExportPrecisionHigh = 1
+  PreviewParams.Options = [prpoShowMenu, prpoAllowShowHideToolbars, prpoAllowDragToolbars, prpoAllowChangePreviewMode]
+  PreviewParams.ShowToolbars = [prptPreviewCommon, prptEdit, prptInsertObject, prptText, prptBorders, prptAlign, prptSize, prptNudge, prptObjects, prptObject]
+  SystemInfo = (
+    'OS: WIN32_NT 5.1.2600 '
+    ''
+    'PageSize: 4096'
+    'ActiveProcessorMask: $1000'
+    'NumberOfProcessors: 1'
+    'ProcessorType: 586'
+    ''
+    'Compiler version: Delphi5'
+    'PReport version: 1.80')
+  LOGPIXELSX = 96
+  LOGPIXELSY = 96
+  object prPage1: TprPage
+    Width = 2100
+    Height = 2970
+    PaperSize = 9
+    Orientation = poPortrait
+    lMargin = 10
+    rMargin = 10
+    tMargin = 10
+    bMargin = 10
+    object prHTitleBand1: TprHTitleBand
+      Height = 1044
+      UseVerticalBands = False
+      object prMemoObj1: TprMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              ' Paper size - A4 (portrait)'
+              ' '
+              ' Left margin - 10mm'
+              ' Top margin - 10mm'
+              ' Right margin - 10mm'
+              ' Bottom margin - 10mm')
+            lBorder.Show = True
+            lBorder.Style = psSolid
+            lBorder.Color = clBlack
+            lBorder.Width = 1
+            rBorder.Show = True
+            rBorder.Style = psSolid
+            rBorder.Color = clBlack
+            rBorder.Width = 1
+            tBorder.Show = True
+            tBorder.Style = psSolid
+            tBorder.Color = clBlack
+            tBorder.Width = 1
+            bBorder.Show = True
+            bBorder.Style = psSolid
+            bBorder.Color = clBlack
+            bBorder.Width = 1
+            FillColor = clWhite
+            hAlign = prhLeft
+            vAlign = prvTop
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -32
+            Font.Name = 'Arial'
+            Font.Style = []
+            Rotate90 = False
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            WordWrap = False
+            FontSize = 24
+          end>
+        dRec.Left = 0
+        dRec.Top = 0
+        dRec.Right = 717
+        dRec.Bottom = 1044
+        Visible = False
+      end
+    end
+  end
+  object prPage2: TprPage
+    Width = 2970
+    Height = 2100
+    PaperSize = 9
+    Orientation = poLandscape
+    lMargin = 10
+    rMargin = 10
+    tMargin = 10
+    bMargin = 10
+    object prHTitleBand2: TprHTitleBand
+      Height = 716
+      UseVerticalBands = False
+      object prMemoObj2: TprMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              ' Paper size - A4 (landscape)'
+              ' '
+              ' Left margin - 10mm'
+              ' Top margin - 10mm'
+              ' Right margin - 10mm'
+              ' Bottom margin - 10mm')
+            lBorder.Show = True
+            lBorder.Style = psSolid
+            lBorder.Color = clBlack
+            lBorder.Width = 1
+            rBorder.Show = True
+            rBorder.Style = psSolid
+            rBorder.Color = clBlack
+            rBorder.Width = 1
+            tBorder.Show = True
+            tBorder.Style = psSolid
+            tBorder.Color = clBlack
+            tBorder.Width = 1
+            bBorder.Show = True
+            bBorder.Style = psSolid
+            bBorder.Color = clBlack
+            bBorder.Width = 1
+            FillColor = clWhite
+            hAlign = prhLeft
+            vAlign = prvTop
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -37
+            Font.Name = 'Times New Roman'
+            Font.Style = [fsBold, fsItalic]
+            Rotate90 = False
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            WordWrap = False
+            FontSize = 28
+          end>
+        dRec.Left = 0
+        dRec.Top = 0
+        dRec.Right = 1046
+        dRec.Bottom = 716
+        Visible = False
+      end
+    end
+  end
+  object prPage3: TprPage
+    Width = 1480
+    Height = 2100
+    PaperSize = 11
+    Orientation = poPortrait
+    lMargin = 30
+    rMargin = 40
+    tMargin = 10
+    bMargin = 20
+    object prHPageHeaderBand1: TprHPageHeaderBand
+      Height = 679
+      UseVerticalBands = False
+      PrintOnFirstPage = True
+      object prMemoObj3: TprMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              ' Paper size - A5 (portrait)'
+              ' '
+              ' Left margin - 30mm'
+              ' Top margin - 10mm'
+              ' Right margin - 40mm'
+              ' Bottom margin - 20mm')
+            lBorder.Show = True
+            lBorder.Style = psSolid
+            lBorder.Color = clBlack
+            lBorder.Width = 1
+            rBorder.Show = True
+            rBorder.Style = psSolid
+            rBorder.Color = clBlack
+            rBorder.Width = 1
+            tBorder.Show = True
+            tBorder.Style = psSolid
+            tBorder.Color = clBlack
+            tBorder.Width = 1
+            bBorder.Show = True
+            bBorder.Style = psSolid
+            bBorder.Color = clBlack
+            bBorder.Width = 1
+            FillColor = clWhite
+            hAlign = prhLeft
+            vAlign = prvTop
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -21
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            Rotate90 = False
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            WordWrap = False
+            FontSize = 16
+          end>
+        dRec.Left = 0
+        dRec.Top = 0
+        dRec.Right = 295
+        dRec.Bottom = 675
+        Visible = False
+      end
+    end
+  end
+  object prPage4: TprPage
+    Width = 4200
+    Height = 5940
+    PaperSize = 66
+    Orientation = poPortrait
+    lMargin = 20
+    rMargin = 20
+    tMargin = 20
+    bMargin = 20
+    object prHTitleBand3: TprHTitleBand
+      Height = 1104
+      UseVerticalBands = False
+      object prMemoObj4: TprMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              'Paper size: A2'
+              ''
+              'If printer not support A2 paper then'
+              'for page scaling:'
+              'ScaleMode = ToDefined (A4 Portrait)')
+            lBorder.Show = True
+            lBorder.Style = psSolid
+            lBorder.Color = clBlack
+            lBorder.Width = 1
+            rBorder.Show = True
+            rBorder.Style = psSolid
+            rBorder.Color = clBlack
+            rBorder.Width = 1
+            tBorder.Show = True
+            tBorder.Style = psSolid
+            tBorder.Color = clBlack
+            tBorder.Width = 1
+            bBorder.Show = True
+            bBorder.Style = psSolid
+            bBorder.Color = clBlack
+            bBorder.Width = 1
+            FillColor = clWhite
+            hAlign = prhLeft
+            vAlign = prvTop
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -64
+            Font.Name = 'Arial'
+            Font.Style = []
+            Rotate90 = False
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            WordWrap = False
+            FontSize = 48
+          end>
+        dRec.Left = 4
+        dRec.Top = 4
+        dRec.Right = 1421
+        dRec.Bottom = 429
+        Visible = False
+      end
+    end
+  end
+  object prPage5: TprPage
+    Width = 2000
+    Height = 1500
+    PaperSize = -1
+    Orientation = poPortrait
+    lMargin = 10
+    rMargin = 10
+    tMargin = 10
+    bMargin = 10
+    object prHTitleBand4: TprHTitleBand
+      Height = 488
+      UseVerticalBands = False
+      object prMemoObj5: TprMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              'Custom paper size: 200mm x 150mm Portrait')
+            lBorder.Show = True
+            lBorder.Style = psSolid
+            lBorder.Color = clBlack
+            lBorder.Width = 1
+            rBorder.Show = True
+            rBorder.Style = psSolid
+            rBorder.Color = clBlack
+            rBorder.Width = 1
+            tBorder.Show = True
+            tBorder.Style = psSolid
+            tBorder.Color = clBlack
+            tBorder.Width = 1
+            bBorder.Show = True
+            bBorder.Style = psSolid
+            bBorder.Color = clBlack
+            bBorder.Width = 1
+            FillColor = clWhite
+            hAlign = prhLeft
+            vAlign = prvTop
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -32
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            Rotate90 = False
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            WordWrap = False
+            FontSize = 24
+          end>
+        dRec.Left = 0
+        dRec.Top = 0
+        dRec.Right = 680
+        dRec.Bottom = 488
+        Visible = False
+      end
+    end
+  end
+  object prPage6: TprPage
+    Width = 4200
+    Height = 5940
+    PaperSize = 66
+    Orientation = poPortrait
+    lMargin = 10
+    rMargin = 10
+    tMargin = 10
+    bMargin = 10
+    PageScaleInfo.ScaleMode = psmUserSelected
+    object prHTitleBand5: TprHTitleBand
+      Height = 2161
+      UseVerticalBands = False
+      object prMemoObj6: TprMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              'Paper size: A2'
+              ''
+              'If printer not support A2 paper then'
+              'for page scaling:'
+              'ScaleMode = UserSelect '
+              '(user can select paper size for this page)')
+            lBorder.Show = True
+            lBorder.Style = psSolid
+            lBorder.Color = clBlack
+            lBorder.Width = 1
+            rBorder.Show = True
+            rBorder.Style = psSolid
+            rBorder.Color = clBlack
+            rBorder.Width = 1
+            tBorder.Show = True
+            tBorder.Style = psSolid
+            tBorder.Color = clBlack
+            tBorder.Width = 1
+            bBorder.Show = True
+            bBorder.Style = psSolid
+            bBorder.Color = clBlack
+            bBorder.Width = 1
+            FillColor = clWhite
+            hAlign = prhLeft
+            vAlign = prvTop
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -48
+            Font.Name = 'Arial'
+            Font.Style = []
+            Rotate90 = False
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            WordWrap = False
+            FontSize = 36
+          end>
+        dRec.Left = 10
+        dRec.Top = 10
+        dRec.Right = 1502
+        dRec.Bottom = 2160
+        Visible = False
+      end
+    end
+  end
+end

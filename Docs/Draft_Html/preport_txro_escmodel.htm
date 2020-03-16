@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/preport.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>The printers' models</title>
+<!-- InstanceEndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable --> 
+<link href="PReport.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table cellspacing=0 cellpadding=0 bgcolor="#FBEAEA" align="center" width=100%>
+  <tr>
+    <td align="left"> &nbsp;<i>PReport</i><br>
+        &nbsp;<b><script language=Javascript>document.write(document.title);</script><br>
+      <br>
+    </b></td>
+  </tr>
+</table>
+<!-- <h3 align=center><img src=logo-gridreport.gif><br>Grid Report description</h3> -->
+
+
+<!-- InstanceBeginEditable name="EditRegion1" -->
+<table width="100%" border="0">
+  <tr> 
+    <td> <p>As is known the majority of printers which can print in a text mode have 
+      the special sets of commands which allow to switch style of a font, line 
+      spacings and so on. Each such command is represented by the special sequence 
+      of several symbols. Windows does not contain the support of such commands. 
+      Therefore the special mechanism for the description of such commands and 
+      their translations between various models of printers has been developed. 
+      </p><p>As a rule, printers of various firms have the different sets of commands 
+      (for example, for printers EPSON the command for italic font will consist 
+      of two symbols - #27#52, for printers Hewlett Packard the 5 symbols - #27#40#115#49#83). 
+      The PReport must print the report on any printer, certainly, can be so, 
+      that some printer does not support the command, and such command should 
+      be ignored.</p> <p>PReport has the special list of the supported commands, each 
+      command is defined by:
+	  <ul> <li>The unique name.</li><li>The description (the simple text 
+      description).</li><li>The unique prefix.</li></ul>
+      The generated report contains these prefixes, and at a printing they are 
+      translated in native commands of the printer the <strong>TprESCModel</strong> 
+      class is used for translation, this class contains the recode table and 
+      uses the command's prefix for searching a native printer's command. The 
+      separate command is represented by the <strong>TprCommand</strong> class.</p> 
+    </td>
+  </tr>
+</table>
+<!-- InstanceEndEditable -->
+<hr width="100%" size="1">
+<br>&nbsp;&nbsp; &copy; 1999-2004 vtkTools Company. All rights reserved.<br><br><br>
+</body>
+<!-- InstanceEnd --></html>

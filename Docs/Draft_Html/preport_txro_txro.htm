@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/preport.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Structure of the TxRO.ini file.</title>
+<!-- InstanceEndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable --> 
+<link href="PReport.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table cellspacing=0 cellpadding=0 bgcolor="#FBEAEA" align="center" width=100%>
+  <tr>
+    <td align="left"> &nbsp;<i>PReport</i><br>
+        &nbsp;<b><script language=Javascript>document.write(document.title);</script><br>
+      <br>
+    </b></td>
+  </tr>
+</table>
+<!-- <h3 align=center><img src=logo-gridreport.gif><br>Grid Report description</h3> -->
+
+
+<!-- InstanceBeginEditable name="EditRegion1" -->
+<table width="100%" border="0">
+  <tr> 
+    <td> <br>
+      The TxRO.ini file contains all options that are described the printing in 
+      the text mode. It is a usual INI file. At the program startup it is searched 
+      by the algorithm: 
+      <ul>
+        <li>In the current application's directory.</li>
+        <li>In the Windows system directory (WINDOWS\SYSTEM).</li>
+        <li>In the Windows directory.</li>
+        <li>In the resources of the program. (TXRO - the resource's name).</li>
+      </ul>
+      The files' sections: 
+      <h5>[General] section:</h5>
+      DefaultRecodeTable - contains the name of recode table that will be used 
+      by default, if it is not specified in the TprTxReport.RecodeTableName property.<br>
+      <blockquote> <strong>Example</strong>: <br>
+        [General]<br>
+          DefaultRecodeTable=Russian866and1251
+      </blockquote>
+      <h5>[TxCommands] section:</h5>
+      Contains the list of all commands that are supported by TprTxReport, each 
+      value of this section describes one command.
+      <blockquote>
+      <strong>Example</strong>:<br>
+      txcReset = @ Reset priter settings to default<br><br>
+        <strong>txcReset</strong> - The unique command's name.<br>
+        <strong>@</strong> - The unique prefix of the command, can consists of 
+        one or tree symbols.<br>
+        <strong>Reset printer settings to default</strong> - The command's description. 
+      </blockquote>
+	  <h5>[TxFontStyles] section:</h5>
+      Contains the font styles, that are supported by TprTxReport, each value 
+      of this section represents one font style.<br>
+      <blockquote> <strong>Example</strong>:<br>
+      tfsNormal = txcNormal,Normal<br><br>
+        <strong>tfsNormal</strong> - The unique name of the font style.<br>
+        <strong>txcNormal</strong> - The name of command from [TxCommands] section, 
+        that is used for initializing this style.<br>
+        <strong>Normal</strong> - The description of style.</blockquote>
+	  
+	  <h5>TxFontOptions section:</h5>
+      Contains the font options that are supported by TprTxReport (bold, italic 
+      and so on), each value of this section describes one font option.<br>
+      <blockquote> <strong>Example</strong>:<br>
+      tfoCondensed = txcCondensedOn,txcCondensedOff,Condensed<br><br>
+        <strong>tfoCondensed</strong> - The unique name of command.<br>
+        <strong>txcCondensedOn</strong> - The command that is switch on the font 
+        option.<br>
+        <strong>txcCondensedOff</strong> - The command that is switch off the 
+        font option.<br>
+        <strong>Condensed</strong> - The description</blockquote>
+	  
+	  <h5>[RecodeTable_XXX] sections:</h5>
+      The file can contain the many sections of this type, each section describes 
+      one recode table. XXX - the name of the recode table, this name must be 
+      specified in the TprTxReport.RecodeTableName property.<br>
+      The section's values:<br>
+      <strong>Description</strong> - The description of the recode table.<br>
+      <strong>OEMtoWINTable</strong> - The array for recoding OEM -> ANSI.<br>
+      <strong>WINtoOEMTable</strong> - The array for recoding ANSI -> OEM. This 
+      parameter can be omitted in this case it will be generated automatically.<br>
+	  <blockquote> <strong>Example</strong>:<br>
+      [RecodeTable_Russian866and1251]<br>
+      Description=Russian DOS866 and Windows 1251<br>
+        OEMtoWINTable=#192#193#194#195#196#197#198#199#200#201#202#203#204#205#206#207#208<br>
+		#209#210#211#212#213#214#215#216#217#218#219#220#221#222#223#224#225#226#227#228#229<br>
+		#230#231#232#233#234#235#236#237#238#239#128#129#130#131#132#133#134#135#136#137#138<br>
+		#139#140#141#142#143#144#145#146#147#148#149#150#151#152#153#154#155#156#157#158#159<br>
+		#160#161#162#163#164#165#166#167#168#169#170#171#172#173#174#175#240#241#242#243#244<br>
+		#245#246#247#248#249#250#251#252#253#254#255#176#177#178#179#180#181#182#183#184#185<br>
+		#186#187#185#189#190#191 
+      </blockquote>
+
+      <h5>[ESCModel_XXX] sections:</h5>
+      The file can contain the many sections of this type, each section describes 
+      one ESC model and is used for converting between TprTxReport commands and 
+      the native commands of printer.<br>
+      The section's values:<br>
+      <strong>ModelName</strong> - The name of the model, this name must be specified 
+      in the TprTxReport.ESCModelName.<br>
+      <strong>PrinterDriver</strong> - The string that is used for searching the 
+      ESC model by the Windows printer driver name, it contains a string which 
+      must be contained in the printer driver name. 
+      <blockquote> <strong>Example</strong>:<br>
+      ModelName=Epson printers<br>
+      PrinterDriver=epson<br>
+      txcFormFeed=#12<br>
+      txcNormal=#27#120#00<br>
+      txcPica=#27#120#01#27#107#00<br>
+      txcElite=#27#120#01#27#107#01<br>
+      txcCondensedOn=#15<br>
+      txcCondensedOff=#18<br>
+      txcBoldOn=#27#71<br>
+      txcBoldOff=#27#72<br>
+      txcItalicOn=#27#52<br>
+      txcItalicOff=#27#53<br>
+      txcUnderlineOn=#27#45#49<br>
+      txcUnderlineOff=#27#45#48<br>
+      txcSuperScriptOn=#27#83#01<br>
+      txcSuperScriptOff=#27#84<br>
+      txcSubScriptOn=#27#83#00<br>
+      txcSubScriptOff=#27#84<br>
+      txcWideOn=#27#87#01<br>
+      txcWideOff=#27#87#00<br>
+      txc12cpiOn=#27#77<br>
+      txc12cpiOff=#27#80
+	  </blockquote>
+      If the command is not supported by the printer it can be not specified. 
+    </td>
+  </tr>
+</table>
+<!-- InstanceEndEditable -->
+<hr width="100%" size="1">
+<br>&nbsp;&nbsp; &copy; 1999-2004 vtkTools Company. All rights reserved.<br><br><br>
+</body>
+<!-- InstanceEnd --></html>

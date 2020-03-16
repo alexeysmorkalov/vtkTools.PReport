@@ -1,0 +1,252 @@
+object TprTxReport
+  ShowProgress = True
+  DesignerFormMode = fmNormal
+  PreviewFormMode = fmNormal
+  Collate = False
+  Copies = 1
+  FromPage = -1
+  ToPage = -1
+  PrintPagesMode = ppmAll
+  Values = <>
+  LeftSpaces = 0
+  WrapAfterColumn = 0
+  StartNewLineOnWrap = False
+  PaperType = ptPage
+  UseLinesOnPage = False
+  LinesOnPage = 0
+  MakeFormFeedOnRulon = False
+  PrintRulonMode = prmAllLines
+  FromLine = 0
+  ToLine = 0
+  object prTxPage1: TprTxPage
+    Width = 0
+    Height = 0
+    LineNum = 60
+    ColNum = 80
+    PageType = tptPage
+    DefTxFontStyle = tfsNormal
+    DefTxFontOptions = []
+    object prTxHTitleBand1: TprTxHTitleBand
+      ResizeMode = prbrmNone
+      Visible = True
+      Height = 3
+      UseVerticalBands = False
+      object prTxMemoObj1: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              '[:<dd.mmmm.yyyy hh:nn:ss>StartDateTime]')
+            hAlign = prhLeft
+            vAlign = prvTop
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            TxFontStyle = tfsNormal
+            TxFontOptions = []
+            WordWrap = False
+          end>
+        dRec.Left = 2
+        dRec.Top = 0
+        dRec.Right = 27
+        dRec.Bottom = 1
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+      object prTxMemoObj2: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              'List of fish')
+            hAlign = prhCenter
+            vAlign = prvTop
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            TxFontStyle = tfsNormal
+            TxFontOptions = []
+            WordWrap = False
+          end>
+        dRec.Left = 29
+        dRec.Top = 1
+        dRec.Right = 53
+        dRec.Bottom = 2
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+    end
+    object prTxHPageHeaderBand1: TprTxHPageHeaderBand
+      ResizeMode = prbrmNone
+      Visible = True
+      Height = 2
+      UseVerticalBands = False
+      PrintOnFirstPage = True
+      object prTxMemoObj3: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              'Page [Page] from [PagesCount]')
+            hAlign = prhRight
+            vAlign = prvTop
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            TxFontStyle = tfsNormal
+            TxFontOptions = []
+            WordWrap = False
+          end>
+        dRec.Left = 55
+        dRec.Top = 0
+        dRec.Right = 79
+        dRec.Bottom = 1
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+    end
+    object prTxHDetailBand1: TprTxHDetailBand
+      ResizeMode = prbrmMaxResizeObj
+      Visible = True
+      Height = 7
+      UseVerticalBands = False
+      DataSetName = 'biolife'
+      ColCount = 1
+      ColDirection = prcdTopBottomLeftRight
+      ResizeObjs = (
+        'prTxMemoObj4')
+      object prTxMemoObj5: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              'Name    : [biolife.Common_Name]'
+              'Category: [biolife.Category]')
+            hAlign = prhLeft
+            vAlign = prvTop
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            TxFontStyle = tfsNormal
+            TxFontOptions = []
+            WordWrap = False
+          end>
+        dRec.Left = 1
+        dRec.Top = 0
+        dRec.Right = 30
+        dRec.Bottom = 2
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+      object prTxMemoObj6: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              'Description:')
+            hAlign = prhLeft
+            vAlign = prvTop
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            TxFontStyle = tfsNormal
+            TxFontOptions = [tfoUnderline]
+            WordWrap = False
+          end>
+        dRec.Left = 1
+        dRec.Top = 3
+        dRec.Right = 13
+        dRec.Bottom = 4
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+      object prTxMemoObj4: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              '[biolife.Notes]')
+            hAlign = prhLeft
+            vAlign = prvTop
+            DeleteEmptyLinesAtEnd = True
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = True
+            TxFontStyle = tfsNormal
+            TxFontOptions = []
+            WordWrap = True
+          end>
+        dRec.Left = 1
+        dRec.Top = 5
+        dRec.Right = 79
+        dRec.Bottom = 6
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+    end
+    object prTxHPageFooterBand1: TprTxHPageFooterBand
+      ResizeMode = prbrmNone
+      Visible = True
+      Height = 2
+      UseVerticalBands = False
+      PrintOnFirstPage = True
+      PrintAfterLastBandOnPage = True
+      object prTxMemoObj7: TprTxMemoObj
+        dRec.DefVersion = 0
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              'Page [Page] from [PagesCount]')
+            hAlign = prhRight
+            vAlign = prvTop
+            DeleteEmptyLinesAtEnd = False
+            DeleteEmptyLines = False
+            CanResizeX = False
+            CanResizeY = False
+            TxFontStyle = tfsNormal
+            TxFontOptions = []
+            WordWrap = False
+          end>
+        dRec.Left = 54
+        dRec.Top = 0
+        dRec.Right = 79
+        dRec.Bottom = 1
+        TopMode = prlmMaxBottom
+        LeftMode = prlmMaxRight
+        WidthMode = prrmMaxRight
+        HeightMode = prrmMaxBottom
+        Visible = False
+      end
+    end
+  end
+end

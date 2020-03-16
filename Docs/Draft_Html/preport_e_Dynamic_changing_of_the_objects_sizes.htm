@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/preport.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Dynamic changing of the objects sizes</title>
+<!-- InstanceEndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable --> 
+<link href="PReport.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table cellspacing=0 cellpadding=0 bgcolor="#FBEAEA" align="center" width=100%>
+  <tr>
+    <td align="left"> &nbsp;<i>PReport</i><br>
+        &nbsp;<b><script language=Javascript>document.write(document.title);</script><br>
+      <br>
+    </b></td>
+  </tr>
+</table>
+<!-- <h3 align=center><img src=logo-gridreport.gif><br>Grid Report description</h3> -->
+
+
+<!-- InstanceBeginEditable name="EditRegion1" -->
+<table width="100%" border="0">
+  <tr> 
+    <td>
+	<h5>Directory: <font color="#0000FF">PReport\DEMO\Demos\07_DynamicResize</font></h5>
+	<p>Open the example "07_DynamicResize", the comments to the report template follow.</p>
+	  <p> <strong>Object prMemoObj1 (Table1. Notes)</strong> 
+      <blockquote>
+	    <table width="100%" border="1" cellspacing="0" cellpadding="0">
+          <tr> 
+            <th width="25%">Page in the properties window</th>
+            <th width="25%">Field</th>
+            <th width="13%">Value</th>
+            <th width="37%">Comment</th>
+          </tr>
+          <tr> 
+            <td rowspan="2">Addititional</td>
+            <td>Resize vertically</td>
+            <td>true</td>
+            <td>The size of object can be dynamically changed depending on size 
+              of the text in the field Table1.Notes</td>
+          </tr>
+          <tr> 
+            <td>Word wrap</td>
+            <td>true</td>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+
+	</blockquote>
+	</p>
+	<p><strong>Object prMemoObj6 (Length: [Table1.Length_In]) </strong>
+      <blockquote> This object should be under the object prMemoObj1. The height 
+        of the prMemoObj1 object can be changed dynamically therefore for object 
+        prMemoObj6 the connection to object prMemoObj1 is installed. This connection 
+        can be viewed in the window of the object connections (can be called by 
+        a <img src="Images/bLinks.GIF" width="16" height="16"> button ) on 
+        page "Top"; the field mode is installed to "Y coord depends from max bottom" 
+        on this page. Except for this object the field "Resize horizontally" is 
+        installed, it width will be determined by a size of the text in it. </blockquote>
+	</p>
+	<p><strong>Object prImageObj1 (Table1.Graphic) </strong>
+      <blockquote>The size of this object is determined by a size of an image in it, the "Paint method" field is installed to "Sizes depends from image size".
+	</blockquote>
+	</p>
+	<p><strong>Objects prMemoObj4 (Common name) and prMemoObj2 (Table1.Common_Name) 
+        </strong> 
+      <blockquote>
+	These objects should be under prImageObj1. The height of prImageObj1 can be changed dynamically, therefore for objects prMemoObj4 and prMemoObj2 the connection to object prImageObj1 is installed.
+	</blockquote>
+	</p>
+	<p><strong>Objects prMemoObj5 (Category) and prMemoObj3 (Table1.Category) 
+        </strong> 
+      <blockquote>
+	These objects should be under objects prMemoObj4 and prMemoObj2. The coordinate Top of the prMemoObj4 and prMemoObj2 objects can be changed dynamically therefore for objects prMemoObj5 and prMemoObj3 the connection accordingly to objects prMemoObj4 and prMemoObj2 is installed.
+	</blockquote>
+	</p>
+	<p>For the detail band (prHDetailBand1) the field "Size" is installed to "Size depends from max bottom in objects".
+	</p>
+	<br>
+	</td>
+  </tr>
+</table>
+<!-- InstanceEndEditable -->
+<hr width="100%" size="1">
+<br>&nbsp;&nbsp; &copy; 1999-2004 vtkTools Company. All rights reserved.<br><br><br>
+</body>
+<!-- InstanceEnd --></html>

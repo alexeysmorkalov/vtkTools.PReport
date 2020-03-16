@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/preport.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Using "user data" in the report</title>
+<!-- InstanceEndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable --> 
+<link href="PReport.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table cellspacing=0 cellpadding=0 bgcolor="#FBEAEA" align="center" width=100%>
+  <tr>
+    <td align="left"> &nbsp;<i>PReport</i><br>
+        &nbsp;<b><script language=Javascript>document.write(document.title);</script><br>
+      <br>
+    </b></td>
+  </tr>
+</table>
+<!-- <h3 align=center><img src=logo-gridreport.gif><br>Grid Report description</h3> -->
+
+
+<!-- InstanceBeginEditable name="EditRegion1" -->
+<table width="100%" border="0">
+  <tr> 
+    <td>
+	<h5>Directory: <font color="#0000FF">PReport\DEMO\Demos\08_UserVars</font></h5>
+	<p>If you want to show "external data" in the report template, which are invisible for the report engine, for example: program variables, contents of TEdit and so on, you must use 3 events of the TprCustomReport component:</p>
+	<blockquote>
+	    <table width="100%" border="1" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="29%"><strong>OnUnknownVariable</strong></td>
+            <td width="71%">This event occurs when the built-in parser has found 
+              an unknown identifier on the stage of the report's generating.</td>
+          </tr>
+          <tr> 
+            <td><strong>OnUnknownFunction</strong></td>
+            <td>This event occurs when the built-in parser has found an unknown 
+              function on the stage of the report's generating.</td>
+          </tr>
+          <tr> 
+            <td><strong>OnUnknownObjFunction</strong></td>
+            <td>This event occurs when the built-in parser has found an unknown 
+              function of object on the stage of the report's generating.</td>
+          </tr>
+        </table>
+
+	</blockquote>
+<p>Create new application</p>
+<ul>
+<li>Put the component TQuery on the form, set its properties to: DatabaseName = DBDEMOS.</li>
+<li>Put the TEdit component on the form, it will be used for entering a string for editing then company in the Customer.db table.</li>
+<li>Put the TCheckBox component on the form, if it is checked, all record from the Customer table will be selected.</li>
+<li>Put the TComboBox component on the form, enter strings "Company,Counts" in a property Items, in this field the order of sorting will be set.</li>
+<li>Put the TprReport component on the form.</li>
+<li>Copy the report template from demo "01_SimpleDemo" to the TprReport component.</li>
+<li>Add two TprMemoObj objects into band Report title, they print the condition of a selection and sorting of records. In the first object write [FindValid], in second - Order by [Order].</li>
+<li>Add object TprMemoObj into band Detail and set its text to: "Length of Company: [Query1.FieldLen("Company")]".  This object prints a length in chars of the Query1.Company field.</li>
+<li>Write the following code in the handler of a button "Generate report":
+      <blockquote> <font face="Courier New, Courier, mono"><strong>procedure</strong> 
+        TForm1.Button1Click(Sender: TObject);<br>
+        <strong>begin</strong><br>
+        &nbsp;&nbsp;<font color="#666666"><strong>// generate SQL query</strong></font><br>
+        &nbsp;&nbsp;Query1.Close;<br>
+        &nbsp;&nbsp;<strong>if</strong> CheckBox1.Checked then<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Query1.SQL.Text := <font color="#009900">'select 
+        * from customer order by '</font>+<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ComboBox1.Items[ComboBox1.ItemIndex]<br>
+        &nbsp;&nbsp;else<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Query1.SQL.Text := <font color="#009900">'select 
+        * from customer where company like ''%'</font>+<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Edit1.Text+<font color="#009900">'%'' 
+        order by '</font>+<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ComboBox1.Items[ComboBox1.ItemIndex];<br>
+        &nbsp;&nbsp;<strong><font color="#666666">// start generate report</font></strong><br>
+        &nbsp;&nbsp;<strong>if</strong> prReport1.PrepareReport then<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;prReport1.PreviewPreparedReport(true);<br>
+        <strong>end</strong>;</font><br>
+</blockquote>
+</li>
+<li>Write a the following code in the handler of an event OnUnknownObjVariable of the prReport1 component:
+          <blockquote> <font face="Courier New, Courier, mono"><strong>procedure</strong> 
+            TForm1.prReport1UnknownVariable(Sender: TObject;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<strong>const</strong> VarName: String; <strong>var</strong> 
+            Value: TprVarValue; <strong>var</strong> IsProcessed: Boolean);<br>
+            <strong>var</strong><br>
+            &nbsp;&nbsp;s: <strong>string</strong>;<br>
+            <strong>begin</strong><br>
+            &nbsp;&nbsp;<strong>if</strong> AnsiCompareText(VarName,'FindValid')=0 
+            <strong>then</strong><br>
+            &nbsp;&nbsp;<strong>begin</strong><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<strong><font color="#666666">// prepare find 
+            valid description</font></strong><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<strong>if</strong> CheckBox1.Checked <strong>then</strong><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s := <font color="#009900">'All 
+            records'</font><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<strong>else</strong><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s := <font color="#009900">'Company 
+            must contains &quot;'</font>+Edit1.Text+<font color="#009900">'&quot;'</font>;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;_vSetAsString(Value,s);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;IsProcessed := true;<br>
+            &nbsp;&nbsp;<strong>end</strong><br>
+            &nbsp;&nbsp;<strong>else</strong><br>
+            &nbsp;&nbsp;<strong>if</strong> AnsiCompareText(VarName,<font color="#009900">'Order'</font>)=0 
+            <strong>then</strong><br>
+            &nbsp;&nbsp;<strong>begin</strong><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<strong><font color="#666666">// prepare order 
+            description</font></strong><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;_vSetAsString(Value,ComboBox1.Items[ComboBox1.ItemIndex]);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;IsProcessed := true;<br>
+            &nbsp;&nbsp;<strong>end</strong>;<br>
+            <strong>end</strong>;</font><br>
+
+
+</blockquote>
+</li>
+<li>Write a the following code in the handler of an event OnUnknownObjFunction of the prReport1 component:
+          <blockquote> <font face="Courier New, Courier, mono"><strong>procedure</strong> 
+            TForm1.prReport1UnknownObjFunction(Sender: TObject;<br>
+            &nbsp;&nbsp;Component: TComponent; <strong>const</strong> FuncName: 
+            <strong>String</strong>;<br>
+            &nbsp;&nbsp;<strong>const</strong> Parameters: TprVarsArray; ParametersCount: 
+            Integer;<br>
+            &nbsp;&nbsp;<strong>var</strong> Value: TprVarValue; <strong>var</strong> 
+            IsProcessed: Boolean);<br>
+            <strong>var</strong><br>
+            &nbsp;&nbsp;f: TField;<br>
+            <strong>begin</strong><br>
+            &nbsp;&nbsp;<strong>if</strong> (Component=Query1) <strong>and</strong><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(AnsiCompareText(FuncName,<font color="#009900">'Query1.FieldLen'</font>)=0) 
+            <strong>and</strong><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ParametersCount=1) <strong>then</strong><br>
+            &nbsp;&nbsp;<strong>begin</strong><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<font color="#666666"><strong>// Parameter 
+            with index 0 is the fieldname</strong></font><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;f := Query1.FindField(_vAsString(Parameters[0]));<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<strong>if</strong> f &lt;&gt; <strong>nil</strong> 
+            <strong>then</strong><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<strong>begin</strong><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color="#666666">// 
+            field is found return length of field value</font></strong><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_vSetAsInteger(Value,Length(f.AsString));<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IsProcessed := true;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<strong>end</strong>;<br>
+            &nbsp;&nbsp;<strong>end</strong>;<br>
+            <strong>end</strong>;</font>
+
+</blockquote>
+</li>
+</ul>
+	<br>
+	</td>
+  </tr>
+</table>
+<!-- InstanceEndEditable -->
+<hr width="100%" size="1">
+<br>&nbsp;&nbsp; &copy; 1999-2004 vtkTools Company. All rights reserved.<br><br><br>
+</body>
+<!-- InstanceEnd --></html>

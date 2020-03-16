@@ -1,0 +1,83 @@
+31.10.2003 Manuzin Alexander
+New features:
+  Print engine:
+    - added new property PrintOnLastPage for vertical and horizontal
+      page footers
+  Removed bugs:
+    - TvgrControlBarManager are incorrectly save and restore properties
+      of hidden toolbars.
+
+25.10.2003 Manuzin Alexander
+New features:
+  Print engine:
+    - added new link modes of objects:
+      Width of object depends on total change of width of linked objects
+      Height of object depends on total change of height of linked objects
+      They are demonstated in demo (on last page):
+         DEMO\Demos\14 - New objects links modes\NewLinkModes
+    - added new property ResetPagesCount at TprGenBandInfo object,
+      you can use it in OnBandGenerateCell event,
+      to manipulate by pages numbering. See demo:
+         DEMO\Demos\16 - Change page numbering
+    - added new property GroupValue at TprGroup object, which returns 
+      current value of group.
+      You can use this property in report template, for example in 
+      TprMemoObj:
+      [prGroup1.GroupValue()] See demo:
+         DEMO\Demos\15 - Grouped TprDataset
+    - added new method
+      function TprVariables.AddVariable(const AVariableName: string; 
+                                        const AVariableValue: Variant): TprVariable;
+      If variable is not exists, adds it with specified name and value,
+      if variable exists function change it value.
+  Removed bugs:
+    - The borders with width more than one are incorrectly shown in
+      preview and at printing.
+    - If DecimalSeparator is not [.] (point) errors in parser are occured
+      at use of floating-point numbers.
+
+26.09.2003 Manuzin Alexander
+New version of PReport 1.9:
+  TprReport:
+    - added object TprShapeObj
+    - speed of report preparing are incresed
+  TprTxReport
+    - added object TprVLineObj (derived from TprLineObj)
+    - added object TprHLineObj (derived from TprLineObj)
+  Print engine:
+    - Method added: 
+      TprCustomReport.FindObject(const AObjectName: string): TprObj;
+      can be used for find a object within report.
+    - Property added:
+      TprCustomReport.ObjectCount
+      Count of all objects in report template (in all pages, in all bands)
+    - Property added:
+      TprCustomReport.Objects[Index: Integer]: TprObj
+      Can be used to access to all object in the report.
+    - Added properties to all report objects, which can be used for
+      access to versions of objects:
+      VersionCount 
+         count of versions of object, can be used 
+         before prepare of report
+      Versions[Index: Integer]: TprObjRecVersion  
+         can be used to access to all versions of object
+         before prepare of report
+      DefVersion: TprObjRecVersion
+         can be used to acces to current default version of object
+         before prepare of report
+      GenVersionCount 
+         count of versions of object, can be used
+         while report preparing (in OnFirstPassObject event, etc)
+      GenVersions[Index: Integer]: TprObjRecVersion  
+         can be used to access to all versions of object
+         while report preparing (in OnFirstPassObject event, etc)
+      GenCurVersion: TprObjRecVersion
+         can be used to acces to current selected version of object
+         while report preparing (in OnFirstPassObject event, etc)
+      You can see examples of using this properties in demo:
+      DEMO\Demos\13 - ChangeAtRuntime\ChangedAtRuntime
+    - added new link modes of objects they are demonstrated
+      in demo: DEMO\Demos\14 - New objects links modes\NewLinkModes
+
+26.09.2003 Manuzin Alexander
+log started

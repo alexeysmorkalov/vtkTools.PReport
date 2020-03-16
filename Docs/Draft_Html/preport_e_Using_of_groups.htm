@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/preport.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Using of groups</title>
+<!-- InstanceEndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable --> 
+<link href="PReport.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table cellspacing=0 cellpadding=0 bgcolor="#FBEAEA" align="center" width=100%>
+  <tr>
+    <td align="left"> &nbsp;<i>PReport</i><br>
+        &nbsp;<b><script language=Javascript>document.write(document.title);</script><br>
+      <br>
+    </b></td>
+  </tr>
+</table>
+<!-- <h3 align=center><img src=logo-gridreport.gif><br>Grid Report description</h3> -->
+
+
+<!-- InstanceBeginEditable name="EditRegion1" -->
+<table width="100%" border="0">
+  <tr> 
+    <td>
+	<h5>Directory: <font color="#0000FF">PReport\DEMO\Demos\03_GroupsDemo</font></h5>
+	  <p>We create the report, in which the records are grouped by Country field, 
+        and then by the first letter of a Company field on the base of report 
+        from 01_SimpleDemo. The TQuery component will be used as a data source. 
+        Set the TQuery.SQL property to: <font face="Courier New, Courier, mono">"<strong>select</strong> 
+        CustNo, Country, Company <strong>from</strong> customer <strong>order</strong> 
+        <strong>by</strong> country, company"</font>. Don't forget to set a Dataset 
+        property of prHDetailBand1 object to Query1.</p>
+		<p>The groups' editor is called through item "Groups…" of the menu "Edit". Use <img src="Images/bNewItem.GIF"> button for creating a new group. You must specify for first group:</p>
+		<ul>
+		<li>Group expression - the condition will be Query1.Country for the first group.</li>
+		<li>Detail band to which the group is linked, in this case - prHDetailBand1.</li>
+		</ul>
+		<p>For the second group:</p>
+		<ul>
+		<li>Group condition will be: UID(Query1.Country, Copy(Query1.Company,1,1)). 
+          <font color="#FF0000"> <strong>As you see an expression of the enclosed 
+          group uses an expression of the parent group, it is important!</strong></font></li>
+		<li>Detail band - prHDetailBand1.</li>
+		</ul>
+		<p>Create a group title for each group. The group title is located after all bands on page after adding; it rise on the necessary place when you select a group for added band. The group can be indicated in a field Group on a page "Data" of the properties window.</p>
+	<br>
+	</td>
+  </tr>
+</table>
+<!-- InstanceEndEditable -->
+<hr width="100%" size="1">
+<br>&nbsp;&nbsp; &copy; 1999-2004 vtkTools Company. All rights reserved.<br><br><br>
+</body>
+<!-- InstanceEnd --></html>

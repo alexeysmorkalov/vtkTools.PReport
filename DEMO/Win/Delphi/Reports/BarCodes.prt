@@ -1,0 +1,114 @@
+object TprReport
+  Values = <>
+  Variables = <>
+  PrinterName = 'FinePrint 2000'
+  SystemInfo = (
+    'OS: WIN32_NT 5.1.2600 Service Pack 1'
+    ''
+    'PageSize: 4096'
+    'ActiveProcessorMask: $1000'
+    'NumberOfProcessors: 1'
+    'ProcessorType: 586'
+    ''
+    'Compiler version: Delphi7'
+    'PReport version: 1.9.7')
+  LOGPIXELSX = 96
+  LOGPIXELSY = 96
+  object prPage1: TprPage
+    Width = 2100
+    Height = 2970
+    PaperSize = 9
+    Orientation = poPortrait
+    lMargin = 10.000000000000000000
+    rMargin = 10.000000000000000000
+    tMargin = 10.000000000000000000
+    bMargin = 10.000000000000000000
+    object prHTitleBand1: TprHTitleBand
+      Height = 259
+      object prMemoObj1: TprMemoObj
+        dRec.Versions = <
+          item
+            Visible = True
+            Memo.Strings = (
+              'From 1.9.7 version the PReport supports BarCodes.')
+            lBorder.Show = True
+            lBorder.Width = 1
+            rBorder.Show = True
+            rBorder.Width = 1
+            tBorder.Show = True
+            tBorder.Width = 1
+            bBorder.Show = True
+            bBorder.Width = 1
+            FillColor = clWhite
+            hAlign = prhCenter
+            vAlign = prvCenter
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -21
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            FontSize = 16
+          end>
+        dRec.Left = 42
+        dRec.Top = 10
+        dRec.Right = 667
+        dRec.Bottom = 59
+      end
+      object prBarCodeObj1: TprBarCodeObj
+        dRec.Versions = <
+          item
+            Visible = True
+            Text = '1'
+            ZoomFactor = 2.000000000000000000
+            ShowTextType = bcoCode
+          end>
+        dRec.Left = 18
+        dRec.Top = 74
+        dRec.Right = 171
+        dRec.Bottom = 219
+      end
+      object prBarCodeObj2: TprBarCodeObj
+        dRec.Versions = <
+          item
+            Visible = True
+            Text = '12'
+            ZoomFactor = 2.000000000000000000
+            ShowTextType = bcoCode
+            Rotation = prbr90
+          end>
+        dRec.Left = 194
+        dRec.Top = 74
+        dRec.Right = 339
+        dRec.Bottom = 219
+      end
+      object prBarCodeObj3: TprBarCodeObj
+        dRec.Versions = <
+          item
+            Visible = True
+            Text = '123'
+            ZoomFactor = 2.000000000000000000
+            ShowTextType = bcoCode
+            Rotation = prbr180
+          end>
+        dRec.Left = 362
+        dRec.Top = 74
+        dRec.Right = 523
+        dRec.Bottom = 219
+      end
+      object prBarCodeObj4: TprBarCodeObj
+        dRec.Versions = <
+          item
+            Visible = True
+            Text = '1234'
+            ZoomFactor = 2.000000000000000000
+            ShowTextType = bcoCode
+            Rotation = prbr270
+          end>
+        dRec.Left = 546
+        dRec.Top = 74
+        dRec.Right = 707
+        dRec.Bottom = 219
+      end
+    end
+  end
+end

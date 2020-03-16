@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/preport.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Formatting of expressions</title>
+<!-- InstanceEndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable --> 
+<link href="PReport.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table cellspacing=0 cellpadding=0 bgcolor="#FBEAEA" align="center" width=100%>
+  <tr>
+    <td align="left"> &nbsp;<i>PReport</i><br>
+        &nbsp;<b><script language=Javascript>document.write(document.title);</script><br>
+      <br>
+    </b></td>
+  </tr>
+</table>
+<!-- <h3 align=center><img src=logo-gridreport.gif><br>Grid Report description</h3> -->
+
+
+<!-- InstanceBeginEditable name="EditRegion1" -->
+<table width="100%" border="0">
+  <tr> 
+    <td>
+      <p>In TprMemoObj, TprRichObj and TprTxMemoObj objects you can write expressions 
+      in square brackets, like: [Table.Name]. These expressions will be calculated 
+      by the parser and replaced with the actual values. For each expression the 
+      format mask can be defined. </p>
+      Syntax of the expressions:
+      <blockquote>[[FormatMask]Expression]</blockquote>
+      Example: 
+      <blockquote>Company: [Customers.Company]<br>
+      Here Customers.Company - expression, the format mask in this example is 
+      not specified.</blockquote>
+      <p>Syntax of the format mask:</p>
+        <blockquote>:[NType of value if NULL][Width and alignment][&lt;DisplayFormat&gt;]</blockquote>
+      <p><strong>Type of value if NULL:</strong></p>
+	  <blockquote>By default if the expression returns NULL its value is replaced with empty string. This format parameter allows defining the default value that will be formatted. Format parameter consists of two chars: [NX], where X can be:<br>
+        <strong>S</strong> - If the expression is equal NULL, while formatting 
+        the value equal to an empty string will be used<br>
+        <strong>D</strong> - If the expression is equal NULL, while formatting 
+        the value equal to empty date (30.12.1899) will be used.<br>
+        <strong>N</strong> - If the expression is equal NULL, while formatting 
+        the value equal to 0 will be used.</blockquote>
+		
+      <p><strong>Width and alignment</strong></p>
+<blockquote>The formatted expression should be levelled in a line of indicated length, the line is supplemented by gaps. After a width the numeral assigning alignment should be necessary  indicated:<br>
+        <strong>L</strong> - On the left edge<br>
+        <strong>R</strong> - On the right edge<br>
+        <strong>C</strong> - On centre<br>
+      </blockquote>
+
+      <p><strong>Display format</strong></p>
+<blockquote>Specified in angular brackets. The syntax of the format string is determined by type of formatted value:
+<ul>
+<li>for string values the format string should have the same format as for function FormatMaskText.</li>
+<li>for numeric values the format string should have the same format as for function FormatFloat.</li>
+<li>for TDateTime values the format string should have the same format as for function FormatDateTime.</li></ul>
+        <table width="100%" height="200" border="1" cellpadding="0" cellspacing="0">
+          <tr> 
+            <th height="18">Format</th>
+            <th>Constant</th>
+            <th>Default value</th>
+          </tr>
+          <tr> 
+            <td height="13">
+<div align="center">&lt;c&gt;</div></td>
+            <td>CurrencyFormat</td>
+            <td>#,0.00?''.'';-#,0.00?''.'''</td>
+          </tr>
+          <tr> 
+            <td height="13">
+<div align="center">&lt;s&gt;</div></td>
+            <td>ShortCurrencyFormat</td>
+            <td>0.00?''.'';-0.00?&#8217;'.''</td>
+          </tr>
+          <tr> 
+            <td height="13">
+<div align="center">&lt;r&gt;</div></td>
+            <td>SimpleCurrencyFormat</td>
+            <td>0.00;-0.00</td>
+          </tr>
+          <tr> 
+            <td height="13">
+<div align="center">&lt;p&gt;</div></td>
+            <td>PercentFormat</td>
+            <td>0.00%;-0.00%</td>
+          </tr>
+          <tr> 
+            <td height="13">
+<div align="center">&lt;d&gt;</div></td>
+            <td>ShortDateFormat</td>
+            <td>System constant</td>
+          </tr>
+          <tr> 
+            <td height="13">
+<div align="center">&lt;q&gt;</div></td>
+            <td>SpacedCurrencyFormat</td>
+            <td>#,0.00;-#,0.00</td>
+          </tr>
+          <tr> 
+            <td height="13">
+<div align="center">&lt;b&gt;</div></td>
+            <td>BankCurrencyFormat</td>
+            <td>\ds-0.00;-0.00</td>
+          </tr>
+        </table>
+        
+        </blockquote>
+	  <h5>Examples:</h5>
+	  <blockquote> 
+        <table width="100%" height="200" border="1" cellpadding="0" cellspacing="0">
+          <tr> 
+            <th height="20">Value </th>
+            <th>Type of value</th>
+            <th>FormatMask </th>
+            <th>Result of formatting </th>
+          </tr>
+          <tr> 
+            <td height="15">123</td>
+            <td>Number</td>
+            <td>[:&lt;c&gt;]</td>
+            <td>123.00?.</td>
+          </tr>
+          <tr> 
+            <td height="15">12.12.1999</td>
+            <td>Date </td>
+            <td>[:&lt;dd mmm yyyy&gt;]</td>
+            <td>12 December 1999</td>
+          </tr>
+          <tr> 
+            <td height="15">10.145</td>
+            <td>Number</td>
+            <td>[:12r&lt;0.00&gt;]</td>
+            <td>_______10.15</td>
+          </tr>
+          <tr> 
+            <td height="20">Null</td>
+            <td>&nbsp;</td>
+            <td>[:&lt;c&gt;]</td>
+            <td>Empty line</td>
+          </tr>
+          <tr>
+            <td height="20">Null</td>
+            <td>&nbsp;</td>
+            <td>[:NN&lt;c&gt;]</td>
+            <td>0.00?.</td>
+          </tr>
+        </table>
+        <br>
+	  </blockquote>
+	  </td>
+  </tr>
+</table>
+<!-- InstanceEndEditable -->
+<hr width="100%" size="1">
+<br>&nbsp;&nbsp; &copy; 1999-2004 vtkTools Company. All rights reserved.<br><br><br>
+</body>
+<!-- InstanceEnd --></html>

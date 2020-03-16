@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/preport.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>The "UserData" in the PReport</title>
+<!-- InstanceEndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable --> 
+<link href="PReport.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table cellspacing=0 cellpadding=0 bgcolor="#FBEAEA" align="center" width=100%>
+  <tr>
+    <td align="left"> &nbsp;<i>PReport</i><br>
+        &nbsp;<b><script language=Javascript>document.write(document.title);</script><br>
+      <br>
+    </b></td>
+  </tr>
+</table>
+<!-- <h3 align=center><img src=logo-gridreport.gif><br>Grid Report description</h3> -->
+
+
+<!-- InstanceBeginEditable name="EditRegion1" -->
+<table width="100%" border="0">
+  <tr> 
+    <td> <p>In many cases the developer needs to use own variables, function in 
+        the report template, PReport has support for this. You may use own variables 
+        or functions in the expressions, if PReport found it the event is fired. </p>
+        <p>PReport has three events for working with users identifiers within expressions:</p>
+        <ul>
+        <li><strong>OnUnknownVariable</strong>. Event occurs when unknown variable 
+          is found in the expression. For example &#8211; if you write [MyVar] 
+          in the TprMemoObj.</li>
+        <li><strong>OnUnknownFunction</strong>. Event occurs when unknown function 
+          is found in the expression. For example &#8211; if you write [MyFunction 
+          (Table1.Field)] in the TprMemoObj.</li>
+        <li><strong>OnUnknownObjFunction</strong>. Event occurs when unknown object 
+          function is found in the expression.</li>
+      </ul>
+        
+      <h5>OnUnknownVariable event </h5>
+      <p>Event occurs when unknown variable is found in the expression. Syntax:<br>
+        <span class="code"><font face="Courier New, Courier, mono"><strong>property</strong> 
+        OnUnknownVariable: TOnUnknownVariable <strong>read</strong> <strong>write</strong>;</font></span></p>
+      <p><font face="Courier New, Courier, mono">TOnUnknownVariable = <strong>procedure</strong> 
+        (Sender: TObject; <strong>const</strong> VarName: string; <strong>var</strong> 
+        Value: TprVarValue; var IsProcessed: boolean) <strong>of</strong> object;</font></p>
+      <table width="100%" border="1" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="137"><strong>Sender</strong></td>
+          <td width="640">Report that fires an event.</td>
+        </tr>
+        <tr> 
+          <td><strong>VarName</strong></td>
+          <td>Name of an unknown variable</td>
+        </tr>
+        <tr> 
+          <td valign="top"><strong>Value</strong></td>
+          <td>Structure of a TprVarValue type, which receive value of the unknown 
+            variable. <p>These functions are used to writing value into TprVarValue 
+              structure:</p>
+            <ul>
+              _vSetNull(var v : TprVarValue);<br>
+              _vSetAsObject(var v : TprVarValue; Value : TObject);<br>
+              _vSetAsString(var v : TprVarValue; Value : string);<br>
+              _vSetAsDateTime(var v : TprVarValue; Value : TDateTime);<br>
+              _vSetAsDouble(var v : TprVarValue; Value : double);<br>
+              _vSetAsInteger(var v : TprVarValue; Value : integer);<br>
+              _vSetAsBoolean(var v : TprVarValue; Value : boolean);<br>
+              _vSetAsVariant(var v : TprVarValue; Value : Variant);<br>
+              _vSetAsType(var v : TprVarValue; Value : Variant; VarType : TprVarValueType); 
+            </ul>
+            <p>These functions are used to reading value from the TprVarValue 
+              structure:</p>
+            <ul>
+              function _vAsString(const v : TprVarValue) : string;<br>
+              function _vAsBoolean(const v : TprVarValue) : boolean;<br>
+              function _vAsInteger(const v : TprVarValue) : integer;<br>
+              function _vAsDouble(const v : TprVarValue) : double;<br>
+              function _vAsObject(const v : TprVarValue) : TObject;<br>
+              function _vAsDateTime(const v : TprVarValue) : TDateTime;<br>
+              function _vAsVariant(const v : TprVarValue) : Variant;<br>
+              function _vIsNull(const v : TprVarValue) : boolean; 
+            </ul>
+            <p>These functions are declared in the pr_Parser unit. </p></td>
+        </tr>
+        <tr> 
+          <td valign="top"><strong>IsProcessed</strong></td>
+          <td>If value of variable is calculated set this parameter to true.</td>
+        </tr>
+      </table>
+      <h5>OnUnknownFunction event</h5>
+      <p>Event occurs when unknown function is found in the expression. Syntax:<br>
+        <font face="Courier New, Courier, mono"><strong>property</strong> OnUnknownFunction: 
+        TOnUnknownFunction <strong>read</strong> <strong>write</strong>;</font></p>
+      <p><font face="Courier New, Courier, mono">TOnUnknownFunction = <strong>procedure</strong> 
+        (Sender: TObject; <strong>const</strong> FuncName: <strong>string</strong>; 
+        <strong>const</strong> Parameters: TprVarsArray; ParametersCount: integer; 
+        <strong>var</strong> Value: TprVarValue; <strong>var</strong> IsProcessed: 
+        boolean) <strong>of</strong> object;</font><br>
+      </p>
+      <table width="100%" border="1" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="17%"><strong>Sender</strong></td>
+          <td width="83%">Report that fires an event.</td>
+        </tr>
+        <tr> 
+          <td><strong>FuncName</strong></td>
+          <td>Name of the unknown function.</td>
+        </tr>
+        <tr> 
+          <td><strong>Parameters</strong></td>
+          <td>Array from the TprVarValue structure, index of the first element 
+            &#8211; 0.</td>
+        </tr>
+        <tr> 
+          <td><strong>ParametersCount</strong></td>
+          <td>The count of elements in an Parameters array.</td>
+        </tr>
+        <tr> 
+          <td><strong>Value</strong></td>
+          <td>Structure of a TprVarValue type, which receive value of the unknown 
+            function.</td>
+        </tr>
+        <tr> 
+          <td><strong>IsProcessed</strong></td>
+          <td>If value of function is calculated set this parameter to true.</td>
+        </tr>
+      </table>
+      <h5>OnUnknownObjFunction event </h5>
+      <p>Event occurs when unknown object function is found in the expression. 
+        Syntax:<br>
+        <font face="Courier New, Courier, mono"><strong>property</strong> OnUnknownObjFunction: 
+        TOnUnknownObjFunction <strong>read</strong> <strong>write</strong>;</font></p>
+      <p><font face="Courier New, Courier, mono">TOnUnknownObjFunction = <strong>procedure</strong> 
+        (Sender: TObject; Component: TComponent; <strong>const</strong> FuncName: 
+        <strong>string</strong>; <strong>const</strong> Parameters: TprVarsArray; 
+        ParametersCount: integer; <strong>var</strong> Value: TprVarValue; <strong>var</strong> 
+        IsProcessed: boolean) of object;</font><br>
+      </p>
+      <table width="100%" border="1" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="17%"><strong>Sender</strong></td>
+          <td width="83%">Report that fires an event</td>
+        </tr>
+        <tr> 
+          <td><strong>Component</strong></td>
+          <td>Component, with unknown function</td>
+        </tr>
+        <tr> 
+          <td><strong>FuncName</strong></td>
+          <td>Name of the unknown function</td>
+        </tr>
+        <tr> 
+          <td><strong>Parameters</strong></td>
+          <td>Array from the TprVarValue structure, index of the first element 
+            &#8211; 0</td>
+        </tr>
+        <tr> 
+          <td><strong>ParametersCount</strong></td>
+          <td>The count of elements in an Parameters array</td>
+        </tr>
+        <tr> 
+          <td><strong>Value</strong></td>
+          <td>Structure of a TprVarValue type, which receive value of the unknown 
+            object function</td>
+        </tr>
+        <tr> 
+          <td><strong>IsProcessed</strong></td>
+          <td>If value of function is calculated set this parameter to true</td>
+        </tr>
+      </table>
+      <p><br>
+      </p>
+      </td>
+  </tr>
+</table>
+<!-- InstanceEndEditable -->
+<hr width="100%" size="1">
+<br>&nbsp;&nbsp; &copy; 1999-2004 vtkTools Company. All rights reserved.<br><br><br>
+</body>
+<!-- InstanceEnd --></html>

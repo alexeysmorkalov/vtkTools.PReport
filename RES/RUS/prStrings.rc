@@ -1,0 +1,880 @@
+/*
+Russian resource
+*/
+
+#include "..\..\Source\pr_strings.pas"
+
+
+STRINGTABLE
+{
+    sPRResBase+0, "Общее"
+    sPRResBase+1, "Имя:"
+    sPRResBase+2, "Колонок:"
+    sPRResBase+3, "Размер:"
+    sPRResBase+4, "Печатать на первой странице"
+    sPRResBase+sPrintOnLastPage, "Печатать на последней странице"
+    SPRResBase+sPrintWithChildDetail, "Печатать с дочерними данными:"
+    sPRResBase+5, "Использовать вертикальные секции"
+    sPRResBase+6, "Использовать горизонтальные секции"
+    sPRResBase+7, "Данные"
+    sPRResBase+8, "Набор данных:"
+    sPRResBase+9, "Группа:"
+    sPRResBase+10, "Секция данных:"
+    sPRResBase+11, "Родитель:"
+    sPRResBase+12, "Группы"
+    sPRResBase+13, "Переместить вверх"
+    sPRResBase+14, "Переместить вниз"
+    sPRResBase+15, "Дочерние секции"
+    sPRResBase+16, "Удалить"
+    sPRResBase+17, "Удалить связь"
+    sPRResBase+18, "Размер"
+    sPRResBase+19, "Режим:"
+    sPRResBase+20, "Объекты"
+    sPRResBase+21, "Вставить секцию"
+    sPRResBase+22, "Текст"
+    sPRResBase+23, "Шрифт"
+    sPRResBase+24, "Размер шрифта"
+    sPRResBase+25, "Жирный"
+    sPRResBase+26, "Курсив"
+    sPRResBase+27, "Подчеркнутый"
+    sPRResBase+28, "Цвет шрифта"
+    sPRResBase+29, "Цвет заливки"
+    sPRResBase+30, "Выровнять текст по левому краю"
+    sPRResBase+31, "Центрировать текст по горизонтали"
+    sPRResBase+32, "Выровнять текст по правому краю"
+    sPRResBase+33, "Выровнять текст по верхнему краю"
+    sPRResBase+34, "Центрировать текст по вертикали"
+    sPRResBase+35, "Выровнять текст по нижнему краю"
+    sPRResBase+36, "Файл"
+    sPRResBase+37, "Объект"
+    sPRResBase+38, "Границы"
+    sPRResBase+39, "Верхняя граница"
+    sPRResBase+40, "Левая граница"
+    sPRResBase+41, "Нижняя граница"
+    sPRResBase+42, "Правая граница"
+    sPRResBase+43, "Все границы"
+    sPRResBase+44, "Нет границ"
+    sPRResBase+45, "Выравнивание"
+    sPRResBase+46, "Размер"
+    sPRResBase+47, "Сдвиг"
+    sPRResBase+48, "Создать"
+    sPRResBase+49, "Создать новый отчет"
+    sPRResBase+50, "Открыть..."
+    sPRResBase+51, "Открыть отчет"
+    sPRResBase+52, "Сохранить"
+    sPRResBase+53, "Сохранить отчет"
+    sPRResBase+54, "Сохранить как..."
+    sPRResBase+55, "Сохранить отчет под другим именем"
+    sPRResBase+56, "Выход"
+    sPRResBase+57, "Группы..."
+    sPRResBase+59, "Агрегатные переменные..." /* changed in version 1.8 */
+    sPRResBase+61, "Удалить выбранные объкты"
+    sPRResBase+62, "Показать сетку"
+    sPRResBase+63, "Выравнивать по сетке"
+    sPRResBase+64, "Предварительный просмотр"
+    sPRResBase+65, "Печать..."
+    sPRResBase+66, "Параметры страницы..."
+    sPRResBase+67, "Параметры отчета..."
+    sPRResBase+68, "Копировать"
+    sPRResBase+69, "Вставить"
+    sPRResBase+70, "Вырезать"
+    sPRResBase+71, "Добавить страницу"
+    sPRResBase+72, "Удалить страницу..."
+    sPRResBase+73, "Следующая страница"
+    sPRResBase+74, "Предыдущая страница"
+    sPRResBase+75, "Размер сетки..."
+    sPRResBase+76, "Связи объекта"
+    sPRResBase+78, "Переместить на задний план"
+    sPRResBase+79, "Переместить на передний план"
+    sPRResBase+80, "Свойства"
+    sPRResBase+81, "Изменить"
+    sPRResBase+82, "Выровнять по левому краю"
+    sPRResBase+83, "Центрировать по горизонтали в секции"
+    sPRResBase+84, "Выровнять горизонтальные центры"
+    sPRResBase+85, "Распредилить равномерно по горизонтали"
+    sPRResBase+86, "Выровнять по правому краю"
+    sPRResBase+87, "Выровнять по верхнему краю"
+    sPRResBase+88, "Центрировать по вертикали в секции"
+    sPRResBase+89, "Выровнять вертикальные центры"
+    sPRResBase+90, "Распределить павномерно по вертикали"
+    sPRResBase+91, "Выровнять по нижнему краю"
+    sPRResBase+92, "Сдвинуть влево"
+    sPRResBase+93, "Сдвинуть вправо"
+    sPRResBase+94, "Сдвинуть вверх"
+    sPRResBase+95, "Сдвинуть вниз"
+    sPRResBase+96, "Уменьшить ширину на 1"
+    sPRResBase+97, "Увеличить ширину на 1"
+    sPRResBase+98, "Увеличить высоту на 1"
+    sPRResBase+99, "Уменьшить высоту на 1"
+    sPRResBase+100, "По минимальной ширине"
+    sPRResBase+101, "По максимальной ширине"
+    sPRResBase+102, "По минимальной высоте"
+    sPRResBase+103, "По максимальной высоте"
+    sPRResBase+104, "Выровнять по сетке"
+    sPRResBase+105, "Выровнять и растянуть по сетке"
+    sPRResBase+106, "Построитель выражений"
+    sPRResBase+107, "Категория:"
+    sPRResBase+108, "Выражение:"
+    sPRResBase+109, "Маска:"
+    sPRResBase+110, "Вставить выбранный объект в выражение"
+    sPRResBase+111, "Выбрать формат отображения"
+    sPRResBase+112, "Имя объекта:"
+    sPRResBase+113, "ОК"
+    sPRResBase+114, "Отмена"
+    sPRResBase+115, "Размер сетки"
+    sPRResBase+116, "Размер (шаг) сетки:"
+    sPRResBase+117, "Редактор группы"
+    sPRResBase+118, "Имя группы:"
+    sPRResBase+119, "Условие:"
+    sPRResBase+121, "Выбрать поле таблицы"
+    sPRResBase+122, "Группы"
+    sPRResBase+123, "Удалить группу..."
+    sPRResBase+124, "Добавить группу..."
+    sPRResBase+125, "Изменить группу..."
+    sPRResBase+126, "Метод отрисовки:"
+    sPRResBase+127, "Фон:"
+    sPRResBase+128, "Фон"
+    sPRResBase+129, "Источник изображения:"
+    sPRResBase+130, "Выбрать изображение"
+    sPRResBase+131, "Показать"
+    sPRResBase+132, "Показать выбранное изображение"
+    sPRResBase+133, "Выбрать файл"
+    sPRResBase+134, "Выбрать поле таблицы"
+    sPRResBase+135, "Файл:"
+    sPRResBase+136, "Поле таблицы:"
+    sPRResBase+137, "Изображение"
+    sPRResBase+138, "Слева"
+    sPRResBase+139, "Режим:"
+    sPRResBase+140, "Сверху"
+    sPRResBase+141, "Ширина"
+    sPRResBase+142, "Высота"
+    sPRResBase+143, "Текст"
+    sPRResBase+144, "Построитель выражений"
+    sPRResBase+145, "Вид"
+    sPRResBase+146, "Цвет заливки:"
+    sPRResBase+147, "Шрифт:"
+    sPRResBase+148, "Цвет шрифта:"
+    sPRResBase+149, "Повернуть на 90 градусов"
+    sPRResBase+150, "Выравнивание"
+    sPRResBase+151, " Вертикальное: "
+    sPRResBase+152, " Горизонтальное: "
+    sPRResBase+153, "Границы"
+    sPRResBase+154, "Левая:"
+    sPRResBase+155, "Верхняя:"
+    sPRResBase+156, "Правая:"
+    sPRResBase+157, "Нижняя:"
+    sPRResBase+158, "Дополнительно"
+    sPRResBase+159, "Удалять пустые строки"
+    sPRResBase+160, "Удалять пустые строки вконце"
+    sPRResBase+161, "Может изменять размер по горизонтали"
+    sPRResBase+162, "Может изменять размер по вертикали"
+    sPRResBase+163, "Переносить по словам"
+    sPRResBase+164, "Применить"
+    sPRResBase+165, "Нет выбранных объектов или невозможно показать свойства выбранных объектов"
+    sPRResBase+166, "Параметры страницы"
+    sPRResBase+167, "Бумага"
+    sPRResBase+168, " Размеры " /* changed in 1.8 */
+    sPRResBase+169, "Мин.:" /* changed in 1.8 */
+    sPRResBase+170, "Ширина (мм):"
+    sPRResBase+171, "Высота (мм):"
+    sPRResBase+173, " Ориентация " /* changed in 1.8 */
+    sPRResBase+174, "Портретная"
+    sPRResBase+175, "Альбомная"
+    sPRResBase+176, " Поля (мм) " /* changed in 1.8 */
+    sPRResBase+177, "Слева:" /* changed in 1.8 */
+    sPRResBase+178, "Справа:" /* changed in 1.8 */
+    sPRResBase+179, "Сверху:" /* changed in 1.8 */
+    sPRResBase+180, "Снизу:" /* changed in 1.8 */
+    sPRResBase+183, "Предварительный просмотр"
+    sPRResBase+185, "Страница целиком"
+    sPRResBase+186, "Показать страницу целиком"
+    sPRResBase+187, "Несколько страниц"
+    sPRResBase+188, "Показать несколько страниц"
+    sPRResBase+189, "По ширине страницы"
+    sPRResBase+190, "Показать по ширине страницы"
+    sPRResBase+191, "Две страницы"
+    sPRResBase+192, "Показать две страницы"
+    sPRResBase+193, "Поиск..."
+    sPRResBase+194, "Искать далее"
+    sPRResBase+195, "Искать назад"
+    sPRResBase+196, "Отменить поиск"
+    sPRResBase+197, "Закрыть"
+    sPRResBase+198, "Сохранить сгенерированный отчет..."
+    sPRResBase+199, "Загрузить сгенерированный отчет..."
+    sPRResBase+200, "Параметры отчета"
+    sPRResBase+201, "Принтер:"
+    sPRResBase+202, "Заголовок:"
+    sPRResBase+203, "Выбор поля таблицы"
+    sPRResBase+204, "Источник данных:"
+    sPRResBase+205, "Список полей:"
+    sPRResBase+206, "Формат отображения"
+    sPRResBase+207, "Использовать выравнивание"
+    sPRResBase+208, " Выравнивание: "
+    sPRResBase+209, "Ширина (в символах):"
+    sPRResBase+210, "По левому краю"
+    sPRResBase+211, "По центру"
+    sPRResBase+212, "По нижнему краю"
+    sPRResBase+213, "Использовать формат отображения"
+    sPRResBase+214, " Формат отображения: "
+    sPRResBase+215, "Тип значения:"
+    sPRResBase+216, "Формат:"
+    sPRResBase+217, "Примеры:"
+    sPRResBase+218, "Параметры шрифта"
+    sPRResBase+219, "Редактор строк"
+    sPRResBase+220, "Стиль шрифта:"
+    sPRResBase+221, "Вставить символ"
+    sPRResBase+222, "Тип страницы:"
+    sPRResBase+223, "Колонок:"
+    sPRResBase+224, "Строк:"
+    sPRResBase+225, "Шрифт по умолчанию:"
+    sPRResBase+226, "Тип:"
+    sPRResBase+227, "Стиль:"
+    sPRResBase+228, "Предварительный просмотр"
+    sPRResBase+229, "Строка: "
+    sPRResBase+230, "Страница: "
+    sPRResBase+231, "Шрифт..."
+    sPRResBase+232, "Редактор агрегатной переменной" /* changed in version 1.8 */
+    sPRResBase+233, "Имя переменной:"
+    sPRResBase+234, "Метод расчета значения"
+    sPRResBase+235, "Метод расчета:"
+    sPRResBase+236, "Набор данных:"
+    sPRResBase+237, "Горизонтальный набор данных (для CrossTab):"
+    sPRResBase+238, "Формула:"
+    sPRResBase+240, "Область видимости переменной"
+    sPRResBase+241, "Область"
+    sPRResBase+242, "Группа:"
+    sPRResBase+243, "Набор данных:"
+    sPRResBase+244, "Агрегатные переменные" /* changed in version 1.8 */
+    sPRResBase+245, "Удалить агрегатную переменную"
+    sPRResBase+246, "Добавить агрегатную переменную"
+    sPRResBase+247, "Изменить агрегатную переменную"
+    sPRResBase+248, "&Файл"
+    sPRResBase+249, "&Правка"
+    sPRResBase+250, "&Объект"
+    sPRResBase+251, "&Страница"
+    sPRResBase+252, "&Вид"
+    sPRResBase+253, "Видим"
+    sPRResBase+254, "Панели инструментов"
+    sPRResBase+255, "Файл"
+    sPRResBase+256, "Объект"
+    sPRResBase+257, "Вставка объекта"
+    sPRResBase+258, "Текст"
+    sPRResBase+259, "Границы"
+    sPRResBase+260, "Выравнивание"
+    sPRResBase+261, "Размер"
+    sPRResBase+262, "Сдвиг"
+    sPRResBase+263, "Метод формирования колонок:"
+    sPRResBase+264, "Колонки"
+    sPRResBase+265, "Дополнительно"
+    sPRResBase+266, "Повторять на каждой странице"
+    sPRResBase+267, "Не отрывать от данных"
+    sPRResBase+268, "Начинать новую страницу"
+    sPRResBase+269, "На странице должна быть секция:"
+    sPRResBase+277, "Размеры и положение"
+    sPRResBase+270, "Единицы:"
+    sPRResBase+271, "Слева:"
+    sPRResBase+272, "Сверху:"
+    sPRResBase+273, "Справа:"
+    sPRResBase+274, "Снизу:"
+    sPRResBase+275, "Ширина:"
+    sPRResBase+276, "Высота:"
+    sPRResBase+278, "Положение, размеры"
+    sPRResBase+279, "Положение и размеры выбранного объекта"
+    sPRResBase+280, "Выводить строки пока истинно условие:"
+    sPRResBase+281, "Печатать сразу после последней секции на странице"
+    sPRResBase+282, "Агрегатная функция:"
+    sPRResBase+283, "Экспорт..."
+    sPRResBase+284, "Добавить формат"
+    sPRResBase+285, "Удалить формат"
+    sPRResBase+286, "Параметры экспорта"
+    sPRResBase+287, " Экспортировать: "
+    sPRResBase+288, "Все"
+    sPRResBase+289, "Сраницы     с:"
+    sPRResBase+290, "по:"
+    sPRResBase+291, "Список страниц:"
+    sPRResBase+292, "Открыть после экспорта"
+    sPRResBase+293, "Имя файла:"
+    sPRResBase+294, " Точность экспорта: "
+    sPRResBase+295, "ESC модель:"
+    sPRResBase+296, "Кодировка:"
+    sPRResBase+297, "Строки        с:"
+    sPRResBase+298, "Экспортировать в текстовый файл"
+    sPRResBase+299, "Число колонок:"
+    sPRResBase+300, "Сменить режим: просмотр/редактирование"
+    sPRResBase+301, "Использовать шрифт установленный для страницы"
+    sPRResBase+302, "Доступные команды:"
+    sPRResBase+303, "Выбранные команды:"
+    sPRResBase+304, "Добавить"
+    sPRResBase+305, "Добавить все"
+    sPRResBase+306, "Удалить"
+    sPRResBase+307, "Удалить все"
+
+    sPRResBase+308, "Параметры" /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+309, " Сетка: " /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+310, "Сетка и Прилипание" /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+311, " Прилипание: " /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+312, "Активно:" /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+313, "Мин. смещение (пиксели):" /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+314, "Прилипать к секциям" /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+315, "Прилипать к объектам" /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+316, "Прилипать с наложением" /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+317, " Горизонтальная линейка: " /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+318, " Вертикальная линейка: " /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+319, " Горизонтальные заголовки секций: " /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+320, " Вертикальные заголовки секций: " /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+321, "Окна свойств" /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+322, " Непрозрачность (процент 0-100): " /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+323, "Свойства объектов:" /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+324, "Связи объекта:" /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+326, "Позиция и размеры:" /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+327, "Параметры..." /* version 1.8 - pr_DesignerPanelOptions.pas */
+    sPRResBase+328, "Главное" /* version 1.8 - pr_TxDesignerPanelOptions.pas */
+    sPRResBase+329, " Шрифт: " /* version 1.8 */
+    sPRResBase+330, "Название:" /* version 1.8 */
+    sPRResBase+331, "Размер:" /* version 1.8 */
+    sPRResBase+332, "Шаг (в символах):" /* version 1.8 */
+    sPRResBase+333, "Вы можете определить как поступать в том случае если принтер на котором будет распечатан отчет не поддерживает используемый размер бумаги: смасштабировать к ближайшему, смасштабировать к указанному и так далее." /* version 1.8 */
+    sPRResBase+334, "Режим масштабирования:" /* version 1.8 */
+    sPRResBase+335, "Предопределенный размер бумаги:" /* version 1.8 */
+    sPRResBase+336, "Вписать объекты" /* version 1.8 */
+    sPRResBase+337, "Масштабирование" /* version 1.8 */
+    sPRResBase+338, "Выберите один из вариантов:" /* version 1.8 */
+    sPRResBase+339, "Масштабировать к размеру страницы:" /* version 1.8 */
+    sPRResBase+440, "Пропустить страницу" /* version 1.8 */
+    sPRResBase+441, "Больше не задавать этот вопрос" /* version 1.8 */
+    sPRResBase+442, "Неподдерживаемый размер бумаги" /* version 1.8 */
+    sPRResBase+443, " Цвета: " /* version 1.8 */
+    sPRResBase+444, "Цвет фона:" /* version 1.8 */
+    sPRResBase+445, "Цвет текста:" /* version 1.8 */
+    sPRResBase+446, "Фон найденного текста:" /* version 1.8 */
+    sPRResBase+447, "Цвет найденного текста:" /* version 1.8 */
+    sPRResBase+448, "Фон выделенного текста:" /* version 1.8 */
+    sPRResBase+449, "Цвет выделенного текста:" /* version 1.8 */
+    sPRResBase+450, "Накапливать значение" /* version 1.8 */
+    sPRResBase+451, "Формулы" /* version 1.8 */
+    sPRResBase+452, "Выводить секцию если условие истинно:" /* version 1.8 */
+    sPRResBase+453, "Основное" /* version 1.8 */
+    sPRResBase+454, "Дизайнер" /* version 1.8 */
+    sPRResBase+455, "Размер страницы в дизайнере:" /* version 1.8 */
+    sPRResBase+456, "Указанные здесь параметры используются только на этапе создания шаблона и никак не влияют на процесс формирования отчета" /* version 1.8 */
+
+    sPRResBase+457, "Найти:" /* version 1.8 */
+    sPRResBase+458, "Заменить на:" /* version 1.8 */
+    sPRResBase+459, "Только слово целиком" /* version 1.8 */
+    sPRResBase+460, "Учитывать регистр" /* version 1.8 */
+    sPRResBase+461, "Найти" /* version 1.8 */
+    sPRResBase+462, "Заменить все" /* version 1.8 */
+    sPRResBase+463, "Параметры" /* version 1.8 */
+    sPRResBase+464, "Найденные объекты" /* version 1.8 */
+    sPRResBase+465, "Поиск в шаблоне" /* version 1.8 */
+    sPRResBase+466, "Спрашивать подтверждение при замене" /* version 1.8 */
+
+    sPRResBase+467, "Имя" /* version 1.8 */
+    sPRResBase+468, "Тип" /* version 1.8 */
+    sPRResBase+469, "Значение" /* version 1.8 */
+
+    sPRResBase+470, "Переменные..." /* version 1.8 */
+
+    sPRResBase+471, "Добавить переменную" /* version 1.8 */
+    sPRResBase+472, "Изменить переменную" /* version 1.8 */
+    sPRResBase+473, "Удалить переменную" /* version 1.8 */
+
+    sPRResBase+sPreviewFirstPage, "Первая страница" /* version 1.8.3.2 */
+    sPRResBase+sPreviewPriorPage, "Предыдущая страница" /* version 1.8.3.2 */
+    sPRResBase+sPreviewNextPage, "Следующая страница" /* version 1.8.3.2 */
+    sPRResBase+sPreviewLastPage, "Последняя страница" /* version 1.8.3.2 */
+
+    sPRResBase+sHLineObjDesc, "Горизонтальная строка из символов {%s, %s, %s}, длина %d" /* version 1.9 */
+    sPRResBase+sVLineObjDesc, "Вертикальная строка из символов {%s, %s, %s}, длина %d" /* version 1.9 */
+
+    sPRResBase+sMainCharTabSheet, "Основной символ" /* version 1.9 */
+    sPRResBase+sStartingCharTabSheet, "Начальный символ" /* version 1.9 */
+    sPRResBase+sEndingCharTabSheet, "Конечный символ" /* version 1.9 */
+    sPRResBase+sHEXCodeLabel, "Код символа (hex):" /* version 1.9 */
+    sPRResBase+sAllCharsAsMainChar, "Все" /* version 1.9 */
+
+    sPRResBase+sSaveCombination, "Сохранить" /* version 1.9 */
+    sPRResBase+sLoadCombination, "Загрузить" /* version 1.9 */
+    sPRResBase+sCurrentCombination, "Текущая комбинация:" /* version 1.9 */
+    sPRResBase+sCombinationsList, "Сохраненные комбинации:" /* version 1.9 */
+    sPRResBase+sLineTemplates, "Шаблоны" /* version 1.9 */
+
+    sPRResBase+sShapeStyleMenuCaption, "Стиль фигуры" /* version 1.9 */
+    sPRResBase+sShapeCenterHorzLine, "Горизонтальная линия" /* version 1.9 */
+    sPRResBase+sShapeBottomLine, "Нижняя линия" /* version 1.9 */
+    sPRResBase+sShapeTopLine, "Верхняя линия" /* version 1.9 */
+    sPRResBase+sShapeCenterVertLine, "Вертикальная линия" /* version 1.9 */
+    sPRResBase+sShapeLeftLine, "Линия слева" /* version 1.9 */
+    sPRResBase+sShapeRightLine, "Линия справа" /* version 1.9 */
+    sPRResBase+sShapeBox, "Прямоугольник" /* version 1.9 */
+    sPRResBase+sShapeEllipse, "Эллипс" /* version 1.9 */
+    sPRResBase+sShapeObjCaption, "Фигура" /* version 1.9 */
+    sPRResBase+sShapeObjHint, "Фигура" /* version 1.9 */
+
+    sPRResBase+sShapeObjEditorMain, "Основное" /* version 1.9 */
+    sPRResBase+sShapeObjEditorStyle, "Стиль:" /* version 1.9 */
+    sPRResBase+sShapeObjEditorPen, " Линия: " /* version 1.9 */
+    sPRResBase+sShapeObjEditorBrush, " Заливка: " /* version 1.9 */
+    sPRResBase+sShapeObjEditorColor, "Цвет:" /* version 1.9 */
+    sPRResBase+sShapeObjEditorPenWidth, "Ширина:" /* version 1.9 */
+    sPRResBase+sShapeObjSetSizeAsPenWidth, "Установить размер по ширине линии" /* version 1.9 */
+
+    sPRResBase+sLinkWidthDependFromMaxWidth, "Как ширина самого широкого объекта" /* version 1.9 */
+    sPRResBase+sLinkWidthDependFromMinWidth, "Как ширина самого узкого объекта" /* version 1.9 */
+    sPRResBase+sLinkWidthDependFromMaxHeight, "Как высота самого высокого объекта" /* version 1.9 */
+    sPRResBase+sLinkWidthDependFromMinHeight, "Как высота самого низкого объекта" /* version 1.9 */
+
+    SPRResBase+sLinkWidthDependFromSumWidth, "Суммарное изменение ширины связанных объектов" /* version 1.9.2 */
+    SPRResBase+sLinkWidthDependFromSumHeight, "Суммарное изменение высоты связанных объектов" /* version 1.9.2 */
+
+    sPRResBase+sBandPrintOnLastPage, "Печатать на последней странице" /* version 1.9.2 */
+
+    sPRResBase+sBandResizeNoChange, "Не изменяется"
+    sPRResBase+sBandResizeMaxBottom, "По самому большому Bottom/Right"
+    sPRResBase+sBandResizeMaxBottomInLinksList, "По максимальному Bottom/Right в списке"
+    sPRResBase+sBandResizeMinBottomInLinksList, "По минимальному Bottom/Right в списке"
+
+    sPRResBase+sFormatExpressionCategoryReportVar, "Переменная отчета" 
+    sPRResBase+sFormatExpressionCategoryObjectPtoperty, "Свойство или метод объекта"
+
+    sPRResBase+sImageEditorDrawModeCenter, "Центрировать изображение"
+    sPRResBase+sImageEditorDrawModeStretch, "Растянуть изображение"
+    sPRResBase+sImageEditorDrawModeStretchProp, "Растянуть изображение пропорционально"
+    sPRResBase+sImageEditorDrawModeAsImageSize, "По размерам изображения"
+
+    sPRResBase+sLinkLeftDependFromMaxRight, "X по максимальному Right"
+    sPRResBase+sLinkLeftDependFromMinRight, "X по минимальному Right"
+    sPRResBase+sLinkTopDependFromMaxBottom, "Y по максимальному Bottom"
+    sPRResBase+sLinkTopDependFromMinBottom, "Y по минимальному Bottom"
+
+    sPRResBase+sLinkWidthDependFromMaxRight, "Ширина по максимальному Right"
+    sPRResBase+sLinkWidthDependFromMinRight, "Ширина по минимальному Right"
+    sPRResBase+sLinkHeightDependFromMaxBottom, "Высота по максимальному Bottom"
+    sPRResBase+sLinkHeightDependFromMinBottom, "Высота по минимальному Bottom"
+
+    sPRResBase+sDisplayFormatStandart, "Предопределенные"
+    sPRResBase+sDisplayFormatNumber, "Число"
+    sPRResBase+sDisplayFormatDate, "Дата"
+    sPRResBase+sDisplayFormatTime, "Время"
+    sPRResBase+sDisplayFormatDateTime, "Дата и время"
+    sPRResBase+sDisplayFormatText, "Текст"
+
+    sPRResBase+NullPointerString, "(нет)"
+
+    sPRResBase+sPageNumber, "Стр. %d из %d"
+    sPRResBase+sBandAlreadyExistsInPageName, "Секция [%s] уже есть на странице [%d]"
+    sPRResBase+sBandAlreadyExistsInPageType, "Секция [%s]уже есть на этой странице"
+    sPRResBase+sErrorBandLoadUnknownObject, "TprBand.Load : неизвестный тип объекта [%s]"
+    sPRResBase+sUnknownBandType, "Секция типа [%s] не найдена"
+    sPRResBase+sUnknownBandName, "Секция с именем [%s] не найдена"
+    sPRResBase+sBandHeightToBig, "Высота секции [%s] слишком велика"
+    sPRResBase+sBandWidthToBig, "Ширина секции [%s] слишком велика"
+    sPRResBase+sDataSetNotFound, "Набор данных [%s] не найден"
+    sPRResBase+sNoReportName, "Без названия"
+    sPRResBase+sPreviewCaption, "Предварительный просмотр - [%s]"
+    sPRResBase+sTextNotFound, "Текст ""%s"" не найден"
+    sPRResBase+sAttention, "Внимание"
+    sPRResBase+sEndOfFind, "Вы дошли до конца отчета, продолжить поиск с начала?"
+    sPRResBase+sStartOfFind, "Вы дошли до начала отчета, продолжить поиск с начала?"
+    sPRResBase+sErrorClipboardPaste, "Для того чтобы вставить объекты из буфера обмена выберите какую-нибудь секцию или объект" /* changed in version 1.8 */
+    sPRResBase+sUnknownTypeObject, "Неизвестный тип объекта [%s]"
+    sPRResBase+sDeletePageQuestion, "Удалить текущую страницу?"
+    sPRResBase+sLinkNotSelected, "Связь не выбрана"
+    sPRResBase+sVarAlreadyExists, "Переменная с именем [%s] уже есть в отчете [%s]"
+    sPRResBase+sGroupAlreadyExists, "Группа с именем [%s] уже есть в отчете [%s]"
+
+    sPRResBase+sReportVarNotCalced, "Невозможно рассчитать значение агрегатной переменной [%s]" /* changed in version 1.8 */
+    sPRResBase+sVarNotExists, "Агрегатная переменная [%s] не найдена" /* changed in version 1.8 */
+    sPRResBase+sGroupNotExists, "Группа [%s] не найдена"
+
+    sPRResBase+sPageMarginsWarning, "Указанные поля для страницы меньше чем минимально допустимые поля для выранного принтера"
+
+    sPRResBase+sNoObjSelected, "Объект не выбран"
+
+    sPRResBase+sDefaultProgressFormCaption, "Пожалуйста подождите..."
+    sPRResBase+sActionCanceled, "Операция прервана"
+
+    sPRResBase+sFirstPassCaption, "Первый проход, генерация таблицы (Строк: %d, Столбцов: %d, Ячеек: %d)"
+    sPRResBase+sSecondPassCaption, "Второй проход, генерация страниц (Сформировано страниц: %d)"
+    sPRResBase+sThirdPassCaption, "Третий проход, расчет значений (Страница %d из %d)"
+
+    sPRResBase+sReportEmptyInPreview, "Отчет пуст"
+
+    sPRResBase+sNoVarVersion, "Агрегатная переменная [%s] не имеет версии с индексом [%d]" /* changed in version 1.8 */
+
+    sPRResBase+sDeleteGroupQuestion, "Удалить группу?"
+    sPRResBase+sDeleteVarQuestion, "Удалить переменную?"
+
+    sPRResBase+sValuesEditorCaption, "Агрегатные переменные отчета [%s]" /* changed in version 1.8 */
+    sPRResBase+sGroupsEditorCaption, "Группы отчета [%s]"
+
+    sPRResBase+sInvalidVarFormula, "Формула не указана"
+    sPRResBase+sCalcOnDataSetNotDefined, "Набор данных не указан"
+
+    sPRResBase+sNoGroupName, "Не указано имя группы"
+    sPRResBase+sNoGroupValid, "Не указано условие для группы"
+    sPRResBase+sNoGroupDetailBand, "Не указана секция данных для группы"
+
+    sPRResBase+sCalcOnCrossDataSetNotDefined, "Горизонтальный набор данных не указан (используется для CrossTab)"
+    sPRResBase+sCalcOnError, "Неверный метод для расчета значения переменной"
+
+    sPRResBase+sResetOnGroupNotDefined, "Не указана группа, которая определяет область видимости для переменной"
+    sPRResBase+sResetOnDataSetNotDefined, "Не указан набор данных, который определяет область видимости для переменной"
+
+    sPRResBase+saRecNotInitializated, "TprObj.FirstPass : aRec not initializated"
+
+    sPRResBase+sPrintReportCaption, "Печать отчета"
+    sPRResBase+sCreateReportCaption, "Создание отчета"
+    sPRResBase+sPrintReport, "Страница %d (копия %d), всего страниц %d, копий %d"
+
+    sPRResBase+sSetupPrintError1, "Введите список страниц для печати"
+    sPRResBase+sSetupPrintError2, "Список страниц, который вы ввели неверен, верный диапозон от %d до %d"
+    sPRResBase+sSetupPrintError3, "Диапозон строк неверен"
+    sPRResBase+sSetupPrintError4, "Диапозон строк неверен, верный диапозон от %d до %d"
+    sPRResBase+sSetupPrintError5, "ESC модель принтера неверна"
+    sPRResBase+sSetupPrintError6, "Неверно указано количество строк на странице"
+
+    sPRResBase+prSaveReportTemplateFilter, "Шаблоны отчетов (*.prt)|*.prt|Все файлы (*.*)|*.*"
+
+    sPRResBase+sPropsFormManyObjectsSelectedCaption, "Выбрано %d объектов"
+    sPRResBase+sFormulaNotDefined, "Формула не указана"
+
+    sPRResBase+sErrorPropName, "Невозможно получить информацию по свойству [%s]"
+
+    sPRResBase+sTotalPages, "Всего страниц: %d"
+
+    sPRResBase+sErrorTxPreviewPageRange, "В документе %d страниц"
+    sPRResBase+sErrorTxOpenPrinter, "Ошибка при открытии принтера (OpenPrinter): %s"  /* changed in 1.8.3 */
+    sPRResBase+sErrorTxStartDoc, "Ошибка создания документа (StartDocPrinter): %s"
+    sPRResBase+sErrorTxStartPAge, "Ошибка при создании страницы документа (StartPagePrinter): %s"
+    sPRResBase+sErrorTxESCModelNotFound, "ESC модель [%s] не найдена"
+
+    sPRResBase+sErrorNoModalForMDIChild, "MDI форма не может быть показана модально"
+
+    sPRResBase+sFind, "Поиск:"
+
+    sPRResBase+sErrorSelectPrinter, "Ошибка при выборе принтера#13%s#13#13%s#13#13в качестве принтера по умолчанию"
+    sPRResBase+sErrorSelectPrinter2, "Ошибка при выборе принтера#13%s#13#13%s"
+
+    sPRResBase+sDefaultPrinterName, "Виртуальный принтер"
+    sPRResBase+sInvalidPrinterName, "Неверное имя принтера"
+    sPRResBase+sPrinterErrorNotInitInfo, "Ошибка при получении информации о принтере (InitInfo)"
+    sPRResBase+sPrinterErrorUnaibleInitializeInfo, "Ошибка при получении информации о принтере"
+    sPRResBase+sPrinterErrorInvalidPaperSize, "Выбранный размер страницы не поддерживается принтером"
+    sPRResBase+sPrinterErrorUnaibleInitializeStructures, "Невозможно получить информацию о структурах принтера"
+    sPRResBase+sPrinterErrorUnaibleCreateCanvas, "Невозможно создать контекст отображения для принтера"
+    sPRResBase+sPrinterErrorUnknown, "Ошибка при печати на принтер:#13%s#13Невозможно установить введенные параметры, попробуйте переустановить принтер"
+
+    sPRResBase+sStandartDisplayFormatSimpleCurrency, "Простой денежный формат"
+    sPRResBase+sStandartDisplayFormatShortCurrency, "Краткий денежный формат"
+    sPRResBase+sStandartDisplayFormatCurrency, "Денежный формат"
+    sPRResBase+sStandartDisplayFormatPercent, "Процентный формат"
+    sPRResBase+sStandartDisplayFormatShortDate, "Краткий формат даты"
+    sPRResBase+sStandartDisplayFormatCurrencyWithDelim, "Денежный формат с разделителями"
+    sPRResBase+sStandartDisplayFormatBankCurrency, "Банковский денежный формат"
+
+    sPRResBase+sFormatExpressionFields, "Поля:"
+    sPRResBase+sFormatExpressionFunctions, "Функции:"
+    sPRResBase+sFormatExpressionProperties, "Свойства:"
+
+    sPRResBase+sGroupsEditorCaptionsName, "Имя"
+    sPRResBase+sGroupsEditorCaptionsValid, "Условие"
+    sPRResBase+sGroupsEditorCaptionsDetailBand, "Секция данных"
+
+    sPRResBase+sValuesEditorCaptionsVarName, "Имя переменной"
+    sPRResBase+sValuesEditorCaptionsFormula, "Формула"
+    sPRResBase+sValuesEditorCaptionsCalcMethod, "Метод расчета"
+    sPRResBase+sValuesEditorCaptionsCalcDataset, "НД для расчета"
+    sPRResBase+sValuesEditorCaptionsCrossTabDataset, "НД для CrossTab"
+    sPRResBase+sValuesEditorCaptionsSphere, "Область видимости"
+    sPRResBase+sValuesEditorCaptionsSphereGroup, "Группа для области видимости"
+    sPRResBase+sValuesEditorCaptionsDataSetSphere, "НД для области видимости"
+
+    sPRResBase+sPropertiesEditTemplate, "Редактировать шаблон"
+    sPRResBase+sPropertiesEditVars, "Редактировать агрегатные переменные"
+    sPRResBase+sPropertiesEditGroups, "Редактировать группы"
+
+    sPRResBase+sVisible, "Видима"
+    sPRResBase+sGetComponentsReportDesc, "Данный отчет"
+
+    sPRResBase+sErrorInvalidDatasetForprDataset, "Для класса TprDatasetLink неверное значение свойства Dataset"
+    sPRResBase+sErrorCalcExpressionInOnePass, "Невозможно посчитать значение выражения за один проход"
+    sPRResBase+sErrorInvalidStringsSource, "Неверный источник строки (поддерживаются: TListBox, TComboBox, TMemo)"
+    sPRResBase+sErrorStringsSourceNotDefined, "Не задан источник строк"
+
+    sPRResBase+sVersionsEditorNewVersion, "Добавить версию"
+    sPRResBase+sVersionsEditorDelVersion, "Удалить версию"
+    sPRResBase+sVersionsEditorMoveUp, "Переместить текущую версию вверх"
+    sPRResBase+sVersionsEditorMoveDown, "Переместить текущую версию вниз"
+    sPRResBase+sVersionsEditorSetAsDefault, "Установить текущую версию как версию по умолчанию"
+    sPRResBase+sVersionsEditorEditFormula, "Редактировать формулу для текущей версии"
+    sPRResBase+sErrorDesignerClassNotFound, "Класс формы дизайнера не найден"
+    sPRResBase+sErrorPreviewClassNotFound, "Класс формы предварительного просмотра не найден"
+
+    sPRResBase+sParserErrorUnknownFieldType, "VarFromField : неизвестный тип поля"
+    sPRResBase+sParserErrorErrorValueType, "Неподходящий тип значения"
+    sPRResBase+sParserErrorCalcExpression, "Ошибка при вычислении выражения:#13%s"
+    sPRResBase+sParserErrorInvalidFormatString, "Неверная строка форматирования"
+    sPRResBase+sParserErrorInFormatString, "Ошибка в строке форматирования, в позиции %d:#13%s"
+    sPRResBase+sParserErrorParamsCountForLocate, "Нечетное число параметров для функции Locate"
+    sPRResBase+sParserErrorGetReferenceToClass, "Невозможно получить ссылку на класс [%s]"
+
+    sPRResBase+sParserErrorUnknownVariable, "Неизвестная переменная [%s]"
+    sPRResBase+sParserErrorGetVarValue, "Ошибка при чтении значения:#13%s"
+    sPRResBase+sParserErrorString, "Неверная запись строки, отсутствует вторая ковычка"
+    sPRResBase+sParserErrorUnknownOperandType, "Операнд [%s] имеет неизвестный тип"
+    sPRResBase+sParserErrorUnknownOperator, "Неизвестный оператор [%s]"
+    sPRResBase+sParserErrorUnknownFunction, "Неизвестная функция [%s]"
+    sPRResBase+sParserErrorCommonError, "Неверная запись выражения"
+    sPRResBase+sParserErrorInvalidBrackets, "Неверное число скобок"
+    sPRResBase+sParserErrorCompile, "Ошибка при компиляции выражения:#13%s#13#13%s"
+    sPRResBase+sParserErrorInvalidFuncParametersCount, "Неверное число параметров для функции [%s], передано %d, должно быть от %d до %d"
+    sPRResBase+sParserErrorStack, "Выход за пределы стэка"
+    sPRResBase+sParserErrorIncompatibleTypes, "Несовместимые типы операндов"
+    sPRResBase+sParserErrorInvalidTypes, "Неверный тип операндов"
+    sPRResBase+sParserErrorUnknownProp, "Неизвестное свойство [%s] класса [%s]"
+    sPRResBase+sParserErrorObjectNotFound, "Объект не найден [%s]"
+    sPRResBase+sParserErrorUnknownObjectFunction, "Функция объекта не найдена [%s]"
+    sPRResBase+sParserErrorUnknownReportVariableVersion, "Не найдена версия агрегатной переменной [%s]" /* changed in version 1.8 */
+    sPRResBase+sParserErrorParameterWithoutFunction, "Параметр без функции" /* version 1.8 */
+    sPRResBase+sParserErrorUnknownOperand, "Неизвестный операнд [%s]" /* version 1.8 */
+    sPRResBase+sParserErrorInvalidSymbol, "Недопустимый символ [%s]" /* version 1.8 */
+
+    sPRResBase+sOnePassCalcError, "Выражение не может быть посчитано за один проход:#13[%s]"
+
+    sPRResBase+sImageObjDescFileMask, "Файл: [%s]"
+    sPRResBase+sImageObjDescDBFieldMask, "Поле таблицы: [%s]"
+    sPRResBase+sOtherPageSize, "Другой"
+
+    sPRResBase+sValuesEditorCaptionsAggFunction, "Агг. функция"
+    sPRResBase+sReportEmptyInExport, "Нечего экспортировать"
+    sPRResBase+sExportErrorInitOLEServer, "Ошибка инициализации OLE сервера [%s]:#13%s"
+
+    sPRResBase+sPreviewFileMask, "Отчеты (*.pr)|*.pr|Все файлы (*.*)|*.*"
+
+    sPRResBase+sExportReportCaption, "Экспорт отчета в файл [%s]"
+    sPRResBase+sExportReportProgress, "Страница %d из %d"
+
+    sPRResBase+sExportPrecisionLow, "Низкая"
+    sPRResBase+sExportPrecisionNormal, "Нормальная"
+    sPRResBase+sExportPrecisionHigh, "Высокая"
+    sPRResBase+sExportFileNotDefined, "Выберите файл для экспорта"
+    sPRResBase+sExportPagesRangeNotValid, "Указан неверный диапозон страниц"
+    sPRResBase+sExportPagesListNotValid, "Неверно указан список страниц"
+
+    sPRResBase+sExportNotUseESCModels, "Не использовать ESC команды"
+    sPRResBase+sExportLinesRangeNotValid, "Неверно указан диапозон строк"
+    sPRResBase+sExportTXTErrorCreateFile, "Ошибка при создании файла для экспорта:#13%s"
+    sPRResBase+sExportReportProgressLines, "Строка %d из %d"
+    sPRResBase+sExportTXTErrorWriteFile, "Ошибка при записи в файл:#13%s"
+
+    sPRResBase+sTxPreviewPages, "Страница: %d из %d"
+
+    sPRResBase+sError, "Ошибка"
+
+    sPRResBase+sReportObjectName, "Отчет"
+
+    sPRResBase+sErrorGetPreviewUserDataClass, "Ошибка при получении класса по имени [%s], возможно класс не зарегистрирован"
+
+    sPRResBase+sNoObjectsSelected, "Объекты не выбраны"
+    sPRResBase+sSelectedMoreThenOneObject, "Выбрано %d объектов"
+    sPRResBase+sColorBtnOtherColorCaption, "Другой..."
+    sPRResBase+sColorBtnNoColorCaption, "Нет"
+    sPRResBase+sPreviewPropsFormOneObjectSelectedCaption, "Свойства выбранного объекта"
+    sPRResBase+sPreviewSelectPageForPaste, "Пожалуйста выберите страницу, в которую надо вставить объекты"
+    sPRResBase+sPreviewDeletePageQuestion, "Удалить выбранную страницу?"
+    sPRResBase+sPreviewModeEdit, "Режим редактирования"
+    sPRResBase+sPreviewModePreview, "Режим просмотра"
+    sPRResBase+sCurrencyFormat, "#,0.00р'.';-#,0.00р'.'"
+    sPRResBase+sShortCurrencyFormat, "0.00р'.';-0.00р'.'"
+    sPRResBase+sSimpleCurrencyFormat, "0.00;-0.00"
+    sPRResBase+sPercentFormat, "0.00%;-0.00%"
+    sPRResBase+sSpacedCurrencyFormat, "#,0.00;-#,0.00"
+    sPRResBase+sBankCurrencyFormat, "\\ds-0.00;-0.00"
+    sPRResBase+sWidthAsVerticalBand, "Ширина объекта равна ширине вертикальной секции"
+    sPRResBase+sHeightAsHorizontalBand, "Высота объекта равна высоте горизонтальной секции"
+    sPRResBase+sObjOptions, "Опции"
+    sPRResBase+sExportFormExportFormat, "Формат:"
+    sPRResBase+sXLSExportFilterDesc, "Книга Excel"
+    sPRResBase+sHTMExportFilterDesc, "Web страница"
+    sPRResBase+sTXTExportFilterDesc, "Текстовый файл"
+    sPRResBase+sExportFilterNotDefined, "Формат экспорта не определен"
+
+    sPRResBase+sbthTitle,        "Заголовок отчета"
+    sPRResBase+sbthSummary,      "Итог по отчету"
+    sPRResBase+sbthPageHeader,   "Заголовок страницы"
+    sPRResBase+sbthPageFooter,   "Подвал страницы"
+    sPRResBase+sbthDetail,       "Данные"
+    sPRResBase+sbthDetailHeader, "Заголовок данных"
+    sPRResBase+sbthDetailFooter, "Подвал данных"
+    sPRResBase+sbthGroupHeader,  "Заголовок группы"
+    sPRResBase+sbthGroupFooter,  "Подвал группы"
+    sPRResBase+sbtvTitle,        "Вертикальный заголовок отчета"
+    sPRResBase+sbtvSummary,      "Вертикальный итог по отчету"
+    sPRResBase+sbtvPageHeader,   "Вертикальный заголовок страницы"
+    sPRResBase+sbtvPageFooter,   "Вертикальный подвал страницы"
+    sPRResBase+sbtvDetail,       "Вертикальные данные"
+    sPRResBase+sbtvDetailHeader, "Вертикальный заголовок данных"
+    sPRResBase+sbtvDetailFooter, "Вертикальный подвал данных"
+    sPRResBase+sbtvGroupHeader,  "Вертикальный заголовок группы"
+    sPRResBase+sbtvGroupFooter,  "Вертикальный подвал группы"
+
+    sPRResBase+sMemoObjCaption, "Текст"
+    sPRResBase+sMemoObjHint, "Прямоугольник с текстом"
+    sPRResBase+sImageObjCaption, "Изображение"
+    sPRResBase+sImageObjHint, "Изображение"
+
+    sPRResBase+sTxMemoObjCaption, "Текст"
+    sPRResBase+sTxMemoObjHint, "Текст"
+
+    sPRResBase+sRichObjCaption, "RTF текст"
+    sPRResBase+sRichObjHint, "RTF текст"
+
+    sPRResBase+sTxCommandObjCaption, "ESC команда"
+    sPRResBase+sTxCommandObjHint, "ESC команда"
+
+    sPRResBase + sTxHLineObjCaption, "Горизонтальная линия" /* version 1.9 */
+    sPRResBase + sTxHLineObjHint, "Горизонтальная линия" /* version 1.9 */
+    
+    sPRResBase + sTxVLineObjCaption, "Вертикальная линия" /* version 1.9 */
+    sPRResBase + sTxVLineObjHint, "Вертикальная линия" /* version 1.9 */
+    
+    sPRResBase+sUnitDescPixel, "Пиксели"
+    sPRResBase+sUnitDescMM, "Миллиметры"
+    sPRResBase+sUnitDescSM, "Сантиметры"
+    sPRResBase+sUnitDescInch, "Дюймы"
+    sPRResBase+sUnitDescM, "Метры :)"
+
+    sPRResBase+sMonthsNamesOffset, "Январь"
+    sPRResBase+sMonthsNamesOffset-1, "Февраль"
+    sPRResBase+sMonthsNamesOffset-2, "Март"
+    sPRResBase+sMonthsNamesOffset-3, "Апрель"
+    sPRResBase+sMonthsNamesOffset-4, "Май"
+    sPRResBase+sMonthsNamesOffset-5, "Июнь"
+    sPRResBase+sMonthsNamesOffset-6, "Июль"
+    sPRResBase+sMonthsNamesOffset-7, "Август"
+    sPRResBase+sMonthsNamesOffset-8, "Сентябрь"
+    sPRResBase+sMonthsNamesOffset-9, "Октябрь"
+    sPRResBase+sMonthsNamesOffset-10, "Ноябрь"
+    sPRResBase+sMonthsNamesOffset-11, "Декабрь"
+    sPRResBase+sMonthsNamesOffset-12, "Января"
+    sPRResBase+sMonthsNamesOffset-13, "Февраля"
+    sPRResBase+sMonthsNamesOffset-14, "Марта"
+    sPRResBase+sMonthsNamesOffset-15, "Апреля"
+    sPRResBase+sMonthsNamesOffset-16, "Мая"
+    sPRResBase+sMonthsNamesOffset-17, "Июня"
+    sPRResBase+sMonthsNamesOffset-18, "Июля"
+    sPRResBase+sMonthsNamesOffset-19, "Августа"
+    sPRResBase+sMonthsNamesOffset-20, "Сентября"
+    sPRResBase+sMonthsNamesOffset-21, "Октября"
+    sPRResBase+sMonthsNamesOffset-22, "Ноября"
+    sPRResBase+sMonthsNamesOffset-23, "Декабря"
+
+    sPRResBase+sTemplaceSaveQuestion, "Шаблон отчета изменен, сохранить?"
+    sPRResBase+sDesignerCaption, "Дизайнер - [%s]"
+
+    sPRResBase+sTxCodePageTitleDOS866, "DOS"
+    sPRResBase+sTxCodePageTitleWIN1251, "Windows"
+
+    sPRResBase+sBandsCaptionsDefineLink, "Установить связь" /* version 1.8 */
+    sPRResBase+sLinksControlDefineLeftLink, "Установить связь слева" /* version 1.8 */
+    sPRResBase+sLinksControlDefineTopLink, "Установить связь сверху" /* version 1.8 */
+    sPRResBase+sLinksControlDefineWidthLink, "Установить связь по ширине" /* version 1.8 */
+    sPRResBase+sLinksControlDefineHeightLink, "Установить связь по высоте" /* version 1.8 */
+
+    sPRResBase+sHorizontalAlignment, "Горизонтальное выравнивание" /* version 1.8 */
+    sPRResBase+sVerticalAlignment, "Вертикальное выравнивание" /* version 1.8 */
+    sPRResBase+sPrinterUnavailable, "Принтер [%s] не доступен, выбран виртуальный принтер" /* version 1.8 */
+    sPRResBase+sPrinterErrorInvalidPaperSizeIndex, "Неверный индекс размера страницы [%d]" /* version 1.8 */
+    sPRResBase+sPrinterErrorUnsupportedPaperSize, "Принтер [%s] не поддерживает размер страницы с кодом [%d]" /* version 1.8 */
+     sPRResBase+sPrinterErrorOpenPrinter, "Ошибка при открытии принтера [%s]#13[%s]" /* version 1.8 */
+
+    sPRResBase+sStuckModeCaptionsOffsetDisabled, "Отключен" /* version 1.8 */
+    sPRResBase+sStuckModeCaptionsOffsetAlways, "Всегда" /* version 1.8 */
+    sPRResBase+sStuckModeCaptionsOffsetCtrlButton, "Когда нажата клавиша Ctrl" /* version 1.8 */
+
+    sPRResBase+sPageScaleModeCaptionsToNearest, "К ближайшему размеру страницы" /* version 1.8 */
+    sPRResBase+sPageScaleModeCaptionsToDefined, "К предопределенному размеру бумаги" /* version 1.8 */
+    sPRResBase+sPageScaleModeCaptionsUserSelected, "По выбору пользователя" /* version 1.8 */
+    sPRResBase+sNotSupportedPaperSize, "Принтер:   %s#13не поддерживает размер бумаги %s, выбранный для страницы № %d:" /* version 1.8 */
+    sPRResBase+sPopupMainMenu, "Главное меню" /* version 1.8 */
+    sPRResBase+sCancelInsertObject, "Отменить вставку объекта" /* version 1.8 */
+
+    sPRResBase+sTemplateFindFormCaptionsObject, "Объект" /* version 1.8 */
+    sPRResBase+sTemplateFindFormCaptionsProperty, "Свойство" /* version 1.8 */
+    sPRResBase+sTemplateFindFormCaptionsText, "Текст" /* version 1.8 */
+
+    sPRResBase+sNotFoundInTemplate, "Строка в шаблоне не найдена" /* version 1.8 */
+    sPRResBase+sFindInTemplate, "Поиск в шаблоне..." /* version 1.8 */
+
+    sPRResBase+sTemplateFindReportDesc, "Отчет" /* version 1.8 */
+    sPRResBase+sTemplateFindGroupDesc, "Группа: %s" /* version 1.8 */
+    sPRResBase+sTemplateFindValueDesc, "Агрегатная переменная: %s" /* version 1.8 */
+    sPRResBase+sTemplateFindPageDesc, "Страница: № %d (%s)" /* version 1.8 */
+    sPRResBase+sTemplateFindBandDesc, "Секция: %s" /* version 1.8 */
+    sPRResBase+sTemplateFindObjectDesc, "%s" /* version 1.8 */
+    sPRResBase+sTemplateFindObjectVersionDesc, "%d: %s" /* version 1.8 */
+
+    sPRResBase+sTemplateFindReplaceQuestion, "Заменить текст [%s]#13на [%s]?#13#13Объект: [%s]#13Свойство: [%s]" /* version 1.8 */
+    sPRResBase+sTemplateFindVariableDesc, "Переменная: %s" /* version 1.8 */
+    sPRResBase+sSimpleVarNotExists, "Переменная [%s] не найдена" /* version 1.8 */
+
+    /* TxMemoObj PopupMenu */
+    sPRResBase+sTxMemoObjFontStyle, "Шрифт" /* version 1.8 */
+    sPRResBase+sTxMemoObjFontOptions, "Стиль шрифта" /* version 1.8 */
+
+    sPRResBase+sVariablesEditorFormValueFormula, "Формула" /* version 1.8 */
+    sPRResBase+sVariablesEditorFormValueString, "Строка" /* version 1.8 */
+    sPRResBase+sVariablesEditorFormValueInteger, "Целое число" /* version 1.8 */
+    sPRResBase+sVariablesEditorFormValueDouble, "Дробное число" /* version 1.8 */
+    sPRResBase+sVariablesEditorFormValueDateTime, "Дата" /* version 1.8 */
+    sPRResBase+sVariablesEditorFormValueNull, "Пустое" /* version 1.8 */
+    sPRResBase+sVariablesEditorFormCaption, "Переменные отчета [%s]" /* version 1.8 */
+    sPRResBase+sVariablesEditorFormDuplicateVariableName, "Переменная с таким именем уже существует" /* version 1.8 */
+
+    sPRResBase+sBandCanSplit, "Может разбиваться" // version 1.9.5
+    sPRResBase+sObjCanSplit, "Может разбиваться" // version 1.9.5
+
+    SPRResBase+sSubReport, "Sub отчет:" // version 1.9.7
+    sPRResBase+sMinDataRecords, "Секция будет напечатана только если группа содержит указанное количество записей:" // version 1.9.7
+    SPRResBase+sTextAlignJustify, "Выровнять по ширине" // version 1.9.7
+
+    SPRResBase+sJustifyLastLine, "Выравнивать последнию строку" // version 1.9.7
+    SPRResBase+sEolIsEndOfParagraph, "Перевод строки как конец параграфа" // version 1.9.7
+
+    sPRResBase+sBarCodeObjCaption, "Штрих-код" /* version 1.9.7 */
+    sPRResBase+sBarCodeObjHint, "Штрих-код" /* version 1.9.7 */
+
+    sPRResBase+sBarCodeEditorText, "Текст:" // version 1.9.7
+    sPRResBase+sBarCodeEditorBarcodeType, "Тип штрих-кода:" // version 1.9.7
+    sPRResBase+sBarCodeEditorShowTextOverLines, "Выводить текст поверх линий" // version 1.9.7
+    sPRResBase+sBarCodeEditorCaptionType, "Тип заголовка:" // version 1.9.7
+    sPRResBase+sBarCodeEditorPosition, "Позиция:" // version 1.9.7
+    sPRResBase+sBarCodeEditorTextFont, "Шрифт:" // version 1.9.7
+    sPRResBase+sBarCodeEditorBackground, "Фон:" // version 1.9.7
+    sPRResBase+sBarCodeEditorForeground, "Шрифт и линии:" // version 1.9.7
+    sPRResBase+sBarCodeEditorRotation, " Поворот: " // version 1.9.7
+
+    sPRResBase+sBarCodeEditorShowTextTypeNone, "Отсутствует" // version 1.9.7
+    sPRResBase+sBarCodeEditorShowTextTypeCode, "Код" // version 1.9.7
+    sPRResBase+sBarCodeEditorShowTextTypeType, "Тип штрих-кода" // version 1.9.7
+    sPRResBase+sBarCodeEditorShowTextTypeBoth, "Код и тип" // version 1.9.7
+
+    sPRResBase+sBarCodeEditorTextPositionTopLeft, "Вверху и слева" // version 1.9.7
+    sPRResBase+sBarCodeEditorTextPositionTopRight, "Вверху и справа" // version 1.9.7
+    sPRResBase+sBarCodeEditorTextPositionTopCenter, "Вверху и в центре" // version 1.9.7
+    sPRResBase+sBarCodeEditorTextPositionBottomLeft, "Внизу и слева" // version 1.9.7
+    sPRResBase+sBarCodeEditorTextPositionBottomRight, "Внизу и справа" // version 1.9.7
+    sPRResBase+sBarCodeEditorTextPositionBottomCenter, "Внизу и в центре" // version 1.9.7
+
+    sPRResBase+sBarCodeEditorSheetMain, "Основное" // version 1.9.7
+    sPRResBase+sBarCodeEditorSheetText, "Заголовок" // version 1.9.7
+    sPRResBase+sBarCodeEditorSheetView, "Вид" // version 1.9.7
+    sPRResBase+sBarCodeRotationNone, "Нет" // version 1.9.7
+    sPRResBase+sBarCodeAutoSize, "Автоматически подбирать размер" // version 1.9.8
+
+    sPRResBase+sTxMemoCustomBorderScheme, "Границы:" // version 1.9.8
+    sPRResBase+sTxMemoPredefinedBorderSchemas, "Предопределенные шаблоны:" // version 1.9.8
+    sPRResBase+sTxMemoNoBorderSchemas, "Текущая таблица перекодировки не определена или она не содержит шаблонов границ." // version 1.9.8
+    sPRResBase+sRecodeTable, "Таблица перекодировки:" // version 1.9.8
+}
